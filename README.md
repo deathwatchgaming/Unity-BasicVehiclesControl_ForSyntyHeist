@@ -13,7 +13,7 @@ from Synty Polygon Heist Asset.
  https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-poly-3d-art-by-synty-97949
 
 
-Synty Hesit Vehicles (total: 12)
+Synty Heist Vehicles (total: 12)
 
 Police Helicopter (total: 4)
 Police Charger (total: 4)
@@ -29,17 +29,18 @@ The intention of these releases due to only being scripts for usage with models 
 Vehicles Currently "Completed" & Included:
 ------------------------------------------
 
-* Police Charger (x4) (controller, speedometer, entry)
-* Swat Van (x4) (controller, speedometer, entry)
-* Police Helicopter (x4) (controller)
+
+* Police Charger (x4) (controller, speedometer, entry) - [Functional]
+* Swat Van (x4) (controller, speedometer, entry) - [Functional]
+* Police Helicopter (x4) (controller) - [Functional] Note: (the helicopter entry scripts that are currently provided are "as is" simply for start point)
 
  
 Other Currently "In Progress" & Not Yet Included:
 --------------------------------------------------
 
 
-* Police Helicopter Entry 
-* All Documentations
+* Police Helicopter Entry (the helicopter entry scripts that are currently provided are "as is" simply provided as a start point)
+* All Various Vehicle / Scene Setup Documentations (0% Started Though Need To Complete)
 
 
 Player Controls: 
@@ -97,74 +98,74 @@ Vehicles Control:
 -----------------
 
 
-* All vehicles with entry in scene setup: 
+* All vehicles with entry in scene setup: (in progress)
 
 
 Police Charger: (total: 4)
 --------------------------
 
-* Police Charger 01 controller only in scene setup:
-* Police Charger 01 controller with entry in scene setup:
-* Police Charger 01 controller only in scene speedometer setup:
-* Police Charger 01 controller with entry in scene speedometer setup:
+* Police Charger 01 controller only in scene setup:  (in progress)
+* Police Charger 01 controller with entry in scene setup:  (in progress)
+* Police Charger 01 controller only in scene speedometer setup:  (in progress)
+* Police Charger 01 controller with entry in scene speedometer setup:  (in progress)
 
-* Police Charger 02 controller only in scene setup:
-* Police Charger 02 controller with entry in scene setup:
-* Police Charger 02 controller only in scene speedometer setup:
-* Police Charger 02 controller with entry in scene speedometer setup:
+* Police Charger 02 controller only in scene setup:  (in progress)
+* Police Charger 02 controller with entry in scene setup:  (in progress)
+* Police Charger 02 controller only in scene speedometer setup:  (in progress)
+* Police Charger 02 controller with entry in scene speedometer setup:  (in progress)
 
-* Police Charger 03 controller only in scene setup:
-* Police Charger 03 controller with entry in scene setup:
-* Police Charger 03 controller only in scene speedometer setup:
-* Police Charger 03 controller with entry in scene speedometer setup:
+* Police Charger 03 controller only in scene setup:  (in progress)
+* Police Charger 03 controller with entry in scene setup:  (in progress)
+* Police Charger 03 controller only in scene speedometer setup:  (in progress)
+* Police Charger 03 controller with entry in scene speedometer setup:  (in progress)
 
-* Police Charger 04controller only in scene setup:
-* Police Charger 04 controller with entry in scene setup:
-* Police Charger 04 controller only in scene speedometer setup:
-* Police Charger 04 controller with entry in scene speedometer setup:
+* Police Charger 04controller only in scene setup:  (in progress)
+* Police Charger 04 controller with entry in scene setup:  (in progress)
+* Police Charger 04 controller only in scene speedometer setup:  (in progress)
+* Police Charger 04 controller with entry in scene speedometer setup:  (in progress)
 
-* All Police Chargers with entry in scene setup: 
+* All Police Chargers with entry in scene setup:  (in progress) 
 
 
 Police Helicopter: (total: 4)
 -----------------------------
 
-* Police Helicopter 01 controller only in scene setup:
-* Police Helicopter 01 controller with entry in scene setup:
+* Police Helicopter 01 controller only in scene setup:  (in progress)
+* Police Helicopter 01 controller with entry in scene setup:  (in progress)
 
-* Police Helicopter 02 controller only in scene setup:
-* Police Helicopter 02 controller with entry in scene setup:
+* Police Helicopter 02 controller only in scene setup:  (in progress)
+* Police Helicopter 02 controller with entry in scene setup:  (in progress)
 
-* Police Helicopter 03 controller only in scene setup:
-* Police Helicopter 03 controller with entry in scene setup:
+* Police Helicopter 03 controller only in scene setup:  (in progress)
+* Police Helicopter 03 controller with entry in scene setup:  (in progress)
 
-* Police Helicopter 04 controller only in scene setup:
-* Police Helicopter 04 controller with entry in scene setup:
+* Police Helicopter 04 controller only in scene setup:  (in progress)
+* Police Helicopter 04 controller with entry in scene setup:  (in progress)
 
-* All Police Helicopters with entry in scene setup: 
+* All Police Helicopters with entry in scene setup:  (in progress) 
 
 
 SwatVan: (total: 4)
 -------------------
 
-* Swat Van 01 controller only in scene setup:
-* Swat Van 01 controller with entry in scene setup:
-* Swat Van 01 controller only in scene speedometer setup:
-* Swat Van 01 controller with entry in scene speedometer setup:
+* Swat Van 01 controller only in scene setup:  (in progress)
+* Swat Van 01 controller with entry in scene setup:  (in progress)
+* Swat Van 01 controller only in scene speedometer setup:  (in progress)
+* Swat Van 01 controller with entry in scene speedometer setup:  (in progress)
 
-* Swat Van 02 controller only in scene setup:
-* Swat Van 02 controller with entry in scene setup:
-* Swat Van 02 controller only in scene speedometer setup:
-* Swat Van 02 controller with entry in scene speedometer setup:
+* Swat Van 02 controller only in scene setup:  (in progress)
+* Swat Van 02 controller with entry in scene setup:  (in progress)
+* Swat Van 02 controller only in scene speedometer setup:  (in progress)
+* Swat Van 02 controller with entry in scene speedometer setup:  (in progress)
 
-* Swat Van 03 controller only in scene setup:
-* Swat Van 03 controller with entry in scene setup:
-* Swat Van 03 controller only in scene speedometer setup:
-* Swat Van 03 controller with entry in scene speedometer setup:
+* Swat Van 03 controller only in scene setup:  (in progress)
+* Swat Van 03 controller with entry in scene setup:  (in progress)
+* Swat Van 03 controller only in scene speedometer setup:  (in progress)
+* Swat Van 03 controller with entry in scene speedometer setup:  (in progress)
 
-* Swat Van 04 controller only in scene setup:
-* Swat Van 04 controller with entry in scene setup:
-* Swat Van 04 controller only in scene speedometer setup:
-* Swat Van 04 controller with entry in scene speedometer setup:
+* Swat Van 04 controller only in scene setup:  (in progress)
+* Swat Van 04 controller with entry in scene setup:  (in progress)
+* Swat Van 04 controller only in scene speedometer setup:  (in progress)
+* Swat Van 04 controller with entry in scene speedometer setup:  (in progress)
 
-* All Swat Vans with entry in scene setup: 
+* All Swat Vans with entry in scene setup:  (in progress) 
