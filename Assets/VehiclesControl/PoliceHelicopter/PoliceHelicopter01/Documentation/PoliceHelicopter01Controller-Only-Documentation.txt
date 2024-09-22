@@ -568,7 +568,7 @@ Convex: True (Bool checked)
 
 -----------------------------------------------------------------------------------
 
-Step 17: Outside of HelicopterController: Create Empty Game Object: "Interface"
+Step 17: Outside of PoliceHelicopter01: Create Empty Game Object: "Interface"
 
 -----------------------------------------------------------------------------------
 

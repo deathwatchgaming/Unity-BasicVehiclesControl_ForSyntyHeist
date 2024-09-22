@@ -535,7 +535,7 @@ Audio:
 ------
 
 Audio Source: PoliceHelicopter04 (Audio Source)
-Rotor Sound: Helicopter01_Rotor
+Rotor Sound: Helicopter04_Rotor
 
 
 -----------------------------------------------------------------------------------
@@ -568,7 +568,7 @@ Convex: True (Bool checked)
 
 -----------------------------------------------------------------------------------
 
-Step 17: Outside of HelicopterController: Create Empty Game Object: "Interface"
+Step 17: Outside of PoliceHelicopter04: Create Empty Game Object: "Interface"
 
 -----------------------------------------------------------------------------------
 
