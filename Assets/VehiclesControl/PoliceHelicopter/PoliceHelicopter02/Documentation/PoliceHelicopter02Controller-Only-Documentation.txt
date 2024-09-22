@@ -92,8 +92,8 @@ Modify via:
 
 Mesh Resolution:
 
-Terrain Width: 80000
-Terrain Length: 80000
+Terrain Width: 8000
+Terrain Length: 8000
 
 Modify via:
 
