@@ -108,7 +108,7 @@ Police Charger: (total: 4)
 
 * Police Charger 01 controller with entry in scene setup:  (in progress)
 
-* Police Charger 01 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-Spedometer-Documentation.txt
+* Police Charger 01 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-Speedometer-Documentation.txt
 
 * Police Charger 01 controller with entry in scene speedometer setup:  (in progress)
 
@@ -116,7 +116,7 @@ Police Charger: (total: 4)
 
 * Police Charger 02 controller with entry in scene setup:  (in progress)
 
-* Police Charger 02 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-Spedometer-Documentation.txt
+* Police Charger 02 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-Speedometer-Documentation.txt
 
 * Police Charger 02 controller with entry in scene speedometer setup:  (in progress)
 
@@ -124,7 +124,7 @@ Police Charger: (total: 4)
 
 * Police Charger 03 controller with entry in scene setup:  (in progress)
 
-* Police Charger 03 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-Spedometer-Documentation.txt
+* Police Charger 03 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-Speedometer-Documentation.txt
 
 * Police Charger 03 controller with entry in scene speedometer setup:  (in progress)
 
@@ -132,7 +132,7 @@ Police Charger: (total: 4)
 
 * Police Charger 04 controller with entry in scene setup:  (in progress)
 
-* Police Charger 04 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Spedometer-Documentation.txt
+* Police Charger 04 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Speedometer-Documentation.txt
 
 * Police Charger 04 controller with entry in scene speedometer setup:  (in progress)
 
