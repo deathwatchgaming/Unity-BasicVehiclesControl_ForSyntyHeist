@@ -116,29 +116,29 @@ namespace VehiclesControl
 		// GameObject FindInActiveObjectByName
 		GameObject FindInActiveObjectByName(string name)
 		{
-            // Transform[] objs
-            Transform[] objs = Resources.FindObjectsOfTypeAll<Transform>() as Transform[];
+			// Transform[] objs
+			Transform[] objs = Resources.FindObjectsOfTypeAll<Transform>() as Transform[];
 
-            // for 
-            for (int i = 0; i < objs.Length; i++)
-            {
-                // if
-                if (objs[i].hideFlags == HideFlags.None)
-                {
-                    // if
-                    if (objs[i].name == name)
-                    {
-                        // return
-                        return objs[i].gameObject;
+			// for 
+			for (int i = 0; i < objs.Length; i++)
+			{
+				// if
+				if (objs[i].hideFlags == HideFlags.None)
+				{
+					// if
+					if (objs[i].name == name)
+					{
+						// return
+						return objs[i].gameObject;
 
-                    } // close if
+					} // close if
 
-                } // close if
+				} // close if
 
-            } // close for
+			} // close for
 
-            // return
-            return null;
+			// return
+			return null;
 
 		} // close GameObject FindInActiveObjectByName
 
