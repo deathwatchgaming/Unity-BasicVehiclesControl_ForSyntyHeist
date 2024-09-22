@@ -151,29 +151,29 @@ namespace VehiclesControl
 			// _rigidbody
 			_rigidbody = GetComponent<Rigidbody>();
 
-            // GameObject _interfaceIMG01Object is FindInActiveObjectByName PoliceCharger03_SpeedoGuage
-            GameObject _interfaceIMG01Object = FindInActiveObjectByName("PoliceCharger03_SpeedoGuage");
+			// GameObject _interfaceIMG01Object is FindInActiveObjectByName PoliceCharger03_SpeedoGuage
+			GameObject _interfaceIMG01Object = FindInActiveObjectByName("PoliceCharger03_SpeedoGuage");
 
-            // _interfaceIMG01Object SetActive is false
-            _interfaceIMG01Object.SetActive(false);
+			// _interfaceIMG01Object SetActive is false
+			_interfaceIMG01Object.SetActive(false);
 
-            // GameObject _interfaceIMG02Object is FindInActiveObjectByName PoliceCharger03_SpeedoNeedle
-            GameObject _interfaceIMG02Object = FindInActiveObjectByName("PoliceCharger03_SpeedoNeedle");
+			// GameObject _interfaceIMG02Object is FindInActiveObjectByName PoliceCharger03_SpeedoNeedle
+			GameObject _interfaceIMG02Object = FindInActiveObjectByName("PoliceCharger03_SpeedoNeedle");
 
-            // _interfaceIMG02Object SetActive is false
-            _interfaceIMG02Object.SetActive(false);
+			// _interfaceIMG02Object SetActive is false
+			_interfaceIMG02Object.SetActive(false);
 
-            // GameObject _interfaceTextObject is FindInActiveObjectByName PoliceCharger03_SpeedText
-            GameObject _interfaceTextObject = FindInActiveObjectByName("PoliceCharger03_SpeedText");
+			// GameObject _interfaceTextObject is FindInActiveObjectByName PoliceCharger03_SpeedText
+			GameObject _interfaceTextObject = FindInActiveObjectByName("PoliceCharger03_SpeedText");
 
-            // _interfaceTextObject SetActive is false
-            _interfaceTextObject.SetActive(false);
+			// _interfaceTextObject SetActive is false
+			_interfaceTextObject.SetActive(false);
 
-            // GameObject _interfaceParentObject is FindInActiveObjectByName PoliceCharger03Speedometer
-            GameObject _interfaceParentObject = FindInActiveObjectByName("PoliceCharger03Speedometer");
+			// GameObject _interfaceParentObject is FindInActiveObjectByName PoliceCharger03Speedometer
+			GameObject _interfaceParentObject = FindInActiveObjectByName("PoliceCharger03Speedometer");
 
-            // _interfaceParentObject SetActive is false
-            _interfaceParentObject.SetActive(false);
+			// _interfaceParentObject SetActive is false
+			_interfaceParentObject.SetActive(false);
 
 		} // close private void Start
 

@@ -151,29 +151,29 @@ namespace VehiclesControl
 			// _rigidbody
 			_rigidbody = GetComponent<Rigidbody>();
 
-            // GameObject _interfaceIMG01Object is FindInActiveObjectByName SwatVan04_SpeedoGuage
-            GameObject _interfaceIMG01Object = FindInActiveObjectByName("SwatVan04_SpeedoGuage");
+			// GameObject _interfaceIMG01Object is FindInActiveObjectByName SwatVan04_SpeedoGuage
+			GameObject _interfaceIMG01Object = FindInActiveObjectByName("SwatVan04_SpeedoGuage");
 
-            // _interfaceIMG01Object SetActive is false
-            _interfaceIMG01Object.SetActive(false);
+			// _interfaceIMG01Object SetActive is false
+			_interfaceIMG01Object.SetActive(false);
 
-            // GameObject _interfaceIMG02Object is FindInActiveObjectByName SwatVan04_SpeedoNeedle
-            GameObject _interfaceIMG02Object = FindInActiveObjectByName("SwatVan04_SpeedoNeedle");
+			// GameObject _interfaceIMG02Object is FindInActiveObjectByName SwatVan04_SpeedoNeedle
+			GameObject _interfaceIMG02Object = FindInActiveObjectByName("SwatVan04_SpeedoNeedle");
 
-            // _interfaceIMG02Object SetActive is false
-            _interfaceIMG02Object.SetActive(false);
+			// _interfaceIMG02Object SetActive is false
+			_interfaceIMG02Object.SetActive(false);
 
-            // GameObject _interfaceTextObject is FindInActiveObjectByName SwatVan04_SpeedText
-            GameObject _interfaceTextObject = FindInActiveObjectByName("SwatVan04_SpeedText");
+			// GameObject _interfaceTextObject is FindInActiveObjectByName SwatVan04_SpeedText
+			GameObject _interfaceTextObject = FindInActiveObjectByName("SwatVan04_SpeedText");
 
-            // _interfaceTextObject SetActive is false
-            _interfaceTextObject.SetActive(false);
+			// _interfaceTextObject SetActive is false
+			_interfaceTextObject.SetActive(false);
 
-            // GameObject _interfaceParentObject is FindInActiveObjectByName SwatVan04Speedometer
-            GameObject _interfaceParentObject = FindInActiveObjectByName("SwatVan04Speedometer");
+			// GameObject _interfaceParentObject is FindInActiveObjectByName SwatVan04Speedometer
+			GameObject _interfaceParentObject = FindInActiveObjectByName("SwatVan04Speedometer");
 
-            // _interfaceParentObject SetActive is false
-            _interfaceParentObject.SetActive(false);
+			// _interfaceParentObject SetActive is false
+			_interfaceParentObject.SetActive(false);
 
 		} // close private void Start
 
