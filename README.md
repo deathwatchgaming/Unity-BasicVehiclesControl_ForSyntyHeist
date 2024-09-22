@@ -142,16 +142,20 @@ Police Charger: (total: 4)
 Police Helicopter: (total: 4)
 -----------------------------
 
-* Police Helicopter 01 controller only in scene setup:  (in progress)
+* Police Helicopter 01 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter01/Documentation/PoliceHelicopter01Controller-Only-Documentation.txt
+
 * Police Helicopter 01 controller with entry in scene setup:  (in progress)
 
-* Police Helicopter 02 controller only in scene setup:  (in progress)
+* Police Helicopter 02 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter02/Documentation/PoliceHelicopter02Controller-Only-Documentation.txt
+
 * Police Helicopter 02 controller with entry in scene setup:  (in progress)
 
-* Police Helicopter 03 controller only in scene setup:  (in progress)
+* Police Helicopter 03 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter03/Documentation/PoliceHelicopter03Controller-Only-Documentation.txt
+
 * Police Helicopter 03 controller with entry in scene setup:  (in progress)
 
-* Police Helicopter 04 controller only in scene setup:  (in progress)
+* Police Helicopter 04 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter04/Documentation/PoliceHelicopter04Controller-Only-Documentation.txt
+
 * Police Helicopter 04 controller with entry in scene setup:  (in progress)
 
 * All Police Helicopters with entry in scene setup:  (in progress) 
