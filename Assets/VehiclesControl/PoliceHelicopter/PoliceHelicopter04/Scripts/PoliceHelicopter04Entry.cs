@@ -129,7 +129,7 @@ namespace VehiclesControl
             _policeHelicopter04Camera02AudioListener.enabled = false;
 
             // _policeHelicopter04Camera03 is GetComponentInChildren Camera
-            _policeHelicopter04Camera03 = _cameras[1].GetComponentInChildren<Camera>();
+            _policeHelicopter04Camera03 = _cameras[2].GetComponentInChildren<Camera>();
 
             // _policeHelicopter04Camera03 enabled is false
             _policeHelicopter04Camera03.enabled = false;
