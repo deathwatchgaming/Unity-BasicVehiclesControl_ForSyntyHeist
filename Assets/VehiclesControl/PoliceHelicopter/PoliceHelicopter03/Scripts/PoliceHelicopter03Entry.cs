@@ -89,6 +89,35 @@ namespace VehiclesControl
         // private Camera[] _cameras
         [SerializeField] private Camera[] _cameras;
 
+        // GameObject FindInActiveObjectByName
+        GameObject FindInActiveObjectByName(string name)
+        {
+            // Transform[] objs
+            Transform[] objs = Resources.FindObjectsOfTypeAll<Transform>() as Transform[];
+
+            // for 
+            for (int i = 0; i < objs.Length; i++)
+            {
+                // if
+                if (objs[i].hideFlags == HideFlags.None)
+                {
+                    // if
+                    if (objs[i].name == name)
+                    {
+                        // return
+                        return objs[i].gameObject;
+
+                    } // close if
+
+                } // close if
+
+            } // close for
+
+            // return
+            return null;
+
+        } // close GameObject FindInActiveObjectByName
+
         // private void Start
         private void Start() 
         {
@@ -149,17 +178,17 @@ namespace VehiclesControl
             // _rigidbody
             _rigidbody = GetComponent<Rigidbody>();
 
-            // _interfaceTextObject is GameObject Find PoliceHelicopter03_EntryKey
-            _interfaceTextObject = GameObject.Find("PoliceHelicopter03_EntryKey");
+            // GameObject _interfaceTextObject 
+            GameObject _interfaceTextObject = FindInActiveObjectByName("PoliceHelicopter03_EntryKey");
 
             // _interfaceTextObject SetActive is false
-            _interfaceTextObject.SetActive(false);
+            _interfaceTextObject.SetActive(false); 
 
-            // _interfaceHUDObject is GameObject Find PoliceHelicopter03_HUD
-            _interfaceHUDObject = GameObject.Find("PoliceHelicopter03_HUD");
-
+            // GameObject _interfaceHUDObject 
+            GameObject _interfaceHUDObject = FindInActiveObjectByName("PoliceHelicopter03_HUD");
+            
             // _interfaceHUDObject SetActive is false
-            _interfaceHUDObject.SetActive(false);
+            _interfaceHUDObject.SetActive(false); 
 
         } // close private void Start
 
