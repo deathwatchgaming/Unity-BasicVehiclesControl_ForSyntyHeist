@@ -62,7 +62,36 @@ namespace VehiclesControl
 
         // Rigidbody _rigidbody
         private Rigidbody _rigidbody;
-        
+
+        // GameObject FindInActiveObjectByName
+        GameObject FindInActiveObjectByName(string name)
+        {
+            // Transform[] objs
+            Transform[] objs = Resources.FindObjectsOfTypeAll<Transform>() as Transform[];
+
+            // for 
+            for (int i = 0; i < objs.Length; i++)
+            {
+                // if
+                if (objs[i].hideFlags == HideFlags.None)
+                {
+                    // if
+                    if (objs[i].name == name)
+                    {
+                        // return
+                        return objs[i].gameObject;
+
+                    } // close if
+
+                } // close if
+
+            } // close for
+
+            // return
+            return null;
+
+        } // close GameObject FindInActiveObjectByName
+                
         // private void Start
         private void Start() 
         {
@@ -87,11 +116,11 @@ namespace VehiclesControl
             // _rigidbody
             _rigidbody = GetComponent<Rigidbody>();
 
-            // _interfaceTextObject is GameObject Find PoliceCharger01_EntryKey
-            _interfaceTextObject = GameObject.Find("PoliceCharger01_EntryKey");
+            // GameObject _interfaceTextObject is FindInActiveObjectByName PoliceCharger01_EntryKey
+            GameObject _interfaceTextObject = FindInActiveObjectByName("PoliceCharger01_EntryKey");
 
             // _interfaceTextObject SetActive is false
-            _interfaceTextObject.SetActive(false);
+            _interfaceTextObject.SetActive(false); 
 
         } // close private void Start
 
