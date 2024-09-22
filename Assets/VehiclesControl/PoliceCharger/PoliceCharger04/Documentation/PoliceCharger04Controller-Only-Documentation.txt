@@ -164,7 +164,7 @@ Step 6: Identify: the "Vehicle Prefab"
 
 Let us first identify and locate the "Vehicle Prefab" we are going to use.
 
-Assets > PolygonCity > Prefabs > Vehicles
+Assets > PolygonHeist > Prefabs > Vehicles
 
 SM_Veh_Car_Police_Heist_Heist_01
 
