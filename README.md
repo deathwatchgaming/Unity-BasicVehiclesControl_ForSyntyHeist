@@ -32,15 +32,14 @@ Vehicles Currently "Completed" & Included:
 
 * Police Charger (x4) (controller, speedometer, entry) - [Functional]
 * Swat Van (x4) (controller, speedometer, entry) - [Functional]
-* Police Helicopter (x4) (controller) - [Functional] Note: (the helicopter entry scripts that are currently provided are "as is" simply for start point)
+* Police Helicopter (x4) (controller, entry) - [Functional] Note: (the helicopter entry scripts that are currently provided are "as is" simply for start point)
 
  
 Other Currently "In Progress" & Not Yet Included:
 --------------------------------------------------
 
 
-* Police Helicopter Entry (the helicopter entry scripts that are currently provided are "as is" simply provided as a start point)
-* All Various Vehicle / Scene Setup Documentations (65% Started Though Need To Complete)
+* All Various Vehicle / Scene Setup Documentations (75% Started Though Need To Complete)
 
 
 Player Controls: 
@@ -144,25 +143,25 @@ Police Helicopter: (total: 4)
 
 * Police Helicopter 01 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter01/Documentation/PoliceHelicopter01Controller-Only-Documentation.txt
 
-* Police Helicopter 01 controller with entry in scene setup:  (in progress)
+* Police Helicopter 01 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter01/Documentation/PoliceHelicopter01Controller-wEntry-Documentation.txt
 
 * Police Helicopter 02 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter02/Documentation/PoliceHelicopter02Controller-Only-Documentation.txt
 
-* Police Helicopter 02 controller with entry in scene setup:  (in progress)
+* Police Helicopter 02 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter02/Documentation/PoliceHelicopter02Controller-wEntry-Documentation.txt
 
 * Police Helicopter 03 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter03/Documentation/PoliceHelicopter03Controller-Only-Documentation.txt
 
-* Police Helicopter 03 controller with entry in scene setup:  (in progress)
+* Police Helicopter 03 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter03/Documentation/PoliceHelicopter03Controller-wEntry-Documentation.txt
 
 * Police Helicopter 04 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter04/Documentation/PoliceHelicopter04Controller-Only-Documentation.txt
 
-* Police Helicopter 04 controller with entry in scene setup:  (in progress)
+* Police Helicopter 04 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter04/Documentation/PoliceHelicopter04Controller-wEntry-Documentation.txt
 
 * All Police Helicopters with entry in scene setup:  (in progress) 
 
 
-SwatVan: (total: 4)
--------------------
+Swat Van: (total: 4)
+--------------------
 
 * Swat Van 01 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Only-Documentation.txt
 
