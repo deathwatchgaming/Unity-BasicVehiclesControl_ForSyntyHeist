@@ -166,7 +166,7 @@ SwatVan: (total: 4)
 
 * Swat Van 01 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Only-Documentation.txt
 
-* Swat Van 01 controller with entry in scene setup:  (in progress)
+* Swat Van 01 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-wEntry-Documentation.txt
 
 * Swat Van 01 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Speedometer-Documentation.txt
 
@@ -174,7 +174,7 @@ SwatVan: (total: 4)
 
 * Swat Van 02 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-Only-Documentation.txt
 
-* Swat Van 02 controller with entry in scene setup:  (in progress)
+* Swat Van 02 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-wEntry-Documentation.txt
 
 * Swat Van 02 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-Speedometer-Documentation.txt
 
@@ -182,7 +182,7 @@ SwatVan: (total: 4)
 
 * Swat Van 03 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-Only-Documentation.txt
 
-* Swat Van 03 controller with entry in scene setup:  (in progress)
+* Swat Van 03 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-wEntry-Documentation.txt
 
 * Swat Van 03 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-Speedometer-Documentation.txt
 
@@ -190,7 +190,7 @@ SwatVan: (total: 4)
 
 * Swat Van 04 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-Only-Documentation.txt
 
-* Swat Van 04 controller with entry in scene setup:  (in progress)
+* Swat Van 04 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-wEntry-Documentation.txt
 
 * Swat Van 04 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-Speedometer-Documentation.txt
 
