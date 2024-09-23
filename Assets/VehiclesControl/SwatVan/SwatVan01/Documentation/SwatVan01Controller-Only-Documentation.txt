@@ -418,7 +418,7 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicle
-  Van
+  SwatVan01
     SM_Veh_SwatVan_Door_l
     SM_Veh_SwatVan_Door_r
     SM_Veh_SwatVan_Glass
@@ -430,7 +430,7 @@ Vehicle
 Fully Expanded:
 
 Vehicle
-  Van
+  SwatVan01
     SM_Veh_SwatVan_Door_l
     SM_Veh_SwatVan_Door_r
     SM_Veh_SwatVan_Glass
