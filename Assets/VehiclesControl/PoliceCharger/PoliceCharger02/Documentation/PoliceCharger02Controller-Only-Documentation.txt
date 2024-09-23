@@ -175,7 +175,7 @@ Let us first identify and locate the "Vehicle Prefab" we are going to use.
 
 Assets > PolygonHeist > Prefabs > Vehicles
 
-SM_Veh_Car_Police_Heist_Heist_01
+SM_Veh_Car_Police_Heist_01
 
 
 -----------------------------------------------------------------------------------
@@ -189,7 +189,7 @@ Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completel
 
 Next, rename the vehicle prefabs:
 
-SM_Veh_Car_Police_Heist_Heist_01 => "PoliceCharger02"
+SM_Veh_Car_Police_Heist_01 => "PoliceCharger02"
 
 Next, set the Transform:
 
