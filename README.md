@@ -157,7 +157,7 @@ Police Helicopter: (total: 4)
 
 * Police Helicopter 04 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter04/Documentation/PoliceHelicopter04Controller-wEntry-Documentation.txt
 
-* All Police Helicopters with entry in scene setup:  (in progress) 
+* All Police Helicopters with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceHelicopter/Documentation/AllPoliceHelicoptersDevScene-wEntry-Documentation.txt
 
 
 Swat Van: (total: 4)
