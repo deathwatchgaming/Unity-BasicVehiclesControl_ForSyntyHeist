@@ -39,7 +39,7 @@ Other Currently "In Progress" & Not Yet Included:
 --------------------------------------------------
 
 
-* All Various Vehicle / Scene Setup Documentations (75% Started Though Need To Complete)
+* All Various Vehicle / Scene Setup Documentations (85% Started Though Need To Complete)
 
 
 Player Controls: 
@@ -135,7 +135,7 @@ Police Charger: (total: 4)
 
 * Police Charger 04 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Spedometer-Documentation.txt
 
-* All Police Chargers with entry in scene setup:  (in progress) 
+* All Police Chargers with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/PoliceCharger/Documentation/AllPoliceChargerControllers-wEntry-Documentation.txt
 
 
 Police Helicopter: (total: 4)
