@@ -3,8 +3,8 @@
 
 Description:
 
-Create a basic Vehicle Controller with entry for your Unity projects using
-vehicle models from Synty Polygon Heist Asset.
+Create a basic All Swat Van Vehicle Controller(s) with entry in scene
+for your Unity projects using vehicle models from Synty Polygon Heist Asset.
 
 Player Controls:
 ----------------
