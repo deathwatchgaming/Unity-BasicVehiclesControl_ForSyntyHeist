@@ -39,7 +39,7 @@ Other Currently "In Progress" & Not Yet Included:
 --------------------------------------------------
 
 
-* All Vehicles with Entry in Scene Setup Documentation (0% Started Thus Still Need To Complete)
+* ...
 
 
 Player Controls: 
@@ -97,7 +97,7 @@ Vehicles Control:
 -----------------
 
 
-* All vehicles with entry in scene setup: (in progress)
+* All vehicles with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Assets/VehiclesControl/Documentation/AllVehicleControllers-wEntry-Documentation.txt
 
 
 Police Charger: (total: 4)
