@@ -1,9 +1,0 @@
-Documentation
---------------------------------
-
-Lets put documentation content here
-
-
-Synty Heist Asset Link:
-
-https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-poly-3d-art-by-synty-97949
