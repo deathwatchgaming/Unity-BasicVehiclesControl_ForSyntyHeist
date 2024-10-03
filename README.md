@@ -14,10 +14,11 @@ from Synty Polygon Heist Asset.
 
 
 Synty Heist Vehicles (total: 12)
+--------------------------------
 
-Police Helicopter (total: 4)
-Police Charger (total: 4)
-Swat Van (total: 4)
+* Police Helicopter (total: 4)
+* Police Charger (total: 4)
+* Swat Van (total: 4)
 
 
 Release Intentions Note:
