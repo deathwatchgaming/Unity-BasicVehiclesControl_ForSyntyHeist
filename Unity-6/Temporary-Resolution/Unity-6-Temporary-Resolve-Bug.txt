@@ -3,6 +3,8 @@ center of gravity offset. This bug has been reported and is listed as a bug
 and is currently being worked on for an official fix. Until such we can
 provide a temporary resolution file to add to your vehicle to sort this out.
 
+This only applies for the ground vehicles (ie: Police Chargers and Swat Vans)
+
 
 -----------------------------------------------------------------------------------
 
