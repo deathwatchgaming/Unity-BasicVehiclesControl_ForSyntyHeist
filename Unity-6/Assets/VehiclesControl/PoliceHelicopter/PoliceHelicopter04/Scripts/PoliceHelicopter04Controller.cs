@@ -334,7 +334,7 @@ namespace VehiclesControl
             // Take care of airspeed unit type and max airspeed
 
             // float _airspeed
-            float _airspeed = _rigidbody.velocity.magnitude;
+            float _airspeed = _rigidbody.linearVelocity.magnitude;
 
             // _airspeedType equals PoliceHelicopter04AirspeedType.mph
             if (_airspeedType == PoliceHelicopter04AirspeedType.mph)
@@ -348,7 +348,7 @@ namespace VehiclesControl
                 if (_airspeed > _maxAirspeed)
                 {
                     // _rigidbody.velocity
-                    _rigidbody.velocity = (_maxAirspeed / 2.23694f) * _rigidbody.velocity.normalized;
+                    _rigidbody.linearVelocity = (_maxAirspeed / 2.23694f) * _rigidbody.linearVelocity.normalized;
 
                 } // close if _airspeed > _maxAirspeed
                         
@@ -366,7 +366,7 @@ namespace VehiclesControl
                 if (_airspeed > _maxAirspeed)
                 {
                     // _rigidbody.velocity
-                    _rigidbody.velocity = (_maxAirspeed / 3.6f) * _rigidbody.velocity.normalized;
+                    _rigidbody.linearVelocity = (_maxAirspeed / 3.6f) * _rigidbody.linearVelocity.normalized;
 
                 } // close if _airspeed > _maxAirspeed
                        
@@ -386,7 +386,7 @@ namespace VehiclesControl
                 // 2.23694 is the constant to convert a value from m
 
                 // _heliHUD.text Airspeed
-                _heliHUD.text += "Airspeed: " + (_rigidbody.velocity.magnitude * 2.23694f).ToString("F0") + " mph\n";
+                _heliHUD.text += "Airspeed: " + (_rigidbody.linearVelocity.magnitude * 2.23694f).ToString("F0") + " mph\n";
 
                 // 0.3048 is the constant to convert from m to ft ie: 0.3048 m = 1 ft thus altitude in m divided by 0.3048 gets feet
 
@@ -401,7 +401,7 @@ namespace VehiclesControl
                 // 3.6 is the constant to convert a value from m/s to km/h
 
                 // _heliHUD.text Airspeed
-                _heliHUD.text += "Airspeed: " + (_rigidbody.velocity.magnitude * 3.6f).ToString("F0") + " kmh\n";
+                _heliHUD.text += "Airspeed: " + (_rigidbody.linearVelocity.magnitude * 3.6f).ToString("F0") + " kmh\n";
 
                 // m is default measurement unit hence keep as is since we want to keep m when kmh speed type selected
 
