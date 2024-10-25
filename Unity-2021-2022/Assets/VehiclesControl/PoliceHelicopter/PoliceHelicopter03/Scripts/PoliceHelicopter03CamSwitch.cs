@@ -55,7 +55,7 @@ namespace VehiclesControl
                 _cameras[0].gameObject.SetActive(true);
 
                 // Debug Log
-                Debug.Log ("Camera with name: " + _cameras[0].GetComponent<Camera>().name + ", is now enabled");
+                //Debug.Log ("Camera with name: " + _cameras[0].GetComponent<Camera>().name + ", is now enabled");
 
             } // close if
 
@@ -87,7 +87,7 @@ namespace VehiclesControl
             currentCameraIndex++;
 
             // Debug Log
-            Debug.Log ("The change camera button has been pressed. Switching to the next camera");
+            //Debug.Log ("The change camera button has been pressed. Switching to the next camera");
 
             // if
             if (currentCameraIndex < _cameras.Length)
@@ -99,7 +99,7 @@ namespace VehiclesControl
                 _cameras[currentCameraIndex].gameObject.SetActive(true);
 
                 // Debug Log
-                Debug.Log ("Camera with name: " + _cameras[currentCameraIndex].GetComponent<Camera>().name + ", is now enabled");
+                //Debug.Log ("Camera with name: " + _cameras[currentCameraIndex].GetComponent<Camera>().name + ", is now enabled");
 
             } // close if
 
@@ -116,7 +116,7 @@ namespace VehiclesControl
                 _cameras[currentCameraIndex].gameObject.SetActive(true);
 
                 // Debug Log
-                Debug.Log ("Camera with name: " + _cameras[currentCameraIndex].GetComponent<Camera>().name + ", is now enabled");
+                //Debug.Log ("Camera with name: " + _cameras[currentCameraIndex].GetComponent<Camera>().name + ", is now enabled");
 
             } // close else
 
