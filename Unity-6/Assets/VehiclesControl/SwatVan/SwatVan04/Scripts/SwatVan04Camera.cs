@@ -130,11 +130,11 @@ namespace VehiclesControl
 
 			} // close else
 	        
-			// float acc
-			float _acc = _swatVan04.GetComponent<Rigidbody>().linearVelocity.magnitude;
+			// float autoCamControl
+			float _autoCamControl = _swatVan04.GetComponent<Rigidbody>().linearVelocity.magnitude;
 
 			// GetComponent Camera fieldOfView
-			GetComponent<Camera>().fieldOfView = _defaultFieldOfView + _acc * _zoomRatio * Time.deltaTime;
+			GetComponent<Camera>().fieldOfView = _defaultFieldOfView + _autoCamControl * _zoomRatio * Time.deltaTime;
 		
 		} // close private void FixedUpdate
 

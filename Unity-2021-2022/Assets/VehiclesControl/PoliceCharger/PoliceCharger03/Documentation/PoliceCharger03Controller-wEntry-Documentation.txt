@@ -519,6 +519,13 @@ Police Cruiser: PoliceCharger03 (Transform)
 Height: 3.28
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 14: Create: empty "Interface"

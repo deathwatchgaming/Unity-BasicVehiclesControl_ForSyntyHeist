@@ -540,6 +540,13 @@ Police Cruiser: PoliceCharger01 (Transform)
 Height: 3.28
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 14: Create: empty "Interface"
@@ -1541,6 +1548,13 @@ Police Cruiser: PoliceCharger02 (Transform)
 Height: 3.28
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 39:  Create child of "VehiclesEntry" add Text tmp: "PoliceCharger02_EntryKey"
@@ -2486,6 +2500,13 @@ Transforms:
 Police Cruiser: PoliceCharger03 (Transform)
 
 Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3520,6 +3541,13 @@ Transforms:
 Police Cruiser: PoliceCharger04 (Transform)
 
 Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -8827,6 +8855,13 @@ SwatVan01: SwatVan01 (Transform)
 Height: 3.28
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 153:  Create child of "VehiclesEntry" add Text tmp: "SwatVan01_EntryKey"
@@ -10414,6 +10449,13 @@ Transforms:
 SwatVan02: SwatVan02 (Transform)
 
 Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -12141,6 +12183,13 @@ Transforms:
 SwatVan03: SwatVan03 (Transform)
 
 Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -13982,6 +14031,13 @@ Transforms:
 SwatVan04: SwatVan04 (Transform)
 
 Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

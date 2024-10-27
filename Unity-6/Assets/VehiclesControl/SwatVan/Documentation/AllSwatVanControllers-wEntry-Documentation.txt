@@ -520,6 +520,13 @@ SwatVan01: SwatVan01 (Transform)
 Height: 3.28
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 14: Create: empty "Interface"
@@ -1536,6 +1543,13 @@ SwatVan02: SwatVan02 (Transform)
 Height: 3.28
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 39:  Create child of "VehiclesEntry" add Text tmp: "SwatVan02_EntryKey"
@@ -2502,6 +2516,13 @@ Transforms:
 SwatVan03: SwatVan03 (Transform)
 
 Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3585,6 +3606,13 @@ Transforms:
 SwatVan04: SwatVan04 (Transform)
 
 Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
