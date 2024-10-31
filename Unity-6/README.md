@@ -142,7 +142,7 @@ Player and Vehicles Compass:
 ----------------------------
 
 
-* https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
+* Player and Vehicles Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
 
 
 
