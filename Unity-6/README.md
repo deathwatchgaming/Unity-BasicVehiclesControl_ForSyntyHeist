@@ -137,6 +137,15 @@ Vehicles Control:
 * All vehicles with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/Documentation/AllVehicleControllers-wEntry-Documentation.txt
 
 
+
+Player and Vehicles Compass:
+----------------------------
+
+
+* https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
+
+
+
 Police Charger: (total: 4)
 --------------------------
 

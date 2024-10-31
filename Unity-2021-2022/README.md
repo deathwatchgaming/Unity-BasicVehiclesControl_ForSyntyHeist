@@ -44,12 +44,6 @@ Other Currently "In Progress" & Not Yet Included:
 --------------------------------------------------
 
 
-Currently in progress:
-
-* Player & Vehicle Compasses: Scripts (100% completed though not yet added to repo)
-* Player & Vehicle Compasses: Related Documentations (0% completed)
-
-
 Possible future additions: (if and or when my limited free time and desire may allow)
 
 * Gas Station / Fuel System (0% Completed) coming TBA...
@@ -117,6 +111,15 @@ Vehicles Control:
 
 
 * All vehicles with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/VehiclesControl/Documentation/AllVehicleControllers-wEntry-Documentation.txt
+
+
+
+Player and Vehicles Compass:
+----------------------------
+
+
+* https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
+
 
 
 Police Charger: (total: 4)

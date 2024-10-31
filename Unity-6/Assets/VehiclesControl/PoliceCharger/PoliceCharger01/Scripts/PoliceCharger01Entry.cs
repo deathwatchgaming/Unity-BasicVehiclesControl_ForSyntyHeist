@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -99,10 +100,25 @@ namespace VehiclesControl
             return null;
 
         } // close GameObject FindInActiveObjectByName
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The police charger 01 compass")]
+            // PoliceCharger01Compass _charger01Compass
+            [SerializeField] private PoliceCharger01Compass _charger01Compass;  
+
+        //public static PoliceCharger01Entry _policeCharger01Entry;      
                 
         // private void Start
         private void Start() 
         {
+            //_policeCharger01Entry = this;
+
             // _policeCharger01Script is GetComponent PoliceCharger01Controller
             _policeCharger01Script = GetComponent<PoliceCharger01Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false); 
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _charger01Compass enabled is false
+            _charger01Compass.enabled = false;
+
+            // _charger01Compass compassEnabled is false
+            _charger01Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The Charger01 compass is disabled");
 
         } // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inPoliceCharger01 is false
                 _inPoliceCharger01 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _charger01Compass enabled is false
+                _charger01Compass.enabled = false;
+
+                // _charger01Compass compassEnabled is false
+                _charger01Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Charger01 compass is disabled");
 
             } // close if _inPoliceCharger01 and Input GetKey KeyCode _exitKey
 
@@ -197,6 +253,26 @@ namespace VehiclesControl
                 // _inPoliceCharger01 is true
                 _inPoliceCharger01 = true;
 
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _charger01Compass enabled is true
+                _charger01Compass.enabled = true;
+
+                // _charger01Compass compassEnabled is true
+                _charger01Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Charger01 compass is enabled");
+ 
             } // close if not _inPoliceCharger01 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
         } // close private void OnTriggerStay Collider other

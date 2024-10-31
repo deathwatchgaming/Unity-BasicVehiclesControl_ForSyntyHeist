@@ -3,12 +3,13 @@
  * Name: PoliceHelicopter01Entry.cs
  * Author: DeathwatchGaming
  * License: MIT
- * Unity Version(s): Unity 2021+ - 2022+ 
+ * Unity Version(s): Unity 2021+ - 2022+
  */
 
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -119,9 +120,24 @@ namespace VehiclesControl
 
         } // close GameObject FindInActiveObjectByName
 
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The police helicopter 01 compass")]
+            // PoliceHelicopter01Compass _heli01Compass
+            [SerializeField] private PoliceHelicopter01Compass _heli01Compass;  
+
+        //public static PoliceHelicopter01Entry _policeHelicopter01Entry;
+
         // private void Start
         private void Start() 
         {
+            //_policeHelicopter01Entry = this;
+
             // _policeHelicopter01Script is GetComponent PoliceHelicopter01Controller
             _policeHelicopter01Script = GetComponent<PoliceHelicopter01Controller>();
 
@@ -190,6 +206,26 @@ namespace VehiclesControl
             
             // _interfaceHUDObject SetActive is false
             _interfaceHUDObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _heli01Compass enabled is false
+            _heli01Compass.enabled = false;
+
+            // _heli01Compass compassEnabled is false
+            _heli01Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The Heli01 compass is disabled");
             
         } // close private void Start
 
@@ -236,6 +272,26 @@ namespace VehiclesControl
 
                 // _inPoliceHelicopter01 is false
                 _inPoliceHelicopter01 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _heli01Compass enabled is false
+                _heli01Compass.enabled = false;
+
+                // _heli01Compass compassEnabled is false
+                _heli01Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Heli01 compass is disabled");
 
             } // close if _inPoliceHelicopter01 and Input GetKey KeyCode _exitKey
 
@@ -299,6 +355,26 @@ namespace VehiclesControl
 
                 // _inPoliceHelicopter01 is true
                 _inPoliceHelicopter01 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _heli01Compass enabled is true
+                _heli01Compass.enabled = true;
+
+                // _heli01Compass compassEnabled is true
+                _heli01Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Heli01 compass is enabled");
 
             } // close if not _inPoliceHelicopter01 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 

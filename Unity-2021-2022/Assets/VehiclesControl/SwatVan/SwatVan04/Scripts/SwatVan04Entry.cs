@@ -3,12 +3,13 @@
  * Name: SwatVan04Entry.cs
  * Author: DeathwatchGaming
  * License: MIT
- * Unity Version(s): Unity 2021+ - 2022+ 
+ * Unity Version(s): Unity 2021+ - 2022+
  */
 
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -100,9 +101,24 @@ namespace VehiclesControl
 
         } // close GameObject FindInActiveObjectByName
 
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The swat van 04 compass")]
+            // SwatVan01Compass _swatVan04Compass
+            [SerializeField] private SwatVan04Compass _swatVan04Compass;  
+
+        //public static SwatVan04Entry _swatVan04Entry;
+
         // private void Start
         private void Start() 
         {
+            //_swatVan04Entry = this;
+
             // _swatVan04Script is GetComponent SwatVan04Controller
             _swatVan04Script = GetComponent<SwatVan04Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _swatVan04Compass enabled is false
+            _swatVan04Compass.enabled = false;
+
+            // _swatVan04Compass compassEnabled is false
+            _swatVan04Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The SwatVan04 compass is disabled");
 
         } // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inSwatVan04 is false
                 _inSwatVan04 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _swatVan04Compass enabled is false
+                _swatVan04Compass.enabled = false;
+
+                // _swatVan04Compass compassEnabled is false
+                _swatVan04Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The SwatVan04 compass is disabled");
 
             } // close if _inSwatVan04 and Input GetKey KeyCode _exitKey
 
@@ -196,6 +252,26 @@ namespace VehiclesControl
 
                 // _inSwatVan04 is true
                 _inSwatVan04 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _swatVan04Compass enabled is true
+                _swatVan04Compass.enabled = true;
+
+                // _swatVan04Compass compassEnabled is true
+                _swatVan04Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The SwatVan04 compass is enabled");
 
             } // close if not _inSwatVan04 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
