@@ -15358,6 +15358,10 @@ Interface
 EventSystem
 
 
+Lastly, you need to next follow the Player and Vehicles Compass setup steps to
+finalize the setup steps!
+
+
 -----------------------------------------------------------------------------------
 
 
