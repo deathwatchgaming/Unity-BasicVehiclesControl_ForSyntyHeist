@@ -47,7 +47,7 @@ Other Currently "In Progress" & Not Yet Included:
 Currently in progress:
 
 * Player & Vehicle Compasses: Scripts (100% completed though not yet added to repo)
-* Player & Vehicle Compasses: Related Dopcumentations (0% completed)
+* Player & Vehicle Compasses: Related Documentations (0% completed)
 
 
 Possible future additions: (if and or when my limited free time and desire may allow)
