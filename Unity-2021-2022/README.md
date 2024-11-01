@@ -118,7 +118,16 @@ Player and Vehicles Compass:
 ----------------------------
 
 
-* Player and Vehicles Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
+* All Vehicles with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
+
+
+* All Police Chargers with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/Compass-Documentation.txt
+
+
+* All Police Helicopters with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/Compass-Documentation.txt
+
+
+* All Swat Vans with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/Compass-Documentation.txt
 
 
 
