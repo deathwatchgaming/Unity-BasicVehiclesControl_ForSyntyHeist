@@ -873,16 +873,16 @@ Size: X: 4.241376 Y: 1.228981 Z: 1.03095
 
 -----------------------------------------------------------------------------------
 
-
-Ok, hopefully I covered everything. You should now be able to run around your
-scene with your player and then enter / exit and drive your vehicle around. 
-
-Note: The next and last step would be to now follow the provided scene with
-entry speedometer setup steps to finalize all setups steps.
+Note: The next step would be to now follow the provided scene with entry
+speedometer setup steps.
 
 Lastly, you need to next follow the Player and Vehicles Compass setup steps to
 finalize the setup steps!
 
+Ok, hopefully I covered everything. After completion of those steps you should
+then be able to run around your scene with your player and then enter / exit
+and drive your vehicle around and see your direction by player and vehicle
+compass.
 
 -----------------------------------------------------------------------------------
 

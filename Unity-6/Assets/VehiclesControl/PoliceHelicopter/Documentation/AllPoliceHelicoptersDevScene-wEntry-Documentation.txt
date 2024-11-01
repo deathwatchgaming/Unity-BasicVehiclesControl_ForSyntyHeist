@@ -3155,15 +3155,17 @@ Interface
 EventSystem
 
 
-Lastly, you need to next follow the Player and Vehicles Compass setup steps to
-finalize the setup steps!
-
-
 -----------------------------------------------------------------------------------
 
+Note: Lastly, you need to next follow the Player and Vehicles Compass setup steps to
+finalize the setup steps!
 
-That is it! You should now be able to run around your scene with your player
-controller and enter / exit your PoliceHelicopter controller(s)!
+Ok, hopefully I covered everything. After completion of those steps you should
+then be able to run around your scene with your player and then enter / exit
+and fly your helicopter(s) around and see your direction by player and vehicle
+compass.
+
+-----------------------------------------------------------------------------------
 
 
 Entry Script Note: the provided entry script(s) are provided "as is" simply as a
