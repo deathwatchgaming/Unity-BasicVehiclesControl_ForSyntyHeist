@@ -1017,6 +1017,11 @@ upon as you will find when you start tinkering with such. So note the
 starting point provided was the intention to then allow you the user to
 continue to expand upon this script further.
 
+Lastly, you need to next follow the Player and Vehicles Compass setup steps to
+finalize the setup steps!
+
+-----------------------------------------------------------------------------------
+
 
 Ok, that is it and concludes the basic PoliceHelicopter02 Controller manual
 setup steps. You can now begin to modify such further for your specific

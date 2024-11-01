@@ -869,6 +869,8 @@ Center: X: 0.07936704 Y: 0.8205938 Z: 0.4637029
 Size: X: 4.241376 Y: 1.228981 Z: 1.03095
 
 
+
+
 -----------------------------------------------------------------------------------
 
 
@@ -877,6 +879,9 @@ scene with your player and then enter / exit and drive your vehicle around.
 
 Note: The next and last step would be to now follow the provided scene with
 entry speedometer setup steps to finalize all setups steps.
+
+Lastly, you need to next follow the Player and Vehicles Compass setup steps to
+finalize the setup steps!
 
 
 -----------------------------------------------------------------------------------
