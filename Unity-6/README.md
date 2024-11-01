@@ -39,15 +39,17 @@ Vehicles Currently "Completed" & Included:
 * Swat Van (x4) (controller, speedometer, entry) - [Functional]
 * Police Helicopter (x4) (controller, hud, entry) - [Functional] Note: (the helicopter entry scripts that are currently provided are "as is" simply for start point)
 
+
+Other Currently "Completed" & Included:
+---------------------------------------
+
+
+* Player & Vehicles Compass
+
+ 
  
 Other Currently "In Progress" & Not Yet Included:
 --------------------------------------------------
-
-
-Currently in progress:
-
-* Player & Vehicle Compasses: Scripts (100% completed though not yet added to repo)
-* Player & Vehicle Compasses: Related Documentations (0% completed)
 
 
 Possible future additions: (if and or when my limited free time and desire may allow)
