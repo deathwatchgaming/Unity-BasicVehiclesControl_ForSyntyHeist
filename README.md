@@ -35,9 +35,9 @@ Vehicles Currently "Completed" & Included:
 ------------------------------------------
 
 
-* Police Charger (x4) (controller, speedometer, entry) - [Functional]
-* Swat Van (x4) (controller, speedometer, entry) - [Functional]
-* Police Helicopter (x4) (controller, hud, entry) - [Functional] Note: (the helicopter entry scripts that are currently provided are "as is" simply for start point)
+* Police Charger (x4) (controller, speedometer, entry, compass) - [Functional]
+* Swat Van (x4) (controller, speedometer, entry, compass) - [Functional]
+* Police Helicopter (x4) (controller, hud, entry, compass) - [Functional] Note: (the helicopter entry scripts that are currently provided are "as is" simply for start point)
 
 
 
