@@ -140,7 +140,7 @@ namespace NavigationControl
 			_displayangle = Mathf.RoundToInt(_headingAngle);
 
 			// Set the compass degree text to the clamped value, 
-			// but change it to the letter if it is Aa true direction
+			// but change it to the letter if it is a true direction
 
 			// Switch _displayangle
 			switch (_displayangle)

@@ -113,12 +113,12 @@ namespace NavigationControl
 			// _compassForeground uvRect is new Rect _policeHelicopter04 localEulerAngles.y 360, 0, 1, 1
 			_compassForeground.uvRect = new Rect(_policeHelicopter04.localEulerAngles.y / 360, 0, 1, 1);
 
-			// Get a copy of the player forward vector
+			// Get a copy of the _policeHelicopter04 forward vector
 
 			// Vector3 forward is _policeHelicopter04 transform forward
 			Vector3 forward = _policeHelicopter04.transform.forward;
 
-			// Zero out the Y of player forward vector to only get the direction in the X,Z 
+			// Zero out the Y of _policeHelicopter04 forward vector to only get the direction in the X,Z 
 
 			// forward y is 0
 			forward.y = 0;
@@ -140,7 +140,7 @@ namespace NavigationControl
 			_displayangle = Mathf.RoundToInt(_headingAngle);
 
 			// Set the compass degree text to the clamped value, 
-			// but change it to the letter if it is Aa true direction
+			// but change it to the letter if it is a true direction
 
 			// Switch _displayangle
 			switch (_displayangle)
