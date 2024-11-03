@@ -178,6 +178,12 @@ namespace VehiclesControl
             // _audioSource GetComponent AudioSource
             _audioSource = GetComponent<AudioSource>();
 
+            // Cursor lockState is CursorLockMode Locked
+            Cursor.lockState = CursorLockMode.Locked;
+
+            // Cursor visible is false
+            Cursor.visible = false;
+
         } // close private void Awake
         
         // Update is called every frame

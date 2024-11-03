@@ -144,6 +144,8 @@ Player and Vehicles Compass:
 ----------------------------
 
 
+All:
+
 * All Vehicles with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
 
 * All Police Chargers with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/Compass-Documentation.txt
@@ -151,6 +153,41 @@ Player and Vehicles Compass:
 * All Police Helicopters with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/Compass-Documentation.txt
 
 * All Swat Vans with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/Compass-Documentation.txt
+
+
+Individual with entry:
+
+Police Charger:
+
+* Police Charger 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger01-Individual-Compass-Documentation.txt
+
+* Police Charger 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger02-Individual-Compass-Documentation.txt
+
+* Police Charger 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger03-Individual-Compass-Documentation.txt
+
+* Police Charger 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger04-Individual-Compass-Documentation.txt
+
+
+Police Helicopter:
+
+* Police Helicopter 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter01-Individual-Compass-Documentation.txt
+
+* Police Helicopter 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter02-Individual-Compass-Documentation.txt
+
+* Police Helicopter 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter03-Individual-Compass-Documentation.txt
+
+* Police Helicopter 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter04-Individual-Compass-Documentation.txt
+
+
+Swat Van:
+
+* Swat Van 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan01-Individual-Compass-Documentation.txt
+
+* Swat Van 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan02-Individual-Compass-Documentation.txt
+
+* Swat Van 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan03-Individual-Compass-Documentation.txt
+
+* Swat Van 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan04-Individual-Compass-Documentation.txt
 
 
 
@@ -161,7 +198,7 @@ Police Charger: (total: 4)
 
 * Police Charger 01 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-wEntry-Documentation.txt
 
-* Police Charger 01 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-Speedometer-Documentation.txt
+* Police Charger 01 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-Speedometer-Documentation.txt
 
 * Police Charger 01 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-Spedometer-Documentation.txt
 
@@ -169,7 +206,7 @@ Police Charger: (total: 4)
 
 * Police Charger 02 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-wEntry-Documentation.txt
 
-* Police Charger 02 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-Speedometer-Documentation.txt
+* Police Charger 02 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-Speedometer-Documentation.txt
 
 * Police Charger 02 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-Spedometer-Documentation.txt
 
@@ -177,7 +214,7 @@ Police Charger: (total: 4)
 
 * Police Charger 03 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-wEntry-Documentation.txt
 
-* Police Charger 03 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-Speedometer-Documentation.txt
+* Police Charger 03 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-Speedometer-Documentation.txt
 
 * Police Charger 03 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-Spedometer-Documentation.txt
 
@@ -185,7 +222,7 @@ Police Charger: (total: 4)
 
 * Police Charger 04 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-wEntry-Documentation.txt
 
-* Police Charger 04 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Speedometer-Documentation.txt
+* Police Charger 04 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Speedometer-Documentation.txt
 
 * Police Charger 04 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Spedometer-Documentation.txt
 
@@ -221,7 +258,7 @@ Swat Van: (total: 4)
 
 * Swat Van 01 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-wEntry-Documentation.txt
 
-* Swat Van 01 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Speedometer-Documentation.txt
+* Swat Van 01 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Speedometer-Documentation.txt
 
 * Swat Van 01 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Spedometer-Documentation.txt
 
@@ -229,7 +266,7 @@ Swat Van: (total: 4)
 
 * Swat Van 02 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-wEntry-Documentation.txt
 
-* Swat Van 02 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-Speedometer-Documentation.txt
+* Swat Van 02 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-Speedometer-Documentation.txt
 
 * Swat Van 02 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-Spedometer-Documentation.txt
 
@@ -237,7 +274,7 @@ Swat Van: (total: 4)
 
 * Swat Van 03 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-wEntry-Documentation.txt
 
-* Swat Van 03 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-Speedometer-Documentation.txt
+* Swat Van 03 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-Speedometer-Documentation.txt
 
 * Swat Van 03 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-Spedometer-Documentation.txt
 
@@ -245,7 +282,7 @@ Swat Van: (total: 4)
 
 * Swat Van 04 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-wEntry-Documentation.txt
 
-* Swat Van 04 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-Speedometer-Documentation.txt
+* Swat Van 04 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-Speedometer-Documentation.txt
 
 * Swat Van 04 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-6/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-Spedometer-Documentation.txt
 
