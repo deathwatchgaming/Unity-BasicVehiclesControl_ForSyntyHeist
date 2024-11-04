@@ -716,6 +716,21 @@ Camera Switch Key: V
 
 -----------------------------------------------------------------------------------
 
+Optional: (Controller only) Compass Usage
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, if you would like to have the compass for controller only usage
+you need to next follow the Vehicle Compass (Controller Only) setup steps to
+finalize that part of the setup steps found via the NavigationControl
+specific vehicle directory documentation folder ie:
+
+PoliceHelicopter03-Controller-Only-Compass-Documentation
+
+
+-----------------------------------------------------------------------------------
+
 
 That is it and concludes the basic Police Helicopter 03 Controller manual setup
 steps. You can now begin to modify such further for your specific needs.
