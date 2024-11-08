@@ -48,8 +48,8 @@ Other Currently "Completed" & Included:
 
  
  
-Other Currently "In Progress" & Not Yet Included:
---------------------------------------------------
+Other Current Possibles "In Progress" & Not Yet Included:
+---------------------------------------------------------
 
 
 Possible future additions: (if and or when my limited free time and desire may allow)
