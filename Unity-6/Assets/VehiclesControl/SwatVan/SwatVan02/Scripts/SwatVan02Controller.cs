@@ -159,7 +159,7 @@ namespace VehiclesControl
 			// _rigidbody is GetComponent Rigidbody
 			_rigidbody = GetComponent<Rigidbody>();
 
-	        // Adjust the Rigidbody Mass
+			// Adjust the Rigidbody Mass
 			// _rigidbody mass is _rigidbodyMass
 			_rigidbody.mass = _rigidbodyMass;
 		
@@ -254,7 +254,7 @@ namespace VehiclesControl
 
 		// private void HandleAcceleration
 		private void HandleAcceleration()
-	    {
+		{
 			// Get the forward and reverse _acceleration from vertical axis (W and S keys)
 	        
 			// _currentAcceleration is _acceleration times Input GetAxis Vertical
@@ -272,7 +272,7 @@ namespace VehiclesControl
 
 		// private void HandleBraking
 		private void HandleBraking()
-	    {
+		{
 			// If we are pressing the _brakeKey give _currentBrakingForce a value
 
 			// if Input GetKey KeyCode _brakeKey
@@ -309,7 +309,7 @@ namespace VehiclesControl
 
 		// private void HandleSteering
 		private void HandleSteering()
-	    {
+		{
 			// Take care of the front wheels steering
 
 			// _currentTurnAngle is_maxTurnAngle times Input GetAxis Horizontal
@@ -325,7 +325,7 @@ namespace VehiclesControl
 
 		// private void UpdateWheelMeshes
 		private void UpdateWheelMeshes()
-	    {
+		{
 			// Update wheel meshes
 
 			// UpdateLeftWheel _frontLeft _frontLeftTransform
