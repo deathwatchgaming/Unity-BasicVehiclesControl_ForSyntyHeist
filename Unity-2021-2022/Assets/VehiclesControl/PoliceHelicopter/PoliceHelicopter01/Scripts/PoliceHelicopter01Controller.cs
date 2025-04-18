@@ -105,18 +105,6 @@ namespace VehiclesControl
             // private float _maxThrust
             [SerializeField] private float _maxThrust = 5f;
 
-            // private float _throttle  
-            private float _throttle;
-       
-            // private float _heliRoll
-            private float _heliRoll;
-
-            // private float _heliPitch
-            private float _heliPitch;
-
-            // private float _heliYaw
-            private float _heliYaw;
-
             [Tooltip("The Rotor Speed Modifier")]        
             // private float _rotorSpeedModifier
             [SerializeField] private float _rotorSpeedModifier = 10f;
@@ -150,9 +138,21 @@ namespace VehiclesControl
             // private AudioClip _rotorSound
             [SerializeField] private AudioClip _rotorSound;
         
-            // private Bool _rotorCheck
-            private bool _rotorCheck = false;
+        // private Bool _rotorCheck
+        private bool _rotorCheck = false;
 
+        // private float _throttle  
+        private float _throttle;
+       
+        // private float _heliRoll
+        private float _heliRoll;
+
+        // private float _heliPitch
+        private float _heliPitch;
+
+        // private float _heliYaw
+        private float _heliYaw;
+            
         // Awake is called even if the script is disabled
             
         // private void Awake
@@ -191,76 +191,17 @@ namespace VehiclesControl
         // private void Update
         private void Update()
         {
-            // HandleInputs
+            // Handle Inputs
             HandleInputs();
 
-            // HandleAirspeed
+            // Handle Airspeed
             HandleAirspeed();
 
-            // UpdateHUD
+            // Update HUD
             UpdateHUD();
             
-            // Top Rotor Rotate
-            
-            // _rotorsTransformTop
-            _rotorsTransformTop.Rotate(Vector3.up * (_maxThrust * _throttle) * _rotorSpeedModifier);
-
-            // Tail Rotor Rotate Roll or Yaw is 0
-
-            // if Input GetAxis _heliRollInput is 0 or Input GetAxis _heliYawInput is 0
-            if (Input.GetAxis(_heliRollInput) == 0 || Input.GetAxis(_heliYawInput) == 0)
-            {
-                // _rotorsTransformTail Rotate
-                _rotorsTransformTail.Rotate(Vector3.right * _throttle * _rotorSpeedModifier);
-
-            } // close if Input GetAxis _heliRollInput is 0 or Input GetAxis _heliYawInput is 0
-
-            // Tail Rotor Yaw Rotate
-
-            // if Input GetAxis _heliYawInput is less than 0
-            if (Input.GetAxis(_heliYawInput) < 0)
-            {
-                // _rotorsTransformTail
-                _rotorsTransformTail.Rotate(Vector3.left * (_maxThrust * _throttle) * _rotorSpeedModifier);
-
-            } // close if Input GetAxis _heliYawInput is less than 0
-
-            // if Input GetAxis _heliYawInput is greater than 0
-            if (Input.GetAxis(_heliYawInput) > 0)
-            {
-                // _rotorsTransformTail
-                _rotorsTransformTail.Rotate(Vector3.right * (_maxThrust * _throttle) * _rotorSpeedModifier);
-
-            } // close if Input GetAxis _heliYawInput is greater than 0
-
-            // Tail Rotor Roll Rotate
-
-            // if Input GetAxis _heliRollInput is less than 0
-            if (Input.GetAxis(_heliRollInput) < 0)
-            {
-                // _rotorsTransformTail
-                _rotorsTransformTail.Rotate(Vector3.left * (_maxThrust * _throttle) * _rotorSpeedModifier);
-
-            } // close if Input GetAxis _heliRollInput is less than 0
-
-            // if Input GetAxis _heliRollInput is greater than 0
-            if (Input.GetAxis(_heliRollInput) > 0)
-            {
-                // _rotorsTransformTail
-                _rotorsTransformTail.Rotate(Vector3.right * (_maxThrust * _throttle) * _rotorSpeedModifier);
-
-            } // close if Input GetAxis _heliRollInput is greater than 0
-            
-            // _audioSource volume
-            _audioSource.volume = (_throttle * 0.01f);  
-
-            // if _rotorCheck is true
-            if (_rotorCheck == true)
-            {
-                // PlayRotorSound
-                PlayRotorSound(); 
-
-            } // close if _rotorCheck is true
+            // Handle Rotors
+            HandleRotors();            
 
         } // close private void Update
 
@@ -418,6 +359,73 @@ namespace VehiclesControl
             } // close else if _speedType is PoliceHelicopter01AirspeedType.kmh
 
         } // close private void UpdateHUD           
+
+        // private void HandleRotors
+        private void HandleRotors()
+        {            
+            // Top Rotor Rotate
+            
+            // _rotorsTransformTop
+            _rotorsTransformTop.Rotate(Vector3.up * (_maxThrust * _throttle) * _rotorSpeedModifier);
+
+            // Tail Rotor Rotate Roll or Yaw is 0
+
+            // if Input GetAxis _heliRollInput is 0 or Input GetAxis _heliYawInput is 0
+            if (Input.GetAxis(_heliRollInput) == 0 || Input.GetAxis(_heliYawInput) == 0)
+            {
+                // _rotorsTransformTail Rotate
+                _rotorsTransformTail.Rotate(Vector3.right * _throttle * _rotorSpeedModifier);
+
+            } // close if Input GetAxis _heliRollInput is 0 or Input GetAxis _heliYawInput is 0
+
+            // Tail Rotor Yaw Rotate
+
+            // if Input GetAxis _heliYawInput is less than 0
+            if (Input.GetAxis(_heliYawInput) < 0)
+            {
+                // _rotorsTransformTail
+                _rotorsTransformTail.Rotate(Vector3.left * (_maxThrust * _throttle) * _rotorSpeedModifier);
+
+            } // close if Input GetAxis _heliYawInput is less than 0
+
+            // if Input GetAxis _heliYawInput is greater than 0
+            if (Input.GetAxis(_heliYawInput) > 0)
+            {
+                // _rotorsTransformTail
+                _rotorsTransformTail.Rotate(Vector3.right * (_maxThrust * _throttle) * _rotorSpeedModifier);
+
+            } // close if Input GetAxis _heliYawInput is greater than 0
+
+            // Tail Rotor Roll Rotate
+
+            // if Input GetAxis _heliRollInput is less than 0
+            if (Input.GetAxis(_heliRollInput) < 0)
+            {
+                // _rotorsTransformTail
+                _rotorsTransformTail.Rotate(Vector3.left * (_maxThrust * _throttle) * _rotorSpeedModifier);
+
+            } // close if Input GetAxis _heliRollInput is less than 0
+
+            // if Input GetAxis _heliRollInput is greater than 0
+            if (Input.GetAxis(_heliRollInput) > 0)
+            {
+                // _rotorsTransformTail
+                _rotorsTransformTail.Rotate(Vector3.right * (_maxThrust * _throttle) * _rotorSpeedModifier);
+
+            } // close if Input GetAxis _heliRollInput is greater than 0
+            
+            // _audioSource volume
+            _audioSource.volume = (_throttle * 0.01f);  
+
+            // if _rotorCheck is true
+            if (_rotorCheck == true)
+            {
+                // PlayRotorSound
+                PlayRotorSound(); 
+
+            } // close if _rotorCheck is true
+
+        } // close private void HandleRotors
 
         // private void PlayRotorSound
         private void PlayRotorSound()
