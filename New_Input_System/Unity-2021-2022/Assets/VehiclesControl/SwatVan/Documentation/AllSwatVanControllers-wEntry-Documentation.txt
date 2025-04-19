@@ -1,0 +1,4384 @@
+"AllSwatVanDevScene-wEntry" Scene Setup Steps
+-----------------------------------------------------------------------------------
+
+Description:
+
+Create a basic All Swat Van Vehicle Controller(s) with entry in scene
+for your Unity projects using vehicle models from Synty Polygon Heist Asset.
+
+Player Controls:
+----------------
+
+Player Forward:   W
+Player Reverse:   S
+Player Left:      A
+Player Right:     D
+Player Jump:      Space
+Player Sprint:    Left Shift
+
+
+Vehicle Controls: 
+-----------------
+
+Vehicle Forward:  W
+Vehicle Reverse:  S
+Turn Left:        A
+Turn Right:       D
+Apply Brake:      Space
+Enter Vehicle:    E
+Exit Vehicle:     F
+
+Manual Setup Instruction:
+-------------------------
+
+* Simply follow the instruction for manual setup found below.
+
+
+-----------------------------------------------------------------------------------
+
+Prep Step: Create New Scene Called: "AllSwatVanDevScene-wEntry"
+
+Note: if you already have some sort of a test terrain in place, well then, you
+can simple skip the steps: #1, 2 & 3 and go directly to #4.
+
+-----------------------------------------------------------------------------------
+
+Step 1: Create: "Environment" * (for Nicer Organization)
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Environment"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+First since this is just a "holder" added for better organization, let us go
+ahead & drag the "Directional Light" into "Environment".
+
+* also if you wanted you could add a "dir" called Environment and opt to place
+  your TerrainData inside that in its own Dir "TerrainData" and as such any
+  other Environment stuff respectively in as desired the "Environment" dir.
+  Just a suggestion.
+
+Also: We don't need the "Main Camera" in Sample Scene, so..., we can go ahead
+and delete it.
+
+
+-----------------------------------------------------------------------------------
+
+Step 2: Create: "Terrain Plane"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Plane"
+
+Position: X: 0   Y: -0.03 Z: 0 
+Rotation: X: 0   Y: 0     Z: 0 
+Scale:    X: 800 Y: 1     Z: 800
+
+Rename to: "Terrain Plane"
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain Plane" into the holder "Environment" we added for just this exact
+ purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 3: Create: "Terrain"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Terrain"
+
+Modify via:
+
+"Terrain" Inspector: Terrain Settings
+
+Mesh Resolution:
+
+Terrain Width: 8000
+Terrain Length: 8000
+
+Modify via:
+
+"Terrain" Inspector: "Transform"
+
+Position: X: -4000 Y: 0 Z: -4000 
+Rotation: X: 0     Y: 0 Z: 0 
+Scale:    X: 1     Y: 1 Z: 1
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain" into the holder "Environment" we added for just this exact purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 4: Create: empty "Vehicle"
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Vehicle"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your scene heirarchy at top should look like this:
+
+Environment
+Vehicle
+
+
+Nice and organized right?! :) Good Stuff! ;)
+
+Note: as this uses a vehicle from such and due to licensing such vehicles
+cannot be included in this repository obviously, as such the provided scripts
+and instructions thus require having / purchasing the:
+
+Synty Polygon Heist Asset:
+
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-poly-3d-art-by-synty-97949
+
+
+-----------------------------------------------------------------------------------
+
+Step 5: Install: "Synty Polygon Heist Asset"
+
+-----------------------------------------------------------------------------------
+
+
+Depending on how you purchased you can either use the package manager to
+install the asset or if you are like me and say already have local repository
+storage of purchased assets and have the package already you can install the
+asset manually.
+
+Asset package to install:
+
+ POLYGON Heist - Low Poly 3D Art by Synty.unitypackage
+
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-poly-3d-art-by-synty-97949
+
+
+-----------------------------------------------------------------------------------
+
+Step 6: Identify: the "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonHeist > Prefabs > Vehicles
+
+SM_Veh_SwatVan_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 7: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_SwatVan_01 => "SwatVan01"
+
+Next, set the Transform:
+
+Position: X: -9 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonHeist_Material_01_A
+
+Then move "SwatVan01" into the empty: "Vehicle" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 9: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SwatVan01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SwatVanVan01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 10: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_SwatVan_Wheel_fl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.4830076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_fr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.4830076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_rl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.4830076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_rr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.4830076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+
+-----------------------------------------------------------------------------------
+
+Step 11: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Left Wheel Collider Radius: 0.5120534
+Front Left Wheel Center X: 5.215406e-08 Y: 0  Z: 0
+Front Left Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Front Right Wheel Collider Radius: 0.5120534
+Front Right Wheel Center X: 0 Y: 0 Z: -1.192093e-07
+Front Right Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Rear Left Wheel Collider Radius: 0.5120534
+Rear Left Wheel Center X: 0 Y: 0  Z: 5.960464e-08
+Rear Left Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Rear Right Wheel Collider Radius: 0.5120534
+Rear Right Wheel Center X: -4.470348e-08 Y: 0  Z: 0
+Rear Right Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5120534
+Set both rear  "Wheel Colliders" radius: 0.5120534
+
+Set Front Left Wheel Collider Center: X: 5.215406e-08 Y: 0  Z: 0
+Set Front Right Wheel Collider Center: X: 0 Y: 0 Z: -1.192093e-07
+Set Rear Left Wheel Collider Center: X: 0 Y: 0  Z: 5.960464e-08
+Set Rear Right Wheel Collider Center: X: -4.470348e-08 Y: 0  Z: 0
+
+We will need to now edit these infos:
+
+
+SM_Veh_SwatVan_Wheel_fl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.6330076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_fr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.6330076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_rl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.6330076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_rr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.6330076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicle
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicle
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 12: Add to: Van (SwatVan01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan01Controller.cs) to "SwatVan01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Van (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_SwatVan_Wheel_fl (Transform)
+Front Right: SM_Veh_SwatVan_Wheel_fr (Transform)
+Rear Left: SM_Veh_SwatVan_Wheel_rl(Transform)
+Rear Right: SM_Veh_SwatVan_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_SwatVan_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_SwatVan_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_SwatVan_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_SwatVan_Wheel_rr (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 3000
+
+
+-----------------------------------------------------------------------------------
+
+Step 13: Add to: SwatVan01Camera (SwatVan01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan01Camera.cs) to "SwatVan01Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SwatVan01: SwatVan01 (Transform)
+
+Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
+-----------------------------------------------------------------------------------
+
+Step 14: Create: empty "Interface"
+
+-----------------------------------------------------------------------------------
+
+Create an empty called: "Interface"
+
+Layer: "UI"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0   Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1 
+
+
+-----------------------------------------------------------------------------------
+
+Step 15: In "Interface" Add UI: "Canvas"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" Add a UI: "Canvas"
+
+
+-----------------------------------------------------------------------------------
+
+Step 16: Create as child of "Canvas" add empty: "VehiclesEntry"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" add empty: "VehiclesEntry"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Bottom Center"
+
+Position: X: 0 Y: 50   Z: 0 
+Width: 100
+Height: 100
+
+
+-----------------------------------------------------------------------------------
+
+Step 17:  Create child of "VehiclesEntry" add Text tmp: "SwatVan01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SwatVan01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicle
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicle
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+Interface
+  Canvas
+    VehiclesEntry
+      SwatVan01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 18: Create: object "Player":
+
+-----------------------------------------------------------------------------------
+
+
+Create empty object and name such: "Player"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.9799998 Z: -15
+Rotation: X: 0 Y: 0  Z: 0 
+Scale:    X: 1 Y: 1  Z: 1
+
+Add Tag: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 19: Add: empty object "View":
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, create a child of the "Player" object and name
+such: "View"
+
+Transform Position: X: 0 Y: 0 Z: 0
+
+
+-----------------------------------------------------------------------------------
+
+Step 20: Add: "Camera":
+
+-----------------------------------------------------------------------------------
+
+In "Player" object, add a Camera component as child of "View" and name
+such: "Camera"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.6 Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1
+
+Depth: "1" 
+
+Add Tag: "MainCamera"
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Edit: the "CharacterController" component:
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, edit the "CharacterController" component:
+
+Height: "1.8"
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 23: Setup: Audio Source and Footstep Sounds Audio Clips:
+
+-----------------------------------------------------------------------------------
+
+In "Player" object edit: the "First Person Controller (Script)"
+
+Footstep Source: Player (AudioSource)
+
+Footstep Sounds: "4"
+
+Element 0: "Footstep01"
+Element 1: "Footstep02"
+Element 2: "Footstep03"
+Element 3: "Footstep04"
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicle
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicle
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+Interface
+  Canvas
+    VehiclesEntry
+      SwatVan01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 24: Add to: SwatVan01 (SwatVan01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan01Entry.cs) to "SwatVan01"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SwatVan01: SwatVan01
+Player: Player
+InterfaceText Object: SwatVan01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.1047263 Y: 1.611615 Z: 0.8782283
+Size: X: 4.096394 Y: 1.665149 Z: 1.00393
+
+
+
+-----------------------------------------------------------------------------------
+
+Step 25: In Interface > Canvas create empty child: "VehiclesSpeed"
+
+-----------------------------------------------------------------------------------
+
+
+In: "VehiclesSpeed"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Bottom Left
+
+Pos X: 146.3
+Pos Y: 143
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 26: In "VehiclesSpeed" create empty child: "SwatVan01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 27: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 28: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 29: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 30: In Vehicle > SwatVan01 attach script: (SwatVan01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SwatVan01Speedometer script: (SwatVan01Speedometer.cs) to
+Vehicle: "SwatVan01"
+
+In: "SwatVan01" > SwatVan01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SwatVan01_Needle
+
+Speed Text: SwatVan01_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SwatVan01Speedometer
+Interface IMG01 Object: SwatVan01_SpeedoGuage
+Interface IMG02 Object: SwatVan01_SpeedoNeedle
+Interface Text Object: SwatVan01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+SwatVan01Speedometer
+SwatVan01_SpeedoGuage
+SwatVan01_SpeedoNeedle
+SwatVan01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      SwatVan01Speedometer
+        SwatVan01_SpeedoGuage
+        SwatVan01_SpeedoNeedle
+        SwatVan01_SpeedText
+    VehiclesEntry
+      SwatVan01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 31: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonHeist > Prefabs > Vehicles
+
+SM_Veh_SwatVan_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 32: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_SwatVan_01 => "SwatVan02"
+
+Next, set the Transform:
+
+Position: X: -3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonHeist_Material_02_A
+
+Then move "SwatVan02" into the empty: "Vehicle" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 33: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan02" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 34: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SwatVan02Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SwatVanVan01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 35: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan02" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_SwatVan_Wheel_fl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.4830076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_fr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.4830076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_rl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.4830076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_rr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.4830076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+
+-----------------------------------------------------------------------------------
+
+Step 36: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan02" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Left Wheel Collider Radius: 0.5120534
+Front Left Wheel Center X: 5.215406e-08 Y: 0  Z: 0
+Front Left Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Front Right Wheel Collider Radius: 0.5120534
+Front Right Wheel Center X: 0 Y: 0 Z: -1.192093e-07
+Front Right Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Rear Left Wheel Collider Radius: 0.5120534
+Rear Left Wheel Center X: 0 Y: 0  Z: 5.960464e-08
+Rear Left Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Rear Right Wheel Collider Radius: 0.5120534
+Rear Right Wheel Center X: -4.470348e-08 Y: 0  Z: 0
+Rear Right Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5120534
+Set both rear  "Wheel Colliders" radius: 0.5120534
+
+Set Front Left Wheel Collider Center: X: 5.215406e-08 Y: 0  Z: 0
+Set Front Right Wheel Collider Center: X: 0 Y: 0 Z: -1.192093e-07
+Set Rear Left Wheel Collider Center: X: 0 Y: 0  Z: 5.960464e-08
+Set Rear Right Wheel Collider Center: X: -4.470348e-08 Y: 0  Z: 0
+
+We will need to now edit these infos:
+
+
+SM_Veh_SwatVan_Wheel_fl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.6330076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_fr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.6330076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_rl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.6330076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_rr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.6330076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 37: Add to: Van (SwatVan02Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan02Controller.cs) to "SwatVan02"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Van (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_SwatVan_Wheel_fl (Transform)
+Front Right: SM_Veh_SwatVan_Wheel_fr (Transform)
+Rear Left: SM_Veh_SwatVan_Wheel_rl(Transform)
+Rear Right: SM_Veh_SwatVan_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_SwatVan_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_SwatVan_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_SwatVan_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_SwatVan_Wheel_rr (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 3000
+
+
+-----------------------------------------------------------------------------------
+
+Step 38: Add to: SwatVan02Camera (SwatVan02Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan02Camera.cs) to "SwatVan02Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SwatVan02: SwatVan02 (Transform)
+
+Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
+-----------------------------------------------------------------------------------
+
+Step 39:  Create child of "VehiclesEntry" add Text tmp: "SwatVan02_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SwatVan02_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      SwatVan01Speedometer
+        SwatVan01_SpeedoGuage
+        SwatVan01_SpeedoNeedle
+        SwatVan01_SpeedText
+    VehiclesEntry
+      SwatVan01_EntryKey
+      SwatVan02_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      SwatVan01Speedometer
+        SwatVan01_SpeedoGuage
+        SwatVan01_SpeedoNeedle
+        SwatVan01_SpeedText
+    VehiclesEntry
+      SwatVan01_EntryKey
+      SwatVan02_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 40: Add to: SwatVan02 (SwatVan02Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan02Entry.cs) to "SwatVan02"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SwatVan02: SwatVan02
+Player: Player
+InterfaceText Object: SwatVan02_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.1047263 Y: 1.611615 Z: 0.8782283
+Size: X: 4.096394 Y: 1.665149 Z: 1.00393
+
+
+-----------------------------------------------------------------------------------
+
+Step 41: In "VehiclesSpeed" create empty child: "SwatVan02Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan02Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 42: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan02_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan02_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 43: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan02_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan02_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 44: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan02_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan02_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 45: In Vehicle > SwatVan02 attach script: (SwatVan02Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SwatVan02Speedometer script: (SwatVan02Speedometer.cs) to
+Vehicle: "SwatVan02"
+
+In: "SwatVan02" > SwatVan02 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SwatVan02_Needle
+
+Speed Text: SwatVan02_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SwatVan02Speedometer
+Interface IMG01 Object: SwatVan02_SpeedoGuage
+Interface IMG02 Object: SwatVan02_SpeedoNeedle
+Interface Text Object: SwatVan02_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+SwatVan02Speedometer
+SwatVan02_SpeedoGuage
+SwatVan02_SpeedoNeedle
+SwatVan02_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera      
+Interface
+  Canvas
+    VehiclesSpeed
+      SwatVan01Speedometer
+        SwatVan01_SpeedoGuage
+        SwatVan01_SpeedoNeedle
+        SwatVan01_SpeedText
+      SwatVan02Speedometer
+        SwatVan02_SpeedoGuage
+        SwatVan02_SpeedoNeedle
+        SwatVan02_SpeedText        
+    VehiclesEntry
+      SwatVan01_EntryKey
+      SwatVan02_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 46: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonHeist > Prefabs > Vehicles
+
+SM_Veh_SwatVan_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 47: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_SwatVan_01 => "SwatVan03"
+
+Next, set the Transform:
+
+Position: X: 3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonHeist_Material_03_A
+
+Then move "SwatVan03" into the empty: "Vehicle" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 48: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan03" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 49: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SwatVan03Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SwatVanVan01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 50: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan03" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_SwatVan_Wheel_fl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.4830076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_fr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.4830076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_rl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.4830076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_rr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.4830076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+
+-----------------------------------------------------------------------------------
+
+Step 51: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan03" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Left Wheel Collider Radius: 0.5120534
+Front Left Wheel Center X: 5.215406e-08 Y: 0  Z: 0
+Front Left Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Front Right Wheel Collider Radius: 0.5120534
+Front Right Wheel Center X: 0 Y: 0 Z: -1.192093e-07
+Front Right Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Rear Left Wheel Collider Radius: 0.5120534
+Rear Left Wheel Center X: 0 Y: 0  Z: 5.960464e-08
+Rear Left Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Rear Right Wheel Collider Radius: 0.5120534
+Rear Right Wheel Center X: -4.470348e-08 Y: 0  Z: 0
+Rear Right Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5120534
+Set both rear  "Wheel Colliders" radius: 0.5120534
+
+Set Front Left Wheel Collider Center: X: 5.215406e-08 Y: 0  Z: 0
+Set Front Right Wheel Collider Center: X: 0 Y: 0 Z: -1.192093e-07
+Set Rear Left Wheel Collider Center: X: 0 Y: 0  Z: 5.960464e-08
+Set Rear Right Wheel Collider Center: X: -4.470348e-08 Y: 0  Z: 0
+
+We will need to now edit these infos:
+
+
+SM_Veh_SwatVan_Wheel_fl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.6330076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_fr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.6330076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_rl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.6330076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_rr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.6330076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan03Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 52: Add to: Van (SwatVan03Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan03Controller.cs) to "SwatVan03"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Van (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_SwatVan_Wheel_fl (Transform)
+Front Right: SM_Veh_SwatVan_Wheel_fr (Transform)
+Rear Left: SM_Veh_SwatVan_Wheel_rl(Transform)
+Rear Right: SM_Veh_SwatVan_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_SwatVan_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_SwatVan_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_SwatVan_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_SwatVan_Wheel_rr (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 3000
+
+
+-----------------------------------------------------------------------------------
+
+Step 53: Add to: SwatVan03Camera (SwatVan03Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan03Camera.cs) to "SwatVan03Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SwatVan03: SwatVan03 (Transform)
+
+Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
+-----------------------------------------------------------------------------------
+
+Step 54:  Create child of "VehiclesEntry" add Text tmp: "SwatVan03_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SwatVan03_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan03Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      SwatVan01Speedometer
+        SwatVan01_SpeedoGuage
+        SwatVan01_SpeedoNeedle
+        SwatVan01_SpeedText
+      SwatVan02Speedometer
+        SwatVan02_SpeedoGuage
+        SwatVan02_SpeedoNeedle
+        SwatVan02_SpeedText 
+    VehiclesEntry
+      SwatVan01_EntryKey    
+      SwatVan02_EntryKey    
+      SwatVan03_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan03Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      SwatVan01Speedometer
+        SwatVan01_SpeedoGuage
+        SwatVan01_SpeedoNeedle
+        SwatVan01_SpeedText
+      SwatVan02Speedometer
+        SwatVan02_SpeedoGuage
+        SwatVan02_SpeedoNeedle
+        SwatVan02_SpeedText   
+    VehiclesEntry
+      SwatVan01_EntryKey    
+      SwatVan02_EntryKey    
+      SwatVan03_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 55: Add to: SwatVan03 (SwatVan03Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan03Entry.cs) to "SwatVan03"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SwatVan03: SwatVan03
+Player: Player
+InterfaceText Object: SwatVan03_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.1047263 Y: 1.611615 Z: 0.8782283
+Size: X: 4.096394 Y: 1.665149 Z: 1.00393
+
+
+-----------------------------------------------------------------------------------
+
+Step 56: In "VehiclesSpeed" create empty child: "SwatVan03Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan03Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 57: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan03_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan03_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 58: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan03_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan03_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 59: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan03_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan03_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 60: In Vehicle > SwatVan03 attach script: (SwatVan03Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SwatVan03Speedometer script: (SwatVan03Speedometer.cs) to
+Vehicle: "SwatVan03"
+
+In: "SwatVan03" > SwatVan03 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SwatVan03_Needle
+
+Speed Text: SwatVan03_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SwatVan03Speedometer
+Interface IMG01 Object: SwatVan03_SpeedoGuage
+Interface IMG02 Object: SwatVan03_SpeedoNeedle
+Interface Text Object: SwatVan03_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+SwatVan03Speedometer
+SwatVan03_SpeedoGuage
+SwatVan03_SpeedoNeedle
+SwatVan03_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View  
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View       
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera   
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan03Camera 
+Interface
+  Canvas
+    VehiclesSpeed
+      SwatVan01Speedometer
+        SwatVan01_SpeedoGuage
+        SwatVan01_SpeedoNeedle
+        SwatVan01_SpeedText
+      SwatVan02Speedometer
+        SwatVan02_SpeedoGuage
+        SwatVan02_SpeedoNeedle
+        SwatVan02_SpeedText  
+      SwatVan03Speedometer
+        SwatVan03_SpeedoGuage
+        SwatVan03_SpeedoNeedle
+        SwatVan03_SpeedText              
+    VehiclesEntry
+      SwatVan01_EntryKey
+      SwatVan02_EntryKey
+      SwatVan03_EntryKey            
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 61: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonHeist > Prefabs > Vehicles
+
+SM_Veh_SwatVan_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 62: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_SwatVan_01 => "SwatVan04"
+
+Next, set the Transform:
+
+Position: X: 9 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonHeist_Material_04_A
+
+Then move "SwatVan04" into the empty: "Vehicle" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 63: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan04" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 64: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SwatVan04Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SwatVanVan01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 65: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan04" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_SwatVan_Wheel_fl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.4830076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_fr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.4830076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_rl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.4830076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+SM_Veh_SwatVan_Wheel_rr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.4830076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable Sphere Collider component!
+
+
+-----------------------------------------------------------------------------------
+
+Step 66: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan04" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Left Wheel Collider Radius: 0.5120534
+Front Left Wheel Center X: 5.215406e-08 Y: 0  Z: 0
+Front Left Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Front Right Wheel Collider Radius: 0.5120534
+Front Right Wheel Center X: 0 Y: 0 Z: -1.192093e-07
+Front Right Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Rear Left Wheel Collider Radius: 0.5120534
+Rear Left Wheel Center X: 0 Y: 0  Z: 5.960464e-08
+Rear Left Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+Rear Right Wheel Collider Radius: 0.5120534
+Rear Right Wheel Center X: -4.470348e-08 Y: 0  Z: 0
+Rear Right Wheel Collider Position Y: 0.6330076 (0.5120534+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_SwatVan_Wheel_fl
+SM_Veh_SwatVan_Wheel_fr
+SM_Veh_SwatVan_Wheel_rl
+SM_Veh_SwatVan_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5120534
+Set both rear  "Wheel Colliders" radius: 0.5120534
+
+Set Front Left Wheel Collider Center: X: 5.215406e-08 Y: 0  Z: 0
+Set Front Right Wheel Collider Center: X: 0 Y: 0 Z: -1.192093e-07
+Set Rear Left Wheel Collider Center: X: 0 Y: 0  Z: 5.960464e-08
+Set Rear Right Wheel Collider Center: X: -4.470348e-08 Y: 0  Z: 0
+
+We will need to now edit these infos:
+
+
+SM_Veh_SwatVan_Wheel_fl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.6330076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_fr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.6330076 Z: 1.927024
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_rl
+---------------------------
+
+Position: X: -0.9400756 Y: 0.6330076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_SwatVan_Wheel_rr
+---------------------------
+
+Position: X: 0.9400718 Y: 0.6330076 Z: -1.71297
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan04
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan03Camera
+  SwatVan04
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan04Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 67: Add to: Van (SwatVan04Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan04Controller.cs) to "SwatVan04"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Van (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_SwatVan_Wheel_fl (Transform)
+Front Right: SM_Veh_SwatVan_Wheel_fr (Transform)
+Rear Left: SM_Veh_SwatVan_Wheel_rl(Transform)
+Rear Right: SM_Veh_SwatVan_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_SwatVan_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_SwatVan_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_SwatVan_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_SwatVan_Wheel_rr (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 3000
+
+
+-----------------------------------------------------------------------------------
+
+Step 68: Add to: SwatVan04Camera (SwatVan04Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan04Camera.cs) to "SwatVan04Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SwatVan04: SwatVan04 (Transform)
+
+Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
+-----------------------------------------------------------------------------------
+
+Step 69:  Create child of "VehiclesEntry" add Text tmp: "SwatVan04_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SwatVan04_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan04
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan03Camera
+  SwatVan04
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan04Camera
+Interface
+  Canvas
+      SwatVan01Speedometer
+        SwatVan01_SpeedoGuage
+        SwatVan01_SpeedoNeedle
+        SwatVan01_SpeedText
+      SwatVan02Speedometer
+        SwatVan02_SpeedoGuage
+        SwatVan02_SpeedoNeedle
+        SwatVan02_SpeedText  
+      SwatVan03Speedometer
+        SwatVan03_SpeedoGuage
+        SwatVan03_SpeedoNeedle
+        SwatVan03_SpeedText   
+    VehiclesEntry
+      SwatVan01_EntryKey
+      SwatVan02_EntryKey
+      SwatVan03_EntryKey
+      SwatVan04_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan04
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan03Camera
+  SwatVan04
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan04Camera
+Interface
+  Canvas
+      SwatVan01Speedometer
+        SwatVan01_SpeedoGuage
+        SwatVan01_SpeedoNeedle
+        SwatVan01_SpeedText
+      SwatVan02Speedometer
+        SwatVan02_SpeedoGuage
+        SwatVan02_SpeedoNeedle
+        SwatVan02_SpeedText  
+      SwatVan03Speedometer
+        SwatVan03_SpeedoGuage
+        SwatVan03_SpeedoNeedle
+        SwatVan03_SpeedText   
+    VehiclesEntry
+      SwatVan01_EntryKey 
+      SwatVan02_EntryKey
+      SwatVan03_EntryKey               
+      SwatVan04_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 70: Add to: SwatVan04 (SwatVan04Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SwatVan04Entry.cs) to "SwatVan04"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SwatVan04: SwatVan04
+Player: Player
+InterfaceText Object: SwatVan04_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.1047263 Y: 1.611615 Z: 0.8782283
+Size: X: 4.096394 Y: 1.665149 Z: 1.00393
+
+
+-----------------------------------------------------------------------------------
+
+Step 71: In "VehiclesSpeed" create empty child: "SwatVan04Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SwatVan04Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 72: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan04_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan04_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 73: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan04_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan04_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 74: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan04_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SwatVan04_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 75: In Vehicle > SwatVan04 attach script: (SwatVan04Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SwatVan04Speedometer script: (SwatVan04Speedometer.cs) to
+Vehicle: "SwatVan04"
+
+In: "SwatVan04" > SwatVan04 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SwatVan04_Needle
+
+Speed Text: SwatVan04_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SwatVan04Speedometer
+Interface IMG01 Object: SwatVan04_SpeedoGuage
+Interface IMG02 Object: SwatVan04_SpeedoNeedle
+Interface Text Object: SwatVan04_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+SwatVan04Speedometer
+SwatVan04_SpeedoGuage
+SwatVan04_SpeedoNeedle
+SwatVan04_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View  
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View  
+  SwatVan04
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+    WheelColliders   
+    View         
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SwatVan01
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan01Camera
+  SwatVan02
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan02Camera   
+  SwatVan03
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan03Camera 
+  SwatVan04
+    SM_Veh_SwatVan_Door_l
+    SM_Veh_SwatVan_Door_r
+    SM_Veh_SwatVan_Glass
+    SM_Veh_SwatVan_Steering_Wheel_01
+    WheelMeshes
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr
+    WheelColliders
+      SM_Veh_SwatVan_Wheel_fl
+      SM_Veh_SwatVan_Wheel_fr
+      SM_Veh_SwatVan_Wheel_rl
+      SM_Veh_SwatVan_Wheel_rr    
+    View
+      SwatVan04Camera       
+Interface
+  Canvas
+    VehiclesSpeed
+      SwatVan01Speedometer
+        SwatVan01_SpeedoGuage
+        SwatVan01_SpeedoNeedle
+        SwatVan01_SpeedText
+      SwatVan02Speedometer
+        SwatVan02_SpeedoGuage
+        SwatVan02_SpeedoNeedle
+        SwatVan02_SpeedText  
+      SwatVan03Speedometer
+        SwatVan03_SpeedoGuage
+        SwatVan03_SpeedoNeedle
+        SwatVan03_SpeedText 
+      SwatVan04Speedometer
+        SwatVan04_SpeedoGuage
+        SwatVan04_SpeedoNeedle
+        SwatVan04_SpeedText 
+    VehiclesEntry
+      SwatVan01_EntryKey
+      SwatVan02_EntryKey
+      SwatVan03_EntryKey 
+      SwatVan04_EntryKey                 
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Note: Lastly, you need to next follow the Player and Vehicles Compass setup steps to
+finalize the setup steps!
+
+Ok, hopefully I covered everything. After completion of those steps you should
+then be able to run around your scene with your player and then enter / exit
+and drive your vehicle around and see your direction by player and vehicle
+compass.
+
+-----------------------------------------------------------------------------------
+
+
+That should about sum it up and should be about it and concludes the basic All
+Swat Vans Vehicle Controller with entry in scene manual setup steps. You can
+now begin to modify such further for your specific needs.
+
+Best of Luck!
