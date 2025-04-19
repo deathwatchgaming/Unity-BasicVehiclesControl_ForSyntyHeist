@@ -102,6 +102,21 @@ Player Controls:
   Note: The following found below are related to the provided playercontrol script for usage example if say using vehicle entry script.
 
 
+New_Input_System Variant:
+
+
+* Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+* Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+* Player Left:      A [Keyboard] / Left Stick [Gamepad]
+* Player Right:     D [Keyboard] / Left Stick [Gamepad]
+* Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+* Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+* Player Look:             Delta [Mouse] / Right Stick [Gamepad]
+
+
+Old_Input_System Variant:
+
+
 * Player Forward:   W
 * Player Reverse:   S
 * Player Left:      A
@@ -117,11 +132,54 @@ Vehicle Controls:
   Note: The following below are related to both variations either standalone vehicle controller usage and entry script usage.
 
 
+New_Input_System Variant:
+
+Cars:
+
+* Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+* Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+* Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+* Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+* Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+
+Helicopters:
+
+* Roll: A & D [Keyboard] / Left Stick [Gamepad]
+* Pitch: S & W [Keyboard] / Left Stick [Gamepad] 
+* Yaw:  Q & E [Keyboard] / Right Stick [Gamepad]
+* Decrease throttle: Shift [Keyboard] / D-Pad Down [Gamepad]
+* Increase throttle: Control [Keyboard] / D-Pad Up [Gamepad] 
+* Change Cameras: V [Keyboard] / D-Pad Left [Gamepad] (ie: Rear Camera, Belly Camera & Cockpit Camera) 
+
+
+Entry Script: 
+
+
+  Note: The following found below are specific only when entry script is applied.
+
+
+* Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+* Exit Vehicle:       F [Keyboard] / Button South [Gamepad] 
+
+
+Old_Input_System Variant:  
+
+Cars:
+
 * Vehicle Forward:  W
 * Vehicle Reverse:  S
 * Turn Left:        A
 * Turn Right:       D
 * Apply Brake:      Space
+
+Helicopters:
+
+* Roll: A & D
+* Pitch: S & W
+* Yaw:  Q & E
+* Decrease throttle: Left Shift
+* Increase throttle: Left Control
+* Change Cameras: V (ie: Rear Camera, Belly Camera & Cockpit Camera)
 
 
 Entry Script: 
@@ -138,6 +196,17 @@ Manual Setup Instruction:
 -------------------------
 
 Simply follow the linkages found below  for documentation information / instruction respective to the version say for example either Unity 2021+ & Unity 2022+ or Unity 6....
+
+
+New_Input_System Variant:
+
+
+* Unity 20221+ & 2022+ => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/tree/main/New_Input_System/Unity-2021-2022
+
+
+* Unity 6 => Files, ReadMe, docs: coming soon...
+
+Old_Input_System Variant:
 
 
 * Unity 20221+ & 2022+ => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/tree/main/Old_Input_System/Unity-2021-2022
