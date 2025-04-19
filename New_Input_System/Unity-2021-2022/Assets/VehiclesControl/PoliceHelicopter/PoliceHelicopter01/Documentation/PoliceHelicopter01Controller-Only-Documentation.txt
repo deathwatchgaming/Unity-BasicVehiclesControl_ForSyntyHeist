@@ -18,8 +18,6 @@ Change Cameras: V [Keyboard] / D-Pad Left [Gamepad] *
 
 * (ie: Rear Camera, Belly Camera & Cockpit Camera) 
 
-Change Cameras: V (ie: Rear Camera, Belly Camera & Cockpit Camera)
-
 
 Manual Setup Instruction:
 -------------------------
@@ -431,7 +429,7 @@ Airspeed Type: Mph *
 
 * or Kmh depending on your desired choice
 
-Max Airspeed: 160 *
+Max Airspeed: 80 *
 
 * 160 is max suggested for Mph else say 260 for Kmh for example if such was
   selected
@@ -629,10 +627,11 @@ Element 0: Heli01 Rear Camera
 Element 1: Heli01 Belly Camera
 Element 2: Heli01 Cockpit Camera
 
-Input:
-------
+Input Actions:
+--------------
 
-Camera Switch Key: V
+
+Helicopter Controls: HelicopterControls (Input Action Asset) 
 
 
 -----------------------------------------------------------------------------------

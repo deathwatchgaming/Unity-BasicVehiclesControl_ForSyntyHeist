@@ -445,7 +445,7 @@ Airspeed Type: Mph *
 
 * or Kmh depending on your desired choice
 
-Max Airspeed: 160 *
+Max Airspeed: 80 *
 
 * 160 is max suggested for Mph else say 260 for Kmh for example if such was
   selected
