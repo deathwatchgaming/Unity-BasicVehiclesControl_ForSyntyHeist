@@ -111,7 +111,7 @@ New_Input_System Variant:
 * Player Right:     D [Keyboard] / Left Stick [Gamepad]
 * Player Jump:      Space [Keyboard] / Button South [Gamepad] 
 * Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
-* Player Look:             Delta [Mouse] / Right Stick [Gamepad]
+* Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Old_Input_System Variant:
@@ -123,6 +123,7 @@ Old_Input_System Variant:
 * Player Right:     D
 * Player Jump:      Space
 * Player Sprint:    Left Shift
+* Player Look:      Mouse
 
 
 Vehicle Controls: 
@@ -133,6 +134,7 @@ Vehicle Controls:
 
 
 New_Input_System Variant:
+
 
 Cars:
 
@@ -163,6 +165,7 @@ Entry Script:
 
 
 Old_Input_System Variant:  
+
 
 Cars:
 
