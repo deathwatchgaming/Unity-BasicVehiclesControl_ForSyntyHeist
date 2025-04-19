@@ -30,9 +30,9 @@ The intention of these releases due to only being scripts for usage with models 
 
 NOTE: This project was developed while / for using Unity 2021+ & 2022+ 
 
-NOTE: This currently still uses the Old Input System, so as such depending on
-what version of Unity you may be using it may be necessary to make sure such
-or both is enabled in project settings.
+NOTE: This uses the New Input System, so as such depending on what version of
+Unity you may be using it may be necessary to make sure such or both is
+enabled in project settings.
 
 
 Vehicles Currently "Completed" & Included:
@@ -117,113 +117,113 @@ Simply follow the documentation instruction linkages for manual setups found bel
 PlayerControl:
 --------------
 
-* Example player control documentation: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/PlayerControl/Documentation/PlayerControl-Documentation.txt
+* Example player control documentation: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/PlayerControl/Documentation/PlayerControl-Documentation.txt
 
 
 Vehicles Control:
 -----------------
 
 
-* All vehicles with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/Documentation/AllVehicleControllers-wEntry-Documentation.txt
+* All vehicles with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/Documentation/AllVehicleControllers-wEntry-Documentation.txt
 
 
 
 Police Charger: (total: 4)
 --------------------------
 
-* Police Charger 01 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-Only-Documentation.txt
+* Police Charger 01 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-Only-Documentation.txt
 
-* Police Charger 01 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-wEntry-Documentation.txt
+* Police Charger 01 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-wEntry-Documentation.txt
 
-* Police Charger 01 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-Only-Speedometer-Documentation.txt
+* Police Charger 01 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-Only-Speedometer-Documentation.txt
 
-* Police Charger 01 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-Speedometer-Documentation.txt
+* Police Charger 01 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger01/Documentation/PoliceCharger01Controller-Speedometer-Documentation.txt
 
-* Police Charger 02 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-Only-Documentation.txt
+* Police Charger 02 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-Only-Documentation.txt
 
-* Police Charger 02 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-wEntry-Documentation.txt
+* Police Charger 02 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-wEntry-Documentation.txt
 
-* Police Charger 02 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-Only-Speedometer-Documentation.txt
+* Police Charger 02 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-Only-Speedometer-Documentation.txt
 
-* Police Charger 02 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-Speedometer-Documentation.txt
+* Police Charger 02 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger02/Documentation/PoliceCharger02Controller-Speedometer-Documentation.txt
 
-* Police Charger 03 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-Only-Documentation.txt
+* Police Charger 03 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-Only-Documentation.txt
 
-* Police Charger 03 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-wEntry-Documentation.txt
+* Police Charger 03 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-wEntry-Documentation.txt
 
-* Police Charger 03 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-Only-Speedometer-Documentation.txt
+* Police Charger 03 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-Only-Speedometer-Documentation.txt
 
-* Police Charger 03 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-Speedometer-Documentation.txt
+* Police Charger 03 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger03/Documentation/PoliceCharger03Controller-Speedometer-Documentation.txt
 
-* Police Charger 04controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Only-Documentation.txt
+* Police Charger 04controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Only-Documentation.txt
 
-* Police Charger 04 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-wEntry-Documentation.txt
+* Police Charger 04 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-wEntry-Documentation.txt
 
-* Police Charger 04 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Only-Speedometer-Documentation.txt
+* Police Charger 04 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Only-Speedometer-Documentation.txt
 
-* Police Charger 04 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Speedometer-Documentation.txt
+* Police Charger 04 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/PoliceCharger04/Documentation/PoliceCharger04Controller-Speedometer-Documentation.txt
 
-* All Police Chargers with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/Documentation/AllPoliceChargerControllers-wEntry-Documentation.txt
+* All Police Chargers with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceCharger/Documentation/AllPoliceChargerControllers-wEntry-Documentation.txt
 
 
 Police Helicopter: (total: 4)
 -----------------------------
 
-* Police Helicopter 01 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter01/Documentation/PoliceHelicopter01Controller-Only-Documentation.txt
+* Police Helicopter 01 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter01/Documentation/PoliceHelicopter01Controller-Only-Documentation.txt
 
-* Police Helicopter 01 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter01/Documentation/PoliceHelicopter01Controller-wEntry-Documentation.txt
+* Police Helicopter 01 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter01/Documentation/PoliceHelicopter01Controller-wEntry-Documentation.txt
 
-* Police Helicopter 02 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter02/Documentation/PoliceHelicopter02Controller-Only-Documentation.txt
+* Police Helicopter 02 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter02/Documentation/PoliceHelicopter02Controller-Only-Documentation.txt
 
-* Police Helicopter 02 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter02/Documentation/PoliceHelicopter02Controller-wEntry-Documentation.txt
+* Police Helicopter 02 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter02/Documentation/PoliceHelicopter02Controller-wEntry-Documentation.txt
 
-* Police Helicopter 03 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter03/Documentation/PoliceHelicopter03Controller-Only-Documentation.txt
+* Police Helicopter 03 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter03/Documentation/PoliceHelicopter03Controller-Only-Documentation.txt
 
-* Police Helicopter 03 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter03/Documentation/PoliceHelicopter03Controller-wEntry-Documentation.txt
+* Police Helicopter 03 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter03/Documentation/PoliceHelicopter03Controller-wEntry-Documentation.txt
 
-* Police Helicopter 04 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter04/Documentation/PoliceHelicopter04Controller-Only-Documentation.txt
+* Police Helicopter 04 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter04/Documentation/PoliceHelicopter04Controller-Only-Documentation.txt
 
-* Police Helicopter 04 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter04/Documentation/PoliceHelicopter04Controller-wEntry-Documentation.txt
+* Police Helicopter 04 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/PoliceHelicopter04/Documentation/PoliceHelicopter04Controller-wEntry-Documentation.txt
 
-* All Police Helicopters with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/Documentation/AllPoliceHelicoptersDevScene-wEntry-Documentation.txt
+* All Police Helicopters with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/PoliceHelicopter/Documentation/AllPoliceHelicoptersDevScene-wEntry-Documentation.txt
 
 
 Swat Van: (total: 4)
 --------------------
 
-* Swat Van 01 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Only-Documentation.txt
+* Swat Van 01 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Only-Documentation.txt
 
-* Swat Van 01 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-wEntry-Documentation.txt
+* Swat Van 01 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-wEntry-Documentation.txt
 
-* Swat Van 01 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Only-Speedometer-Documentation.txt
+* Swat Van 01 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Only-Speedometer-Documentation.txt
 
-* Swat Van 01 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Speedometer-Documentation.txt
+* Swat Van 01 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan01/Documentation/SwatVan01Controller-Speedometer-Documentation.txt
 
-* Swat Van 02 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-Only-Documentation.txt
+* Swat Van 02 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-Only-Documentation.txt
 
-* Swat Van 02 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-wEntry-Documentation.txt
+* Swat Van 02 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-wEntry-Documentation.txt
 
-* Swat Van 02 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-Only-Speedometer-Documentation.txt
+* Swat Van 02 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-Only-Speedometer-Documentation.txt
 
-* Swat Van 02 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-Speedometer-Documentation.txt
+* Swat Van 02 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan02/Documentation/SwatVan02Controller-Speedometer-Documentation.txt
 
-* Swat Van 03 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-Only-Documentation.txt
+* Swat Van 03 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-Only-Documentation.txt
 
-* Swat Van 03 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-wEntry-Documentation.txt
+* Swat Van 03 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-wEntry-Documentation.txt
 
-* Swat Van 03 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-Only-Speedometer-Documentation.txt
+* Swat Van 03 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-Only-Speedometer-Documentation.txt
 
-* Swat Van 03 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-Speedometer-Documentation.txt
+* Swat Van 03 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan03/Documentation/SwatVan03Controller-Speedometer-Documentation.txt
 
-* Swat Van 04 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-Only-Documentation.txt
+* Swat Van 04 controller only in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-Only-Documentation.txt
 
-* Swat Van 04 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-wEntry-Documentation.txt
+* Swat Van 04 controller with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-wEntry-Documentation.txt
 
-* Swat Van 04 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-Only-Speedometer-Documentation.txt
+* Swat Van 04 controller only in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-Only-Speedometer-Documentation.txt
 
-* Swat Van 04 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-Speedometer-Documentation.txt
+* Swat Van 04 controller with entry in scene speedometer setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/SwatVan04/Documentation/SwatVan04Controller-Speedometer-Documentation.txt
 
-* All Swat Vans with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/Documentation/AllSwatVanControllers-wEntry-Documentation.txt
+* All Swat Vans with entry in scene setup:  https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/VehiclesControl/SwatVan/Documentation/AllSwatVanControllers-wEntry-Documentation.txt
 
 
 
@@ -233,13 +233,13 @@ Player and Vehicles Compass:
 
 All with entry:
 
-* All Vehicles with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
+* All Vehicles with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
 
-* All Police Chargers with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/Compass-Documentation.txt
+* All Police Chargers with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/Compass-Documentation.txt
 
-* All Police Helicopters with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/Compass-Documentation.txt
+* All Police Helicopters with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/Compass-Documentation.txt
 
-* All Swat Vans with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/Compass-Documentation.txt
+* All Swat Vans with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/Compass-Documentation.txt
 
 
 Individual Vehicles:
@@ -248,68 +248,68 @@ Police Charger:
 
 Vehicles with entry:
 
-* Police Charger 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger01-Individual-Compass-Documentation.txt
+* Police Charger 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger01-Individual-Compass-Documentation.txt
 
-* Police Charger 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger02-Individual-Compass-Documentation.txt
+* Police Charger 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger02-Individual-Compass-Documentation.txt
 
-* Police Charger 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger03-Individual-Compass-Documentation.txt
+* Police Charger 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger03-Individual-Compass-Documentation.txt
 
-* Police Charger 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger04-Individual-Compass-Documentation.txt
+* Police Charger 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger04-Individual-Compass-Documentation.txt
 
 Vehicles without entry:
 
-* Police Charger 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger01-Controller-Only-Compass-Documentation.txt
+* Police Charger 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger01-Controller-Only-Compass-Documentation.txt
 
-* Police Charger 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger02-Controller-Only-Compass-Documentation.txt
+* Police Charger 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger02-Controller-Only-Compass-Documentation.txt
 
-* Police Charger 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger03-Controller-Only-Compass-Documentation.txt
+* Police Charger 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger03-Controller-Only-Compass-Documentation.txt
 
-* Police Charger 04 without Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger04-Controller-Only-Compass-Documentation.txt
+* Police Charger 04 without Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger04-Controller-Only-Compass-Documentation.txt
 
 
 Police Helicopter:
 
 Vehicles with entry:
 
-* Police Helicopter 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter01-Individual-Compass-Documentation.txt
+* Police Helicopter 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter01-Individual-Compass-Documentation.txt
 
-* Police Helicopter 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter02-Individual-Compass-Documentation.txt
+* Police Helicopter 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter02-Individual-Compass-Documentation.txt
 
-* Police Helicopter 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter03-Individual-Compass-Documentation.txt
+* Police Helicopter 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter03-Individual-Compass-Documentation.txt
 
-* Police Helicopter 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter04-Individual-Compass-Documentation.txt
+* Police Helicopter 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter04-Individual-Compass-Documentation.txt
 
 Vehicles without entry:
 
-* Police Helicopter 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter01-Controller-Only-Compass-Documentation.txt
+* Police Helicopter 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter01-Controller-Only-Compass-Documentation.txt
 
-* Police Helicopter 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter02-Controller-Only-Compass-Documentation.txt
+* Police Helicopter 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter02-Controller-Only-Compass-Documentation.txt
 
-* Police Helicopter 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter03-Controller-Only-Compass-Documentation.txt
+* Police Helicopter 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter03-Controller-Only-Compass-Documentation.txt
 
-* Police Helicopter 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter04-Controller-Only-Compass-Documentation.txt
+* Police Helicopter 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceHelicopter/Documentation/PoliceHelicopter04-Controller-Only-Compass-Documentation.txt
 
 
 Swat Van:
 
 Vehicles with entry:
 
-* Swat Van 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan01-Individual-Compass-Documentation.txt
+* Swat Van 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan01-Individual-Compass-Documentation.txt
 
-* Swat Van 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan02-Individual-Compass-Documentation.txt
+* Swat Van 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan02-Individual-Compass-Documentation.txt
 
-* Swat Van 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan03-Individual-Compass-Documentation.txt
+* Swat Van 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan03-Individual-Compass-Documentation.txt
 
-* Swat Van 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan04-Individual-Compass-Documentation.txt
+* Swat Van 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan04-Individual-Compass-Documentation.txt
 
 Vehicles without entry:
 
-* Swat Van 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan01-Controller-Only-Compass-Documentation.txt
+* Swat Van 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan01-Controller-Only-Compass-Documentation.txt
 
-* Swat Van 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan02-Controller-Only-Compass-Documentation.txt
+* Swat Van 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan02-Controller-Only-Compass-Documentation.txt
 
-* Swat Van 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan03-Controller-Only-Compass-Documentation.txt
+* Swat Van 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan03-Controller-Only-Compass-Documentation.txt
 
-* Swat Van 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Old_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan04-Controller-Only-Compass-Documentation.txt
+* Swat Van 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SwatVan/Documentation/SwatVan04-Controller-Only-Compass-Documentation.txt
 
 
