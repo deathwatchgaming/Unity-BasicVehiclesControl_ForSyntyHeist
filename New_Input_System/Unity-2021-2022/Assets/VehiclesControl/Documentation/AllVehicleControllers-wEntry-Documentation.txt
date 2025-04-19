@@ -10,43 +10,48 @@ projects using vehicle models from Synty Polygon Heist Asset.
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
-Enter Vehicle:    E
-Exit Vehicle:     F
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
 
 
 Helicopter Controls: 
 --------------------
 
-Heli Roll:        A & D
-Heli Pitch:       S & W
-Heli Yaw:         Q & E
-Enter Vehicle:    E
-Exit Vehicle:     F
-
-Decrease throttle: Left Shift
-Increase throttle: Left Control
+Helicopter Roll: A & D [Keyboard] / Left Stick [Gamepad]
+Helicopter Pitch: S & W [Keyboard] / Left Stick [Gamepad] 
+Helicopter Yaw:  Q & E [Keyboard] / Right Stick [Gamepad]
+Helicopter Decrease throttle: Shift [Keyboard] / D-Pad Down [Gamepad]
+Helicopter Increase throttle: Control [Keyboard] / D-Pad Up [Gamepad]
 
 
 Helicopter Camera Controls:
 ---------------------------
 
-Change Cameras: V (ie: Rear Camera, Belly Camera & Cockpit Camera)
+Helicopter Change Cameras: V [Keyboard] / D-Pad Left [Gamepad] * 
+
+* (ie: Rear Camera, Belly Camera & Cockpit Camera) 
+
+
+Entry Controls:
+-----------------
+
+Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:       F [Keyboard] / Button South [Gamepad]
 
 
 Manual Setup Instruction:
@@ -520,6 +525,13 @@ Rigidbody Mass:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 13: Add to: PoliceCharger01Camera (PoliceCharger01Camera.cs)
@@ -752,7 +764,23 @@ Add Tag: "MainCamera"
 
 -----------------------------------------------------------------------------------
 
-Step 21: Edit: the "CharacterController" component:
+Step 21: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+Input Actions:
+--------------
+
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -760,16 +788,6 @@ Step 21: Edit: the "CharacterController" component:
 In "Player" object, edit the "CharacterController" component:
 
 Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 22: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
 
 
 -----------------------------------------------------------------------------------
@@ -873,6 +891,13 @@ Game Objects:
 PoliceCharger01: PoliceCharger01
 Player: Player
 InterfaceText Object: PoliceCharger01_EntryKey
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 In Box Collider:
@@ -1090,6 +1115,14 @@ Interface Parent Object: PoliceCharger01Speedometer
 Interface IMG01 Object: PoliceCharger01_SpeedoGuage
 Interface IMG02 Object: PoliceCharger01_SpeedoNeedle
 Interface Text Object: PoliceCharger01_SpeedText
+
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1528,6 +1561,13 @@ Rigidbody Mass:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 38: Add to: PoliceCharger02Camera (PoliceCharger02Camera.cs)
@@ -1798,6 +1838,13 @@ Player: Player
 InterfaceText Object: PoliceCharger02_EntryKey
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 In Box Collider:
 ----------------
 
@@ -1993,6 +2040,13 @@ Interface Parent Object: PoliceCharger02Speedometer
 Interface IMG01 Object: PoliceCharger02_SpeedoGuage
 Interface IMG02 Object: PoliceCharger02_SpeedoNeedle
 Interface Text Object: PoliceCharger02_SpeedText
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2482,6 +2536,13 @@ Rigidbody Mass:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 53: Add to: PoliceCharger03Camera (PoliceCharger03Camera.cs)
@@ -2788,6 +2849,13 @@ Player: Player
 InterfaceText Object: PoliceCharger03_EntryKey
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 In Box Collider:
 ----------------
 
@@ -2983,6 +3051,13 @@ Interface Parent Object: PoliceCharger03Speedometer
 Interface IMG01 Object: PoliceCharger03_SpeedoGuage
 Interface IMG02 Object: PoliceCharger03_SpeedoNeedle
 Interface Text Object: PoliceCharger03_SpeedText
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3523,6 +3598,13 @@ Rigidbody Mass:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 72: Add to: PoliceCharger04Camera (PoliceCharger04Camera.cs)
@@ -3877,6 +3959,13 @@ Player: Player
 InterfaceText Object: PoliceCharger04_EntryKey
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 In Box Collider:
 ----------------
 
@@ -4074,6 +4163,14 @@ Interface IMG02 Object: PoliceCharger04_SpeedoNeedle
 Interface Text Object: PoliceCharger04_SpeedText
 
 
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 
@@ -4249,95 +4346,7 @@ EventSystem
 
 -----------------------------------------------------------------------------------
 
-Step 80: Add Input: "Heli Roll"
-
------------------------------------------------------------------------------------
-
-
-In Edit -> Project Settings -> Input Manager:
-
-Add Input Axes: "Heli Roll"
-
-Name: Roll
-Negative Button: left
-Positive Button: right
-Alt Negative Button: a
-Alt Positive Button: d
-Gravity: 3
-Dead: 0.001
-Sensitivity: 3
-Snap: True (checked)
-Invert: False (unchecked)
-Type: Key or Mouse Button
-Axis: X axis
-Joy Num: Get Motion from all Joysticks
-
-Note: this is using the old input system and while yes, you could modify the script
-for new input system usage, currently that is not covered in the scope of this 
-setup at this time.
-
-
------------------------------------------------------------------------------------
-
-Step 81: Add Input: "Heli Pitch"
-
------------------------------------------------------------------------------------
-
-
-In Edit -> Project Settings -> Input Manager:
-
-Add Input Axes: "Heli Pitch"
-
-Name: Pitch
-Negative Button: down
-Positive Button: up
-Alt Negative Button: s
-Alt Positive Button: w
-Gravity: 3
-Dead: 0.001
-Sensitivity: 3
-Snap: True (checked)
-Invert: False (unchecked)
-Type: Key or Mouse Button
-Axis: X axis
-Joy Num: Get Motion from all Joysticks
-
-Note: this is using the old input system and while yes, you could modify the script
-for new input system usage, currently that is not covered in the scope of this 
-setup at this time.
-
-
------------------------------------------------------------------------------------
-
-Step 82: Add Input: "Heli Yaw"
-
------------------------------------------------------------------------------------
-
-
-In Edit -> Project Settings -> Input Manager:
-
-Add Input Axes: "Heli Yaw"
-
-Name: Yaw
-Negative Button: q
-Positive Button: e
-Gravity: 3
-Dead: 0.001
-Sensitivity: 3
-Snap: True (checked)
-Invert: False (unchecked)
-Type: Key or Mouse Button
-Axis: X axis
-Joy Num: Get Motion from all Joysticks
-
-Note: this is using the old input system and while yes, you could modify the script
-for new input system usage, currently that is not covered in the scope of this 
-setup at this time.
-
-
------------------------------------------------------------------------------------
-
-Step 83: Identify: the next "Vehicle Prefab"
+Step 80: Identify: the next "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -4351,7 +4360,7 @@ SM_Veh_Helicopter_01
 
 -----------------------------------------------------------------------------------
 
-Step 84: Add: the next "Vehicle Prefab" to Scene
+Step 81: Add: the next "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -4375,7 +4384,7 @@ Then move "PoliceHelicopter01" into the empty: "Vehicles" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 85: Add: empty "View" as child
+Step 82: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -4391,7 +4400,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 86: Add: "Camera(s)" in empty "View" as child
+Step 83: Add: "Camera(s)" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -4534,7 +4543,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 87: In "PoliceHelicopter01" Add: empty "Rotors" as child 
+Step 84: In "PoliceHelicopter01" Add: empty "Rotors" as child 
 
 -----------------------------------------------------------------------------------
 
@@ -4663,7 +4672,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 88: Add Script: "PoliceHelicopter01Controller.cs" to "PoliceHelicopter01" 
+Step 85: Add Script: "PoliceHelicopter01Controller.cs" to "PoliceHelicopter01" 
 
 -----------------------------------------------------------------------------------
 
@@ -4675,7 +4684,7 @@ Add Component: PoliceHelicopter01Controller (PoliceHelicopter01Controller)
 
 -----------------------------------------------------------------------------------
 
-Step 89: Modify Settings for: "PoliceHelicopter01Controller (Script)" 
+Step 86: Modify Settings for: "PoliceHelicopter01Controller (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -4687,14 +4696,6 @@ instead. So, in saying such, your settings should simply look like such:
 
 Script: PoliceHelicopter01Controller
 
-Inputs:
--------
-
-Heli Roll Input: Heli Roll
-Heli Pitch Input: Heli Pitch
-Heli Yaw Input: Heli Yaw
-Min Throttle Key: Left Shift
-Max Throttle Key: Left Control
 
 Components:
 -----------
@@ -4729,7 +4730,7 @@ Airspeed Type: Mph *
 
 * or Kmh depending on your desired choice
 
-Max Airspeed: 160 *
+Max Airspeed: 80 *
 
 * 160 is max suggested for Mph else say 260 for Kmh for example if such was
   selected
@@ -4749,10 +4750,16 @@ Audio:
 Audio Source: PoliceHelicopter01 (Audio Source)
 Rotor Sound: Helicopter01_Rotor
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 90: Modify Settings for: "Rigidbody (Component)" 
+Step 87: Modify Settings for: "Rigidbody (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -4766,7 +4773,7 @@ Mass: 360
 
 -----------------------------------------------------------------------------------
 
-Step 91: Modify Settings for: "Mesh Collider (Component)" 
+Step 88: Modify Settings for: "Mesh Collider (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -4780,7 +4787,7 @@ Convex: True (Bool checked)
 
 -----------------------------------------------------------------------------------
 
-Step 92: In "Canvas": add as child: An Empty called: "VehiclesHUD"
+Step 89: In "Canvas": add as child: An Empty called: "VehiclesHUD"
 
 -----------------------------------------------------------------------------------
 
@@ -4803,7 +4810,7 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 93: In "VehiclesHUD": add child: (TexMeshPro) called: "PoliceHelicopter01_HUD"
+Step 90: In "VehiclesHUD": add child: (TexMeshPro) called: "PoliceHelicopter01_HUD"
 
 -----------------------------------------------------------------------------------
 
@@ -4955,7 +4962,7 @@ PoliceHelicopter01_HUD
 
 -----------------------------------------------------------------------------------
 
-Step 94: Exit "Interface" & Add Script: "PoliceHelicopter01CamSwitch.cs" 
+Step 91: Exit "Interface" & Add Script: "PoliceHelicopter01CamSwitch.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -4970,7 +4977,7 @@ Then re-enable the previously disabled camera named: "Heli01 Belly Camera"
 
 -----------------------------------------------------------------------------------
 
-Step 95: Modify Settings for: "PoliceHelicopter01 Cam Switch (Script)" 
+Step 92: Modify Settings for: "PoliceHelicopter01 Cam Switch (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -4983,20 +4990,20 @@ Element 1: Heli01 Belly Camera
 
 Element 2: Heli01 Cockpit Camera
 
-Input:
-------
-
-Camera Switch Key: V
-
-
 
 * make sure that you include all three cams as the later added entry script is
   reliant on the same.
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 96: In "Canvas" add as child: An Empty called: "VehiclesEntry"
+Step 93: In "Canvas" add as child: An Empty called: "VehiclesEntry"
 
 -----------------------------------------------------------------------------------
 
@@ -5013,7 +5020,7 @@ Height: 100
 
 -----------------------------------------------------------------------------------
 
-Step 97: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter01_EntryKey" 
+Step 94: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter01_EntryKey" 
 
 -----------------------------------------------------------------------------------
 
@@ -5175,7 +5182,7 @@ PoliceHelicopter01_EntryKey
 
 -----------------------------------------------------------------------------------
 
-Step 98: Exit "Interface" & Add Script: "PoliceHelicopter01Entry.cs" 
+Step 95: Exit "Interface" & Add Script: "PoliceHelicopter01Entry.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -5186,15 +5193,6 @@ Add Component: PoliceHelicopter01Entry (Script)
 
 
 Script: PoliceHelicopter01Entry
-
-
-Input Customisations:
----------------------
-
-Enter Key: E
-
-Exit Key: F
-
 
 Game Objects:
 -------------
@@ -5221,10 +5219,16 @@ Element 2: Heli01 Cockpit Camera
 * make sure the element order matches the order that you have
   on "PoliceHelicopter01CamSwitch" component and that you include all three.
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 99: Edit component: "Box Collider"
+Step 96: Edit component: "Box Collider"
 
 -----------------------------------------------------------------------------------
 
@@ -5243,7 +5247,7 @@ tweaked further to your likings.
 
 -----------------------------------------------------------------------------------
 
-Step 100: Identify: the next "Vehicle Prefab"
+Step 97: Identify: the next "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -5257,7 +5261,7 @@ SM_Veh_Helicopter_01
 
 -----------------------------------------------------------------------------------
 
-Step 101: Add: the next "Vehicle Prefab" to Scene
+Step 98: Add: the next "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -5281,7 +5285,7 @@ Then move "PoliceHelicopter02" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 102: Add: empty "View" as child
+Step 99: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -5297,7 +5301,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 103: Add: "Camera(s)" in empty "View" as child
+Step 100: Add: "Camera(s)" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -5453,7 +5457,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 104: In "PoliceHelicopter02" Add: empty "Rotors" as child 
+Step 101: In "PoliceHelicopter02" Add: empty "Rotors" as child 
 
 -----------------------------------------------------------------------------------
 
@@ -5595,7 +5599,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 105: Add Script: "PoliceHelicopter02Controller.cs" to "PoliceHelicopter02" 
+Step 102: Add Script: "PoliceHelicopter02Controller.cs" to "PoliceHelicopter02" 
 
 -----------------------------------------------------------------------------------
 
@@ -5607,7 +5611,7 @@ Add Component: PoliceHelicopter02Controller (PoliceHelicopter02Controller)
 
 -----------------------------------------------------------------------------------
 
-Step 106: Modify Settings for: "PoliceHelicopter02Controller (Script)" 
+Step 103: Modify Settings for: "PoliceHelicopter02Controller (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -5619,14 +5623,6 @@ instead. So, in saying such, your settings should simply look like such:
 
 Script: PoliceHelicopter02Controller
 
-Inputs:
--------
-
-Heli Roll Input: Heli Roll
-Heli Pitch Input: Heli Pitch
-Heli Yaw Input: Heli Yaw
-Min Throttle Key: Left Shift
-Max Throttle Key: Left Control
 
 Components:
 -----------
@@ -5661,7 +5657,7 @@ Airspeed Type: Mph *
 
 * or Kmh depending on your desired choice
 
-Max Airspeed: 160 *
+Max Airspeed: 80 *
 
 * 160 is max suggested for Mph else say 260 for Kmh for example if such was
   selected
@@ -5681,10 +5677,16 @@ Audio:
 Audio Source: PoliceHelicopter02 (Audio Source)
 Rotor Sound: Helicopter02_Rotor
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 107: Modify Settings for: "Rigidbody (Component)" 
+Step 104: Modify Settings for: "Rigidbody (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -5698,7 +5700,7 @@ Mass: 360
 
 -----------------------------------------------------------------------------------
 
-Step 108: Modify Settings for: "Mesh Collider (Component)" 
+Step 105: Modify Settings for: "Mesh Collider (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -5712,7 +5714,7 @@ Convex: True (Bool checked)
 
 -----------------------------------------------------------------------------------
 
-Step 109: In "VehiclesHUD": add child: (TextMeshPro) called: "PoliceHelicopter02_HUD"
+Step 106: In "VehiclesHUD": add child: (TextMeshPro) called: "PoliceHelicopter02_HUD"
 
 -----------------------------------------------------------------------------------
 
@@ -5878,7 +5880,7 @@ PoliceHelicopter02_HUD
 
 -----------------------------------------------------------------------------------
 
-Step 110: Exit "Interface" & Add Script: "PoliceHelicopter02CamSwitch.cs" 
+Step 107: Exit "Interface" & Add Script: "PoliceHelicopter02CamSwitch.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -5893,7 +5895,7 @@ Then re-enable the previously disabled camera named: "Heli02 Belly Camera"
 
 -----------------------------------------------------------------------------------
 
-Step 111: Modify Settings for: "PoliceHelicopter02 Cam Switch (Script)" 
+Step 108: Modify Settings for: "PoliceHelicopter02 Cam Switch (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -5906,20 +5908,20 @@ Element 1: Heli02 Belly Camera
 
 Element 2: Heli02 Cockpit Camera
 
-Input:
-------
-
-Camera Switch Key: V
-
-
 
 * make sure that you include all three cams as the later added entry script is
   reliant on the same.
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 112: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter02_EntryKey" 
+Step 109: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter02_EntryKey" 
 
 -----------------------------------------------------------------------------------
 
@@ -6096,7 +6098,7 @@ PoliceHelicopter02_EntryKey
 
 -----------------------------------------------------------------------------------
 
-Step 113: Exit "Interface" & Add Script: "PoliceHelicopter02Entry.cs" 
+Step 110: Exit "Interface" & Add Script: "PoliceHelicopter02Entry.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -6108,13 +6110,6 @@ Add Component: PoliceHelicopter02Entry (Script)
 
 Script: PoliceHelicopter02Entry
 
-
-Input Customisations:
----------------------
-
-Enter Key: E
-
-Exit Key: F
 
 
 Game Objects:
@@ -6143,9 +6138,16 @@ Element 2: Heli02 Cockpit Camera
   on "PoliceHelicopter02CamSwitch" component and that you include all three.
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 114: Edit component: "Box Collider"
+Step 111: Edit component: "Box Collider"
 
 -----------------------------------------------------------------------------------
 
@@ -6164,7 +6166,7 @@ tweaked further to your likings.
 
 -----------------------------------------------------------------------------------
 
-Step 115: Identify: the next "Vehicle Prefab"
+Step 112: Identify: the next "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -6178,7 +6180,7 @@ SM_Veh_Helicopter_01
 
 -----------------------------------------------------------------------------------
 
-Step 116: Add: the next "Vehicle Prefab" to Scene
+Step 113: Add: the next "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -6202,7 +6204,7 @@ Then move "PoliceHelicopter03" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 117: Add: empty "View" as child
+Step 114: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -6218,7 +6220,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 118: Add: "Camera(s)" in empty "View" as child
+Step 115: Add: "Camera(s)" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -6387,7 +6389,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 119: In "PoliceHelicopter03" Add: empty "Rotors" as child 
+Step 116: In "PoliceHelicopter03" Add: empty "Rotors" as child 
 
 -----------------------------------------------------------------------------------
 
@@ -6542,7 +6544,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 120: Add Script: "PoliceHelicopter03Controller.cs" to "PoliceHelicopter03" 
+Step 117: Add Script: "PoliceHelicopter03Controller.cs" to "PoliceHelicopter03" 
 
 -----------------------------------------------------------------------------------
 
@@ -6554,7 +6556,7 @@ Add Component: PoliceHelicopter03Controller (PoliceHelicopter03Controller)
 
 -----------------------------------------------------------------------------------
 
-Step 121: Modify Settings for: "PoliceHelicopter03Controller (Script)" 
+Step 118: Modify Settings for: "PoliceHelicopter03Controller (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -6566,14 +6568,6 @@ instead. So, in saying such, your settings should simply look like such:
 
 Script: PoliceHelicopter03Controller
 
-Inputs:
--------
-
-Heli Roll Input: Heli Roll
-Heli Pitch Input: Heli Pitch
-Heli Yaw Input: Heli Yaw
-Min Throttle Key: Left Shift
-Max Throttle Key: Left Control
 
 Components:
 -----------
@@ -6608,7 +6602,7 @@ Airspeed Type: Mph *
 
 * or Kmh depending on your desired choice
 
-Max Airspeed: 160 *
+Max Airspeed: 80 *
 
 * 160 is max suggested for Mph else say 260 for Kmh for example if such was
   selected
@@ -6628,10 +6622,16 @@ Audio:
 Audio Source: PoliceHelicopter03 (Audio Source)
 Rotor Sound: Helicopter03_Rotor
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 122: Modify Settings for: "Rigidbody (Component)" 
+Step 119: Modify Settings for: "Rigidbody (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -6645,7 +6645,7 @@ Mass: 360
 
 -----------------------------------------------------------------------------------
 
-Step 123: Modify Settings for: "Mesh Collider (Component)" 
+Step 120: Modify Settings for: "Mesh Collider (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -6659,7 +6659,7 @@ Convex: True (Bool checked)
 
 -----------------------------------------------------------------------------------
 
-Step 124: In "VehiclesHUD": add child: (TexMeshPro) called: "PoliceHelicopter03_HUD"
+Step 121: In "VehiclesHUD": add child: (TexMeshPro) called: "PoliceHelicopter03_HUD"
 
 -----------------------------------------------------------------------------------
 
@@ -6839,7 +6839,7 @@ PoliceHelicopter03_HUD
 
 -----------------------------------------------------------------------------------
 
-Step 125: Exit "Interface" & Add Script: "PoliceHelicopter03CamSwitch.cs" 
+Step 122: Exit "Interface" & Add Script: "PoliceHelicopter03CamSwitch.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -6854,7 +6854,7 @@ Then re-enable the previously disabled camera named: "Heli03 Belly Camera"
 
 -----------------------------------------------------------------------------------
 
-Step 126: Modify Settings for: "PoliceHelicopter03 Cam Switch (Script)" 
+Step 123: Modify Settings for: "PoliceHelicopter03 Cam Switch (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -6867,20 +6867,20 @@ Element 1: Heli03 Belly Camera
 
 Element 2: Heli03 Cockpit Camera
 
-Input:
-------
-
-Camera Switch Key: V
-
-
 
 * make sure that you include all three cams as the later added entry script is
   reliant on the same.
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 127: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter03_EntryKey" 
+Step 124: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter03_EntryKey" 
 
 -----------------------------------------------------------------------------------
 
@@ -7072,7 +7072,7 @@ PoliceHelicopter03_EntryKey
 
 -----------------------------------------------------------------------------------
 
-Step 128: Exit "Interface" & Add Script: "PoliceHelicopter03Entry.cs" 
+Step 125: Exit "Interface" & Add Script: "PoliceHelicopter03Entry.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -7083,14 +7083,6 @@ Add Component: PoliceHelicopter03Entry (Script)
 
 
 Script: PoliceHelicopter03Entry
-
-
-Input Customisations:
----------------------
-
-Enter Key: E
-
-Exit Key: F
 
 
 Game Objects:
@@ -7119,9 +7111,16 @@ Element 2: Heli03 Cockpit Camera
   on "PoliceHelicopter03CamSwitch" component and that you include all three.
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 129: Edit component: "Box Collider"
+Step 126: Edit component: "Box Collider"
 
 -----------------------------------------------------------------------------------
 
@@ -7140,7 +7139,7 @@ tweaked further to your likings.
 
 -----------------------------------------------------------------------------------
 
-Step 130: Identify: the next "Vehicle Prefab"
+Step 127: Identify: the next "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -7154,7 +7153,7 @@ SM_Veh_Helicopter_01
 
 -----------------------------------------------------------------------------------
 
-Step 131: Add: the next "Vehicle Prefab" to Scene
+Step 128: Add: the next "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -7178,7 +7177,7 @@ Then move "PoliceHelicopter04" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 132: Add: empty "View" as child
+Step 129: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -7194,7 +7193,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 133: Add: "Camera(s)" in empty "View" as child
+Step 130: Add: "Camera(s)" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -7376,7 +7375,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 134: In "PoliceHelicopter04" Add: empty "Rotors" as child 
+Step 131: In "PoliceHelicopter04" Add: empty "Rotors" as child 
 
 -----------------------------------------------------------------------------------
 
@@ -7544,7 +7543,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 135: Add Script: "PoliceHelicopter04Controller.cs" to "PoliceHelicopter04" 
+Step 132: Add Script: "PoliceHelicopter04Controller.cs" to "PoliceHelicopter04" 
 
 -----------------------------------------------------------------------------------
 
@@ -7556,7 +7555,7 @@ Add Component: PoliceHelicopter04Controller (PoliceHelicopter04Controller)
 
 -----------------------------------------------------------------------------------
 
-Step 136: Modify Settings for: "PoliceHelicopter04Controller (Script)" 
+Step 133: Modify Settings for: "PoliceHelicopter04Controller (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -7568,14 +7567,6 @@ instead. So, in saying such, your settings should simply look like such:
 
 Script: PoliceHelicopter04Controller
 
-Inputs:
--------
-
-Heli Roll Input: Heli Roll
-Heli Pitch Input: Heli Pitch
-Heli Yaw Input: Heli Yaw
-Min Throttle Key: Left Shift
-Max Throttle Key: Left Control
 
 Components:
 -----------
@@ -7610,7 +7601,7 @@ Airspeed Type: Mph *
 
 * or Kmh depending on your desired choice
 
-Max Airspeed: 160 *
+Max Airspeed: 80 *
 
 * 160 is max suggested for Mph else say 260 for Kmh for example if such was
   selected
@@ -7630,10 +7621,16 @@ Audio:
 Audio Source: PoliceHelicopter04 (Audio Source)
 Rotor Sound: Helicopter04_Rotor
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 137: Modify Settings for: "Rigidbody (Component)" 
+Step 134: Modify Settings for: "Rigidbody (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -7647,7 +7644,7 @@ Mass: 360
 
 -----------------------------------------------------------------------------------
 
-Step 138: Modify Settings for: "Mesh Collider (Component)" 
+Step 135: Modify Settings for: "Mesh Collider (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -7661,7 +7658,7 @@ Convex: True (Bool checked)
 
 -----------------------------------------------------------------------------------
 
-Step 139: In "VehiclesHUD": add child: (TextMeshPro) called: "PoliceHelicopter04_HUD"
+Step 136: In "VehiclesHUD": add child: (TextMeshPro) called: "PoliceHelicopter04_HUD"
 
 -----------------------------------------------------------------------------------
 
@@ -7855,7 +7852,7 @@ PoliceHelicopter04_HUD
 
 -----------------------------------------------------------------------------------
 
-Step 140: Exit "Interface" & Add Script: "PoliceHelicopter04CamSwitch.cs" 
+Step 137: Exit "Interface" & Add Script: "PoliceHelicopter04CamSwitch.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -7870,7 +7867,7 @@ Then re-enable the previously disabled camera named: "Heli04 Belly Camera"
 
 -----------------------------------------------------------------------------------
 
-Step 141: Modify Settings for: "PoliceHelicopter04 Cam Switch (Script)" 
+Step 138: Modify Settings for: "PoliceHelicopter04 Cam Switch (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -7883,20 +7880,20 @@ Element 1: Heli04 Belly Camera
 
 Element 2: Heli04 Cockpit Camera
 
-Input:
-------
-
-Camera Switch Key: V
-
-
 
 * make sure that you include all three cams as the later added entry script is
   reliant on the same.
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 142: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter04_EntryKey" 
+Step 139: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter04_EntryKey" 
 
 -----------------------------------------------------------------------------------
 
@@ -8103,7 +8100,7 @@ PoliceHelicopter04_EntryKey
 
 -----------------------------------------------------------------------------------
 
-Step 143: Exit "Interface" & Add Script: "PoliceHelicopter04Entry.cs" 
+Step 140: Exit "Interface" & Add Script: "PoliceHelicopter04Entry.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -8115,13 +8112,6 @@ Add Component: PoliceHelicopter04Entry (Script)
 
 Script: PoliceHelicopter04Entry
 
-
-Input Customisations:
----------------------
-
-Enter Key: E
-
-Exit Key: F
 
 
 Game Objects:
@@ -8149,10 +8139,16 @@ Element 2: Heli04 Cockpit Camera
 * make sure the element order matches the order that you have
   on "PoliceHelicopter04CamSwitch" component and that you include all three.
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 144: Edit component: "Box Collider"
+Step 141: Edit component: "Box Collider"
 
 -----------------------------------------------------------------------------------
 
@@ -8342,7 +8338,7 @@ EventSystem
 
 -----------------------------------------------------------------------------------
 
-Step 145: Identify: the next "Vehicle Prefab"
+Step 142: Identify: the next "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -8356,7 +8352,7 @@ SM_Veh_SwatVan_01
 
 -----------------------------------------------------------------------------------
 
-Step 146: Add: the next "Vehicle Prefab" to Scene
+Step 143: Add: the next "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -8380,7 +8376,7 @@ Then move "SwatVan01" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 147: Add: empty "View" as child
+Step 144: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -8396,7 +8392,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 148: Add: "Camera" in empty "View" as child
+Step 145: Add: "Camera" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -8416,7 +8412,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 149: Add: empty "WheelMeshes" as child
+Step 146: Add: empty "WheelMeshes" as child
 
 -----------------------------------------------------------------------------------
 
@@ -8480,7 +8476,7 @@ Important: Disable Sphere Collider component!
 
 -----------------------------------------------------------------------------------
 
-Step 150: Duplicate: empty "WheelMeshes" as "WheelColliders"
+Step 147: Duplicate: empty "WheelMeshes" as "WheelColliders"
 
 -----------------------------------------------------------------------------------
 
@@ -8799,7 +8795,7 @@ Vehicle
 
 -----------------------------------------------------------------------------------
 
-Step 151: Add to: Van (SwatVan01Controller.cs)
+Step 148: Add to: Van (SwatVan01Controller.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -8835,9 +8831,16 @@ Rigidbody Mass:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 152: Add to: SwatVan01Camera (SwatVan01Camera.cs)
+Step 149: Add to: SwatVan01Camera (SwatVan01Camera.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -8864,7 +8867,7 @@ Height: 3.16
 
 -----------------------------------------------------------------------------------
 
-Step 153:  Create child of "VehiclesEntry" add Text tmp: "SwatVan01_EntryKey"
+Step 150:  Create child of "VehiclesEntry" add Text tmp: "SwatVan01_EntryKey"
 
 -----------------------------------------------------------------------------------
 
@@ -9387,7 +9390,7 @@ EventSystem
 
 -----------------------------------------------------------------------------------
 
-Step 154: Add to: SwatVan01 (SwatVan01Entry.cs)
+Step 151: Add to: SwatVan01 (SwatVan01Entry.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -9403,6 +9406,13 @@ Game Objects:
 SwatVan01: SwatVan01
 Player: Player
 InterfaceText Object: SwatVan01_EntryKey
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 In Box Collider:
@@ -9424,7 +9434,7 @@ Size: X: 4.096394 Y: 1.665149 Z: 1.00393
 
 -----------------------------------------------------------------------------------
 
-Step 155: In Interface > Canvas create empty child: "VehiclesSpeed"
+Step 152: In Interface > Canvas create empty child: "VehiclesSpeed"
 
 -----------------------------------------------------------------------------------
 
@@ -9444,7 +9454,7 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 156: In "VehiclesSpeed" create empty child: "SwatVan01Speedometer"
+Step 153: In "VehiclesSpeed" create empty child: "SwatVan01Speedometer"
 
 -----------------------------------------------------------------------------------
 
@@ -9476,7 +9486,7 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 157: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan01_SpeedoGuage"
+Step 154: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan01_SpeedoGuage"
 
 -----------------------------------------------------------------------------------
 
@@ -9511,7 +9521,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 158: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan01_SpeedoNeedle"
+Step 155: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan01_SpeedoNeedle"
 
 -----------------------------------------------------------------------------------
 
@@ -9546,7 +9556,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 159: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan01_SpeedText"
+Step 156: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan01_SpeedText"
 
 -----------------------------------------------------------------------------------
 
@@ -9598,7 +9608,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 160: In Vehicle > SwatVan01 attach script: (SwatVan01Speedometer.cs)
+Step 157: In Vehicle > SwatVan01 attach script: (SwatVan01Speedometer.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -9621,6 +9631,13 @@ Interface Parent Object: SwatVan01Speedometer
 Interface IMG01 Object: SwatVan01_SpeedoGuage
 Interface IMG02 Object: SwatVan01_SpeedoNeedle
 Interface Text Object: SwatVan01_SpeedText
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -9913,7 +9930,7 @@ EventSystem
 
 -----------------------------------------------------------------------------------
 
-Step 161: Identify: the next "Vehicle Prefab"
+Step 158: Identify: the next "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -9927,7 +9944,7 @@ SM_Veh_SwatVan_01
 
 -----------------------------------------------------------------------------------
 
-Step 162: Add: the next "Vehicle Prefab" to Scene
+Step 159: Add: the next "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -9951,7 +9968,7 @@ Then move "SwatVan02" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 163: Add: empty "View" as child
+Step 160: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -9967,7 +9984,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 164: Add: "Camera" in empty "View" as child
+Step 161: Add: "Camera" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -9987,7 +10004,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 165: Add: empty "WheelMeshes" as child
+Step 162: Add: empty "WheelMeshes" as child
 
 -----------------------------------------------------------------------------------
 
@@ -10051,7 +10068,7 @@ Important: Disable Sphere Collider component!
 
 -----------------------------------------------------------------------------------
 
-Step 166: Duplicate: empty "WheelMeshes" as "WheelColliders"
+Step 163: Duplicate: empty "WheelMeshes" as "WheelColliders"
 
 -----------------------------------------------------------------------------------
 
@@ -10395,7 +10412,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 167: Add to: Van (SwatVan02Controller.cs)
+Step 164: Add to: Van (SwatVan02Controller.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -10431,9 +10448,16 @@ Rigidbody Mass:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 168: Add to: SwatVan02Camera (SwatVan02Camera.cs)
+Step 165: Add to: SwatVan02Camera (SwatVan02Camera.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -10460,7 +10484,7 @@ Height: 3.16
 
 -----------------------------------------------------------------------------------
 
-Step 169:  Create child of "VehiclesEntry" add Text tmp: "SwatVan02_EntryKey"
+Step 166:  Create child of "VehiclesEntry" add Text tmp: "SwatVan02_EntryKey"
 
 -----------------------------------------------------------------------------------
 
@@ -11087,7 +11111,7 @@ EventSystem
 
 -----------------------------------------------------------------------------------
 
-Step 170: Add to: SwatVan02 (SwatVan02Entry.cs)
+Step 167: Add to: SwatVan02 (SwatVan02Entry.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -11103,6 +11127,13 @@ Game Objects:
 SwatVan02: SwatVan02
 Player: Player
 InterfaceText Object: SwatVan02_EntryKey
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 In Box Collider:
@@ -11123,7 +11154,7 @@ Size: X: 4.096394 Y: 1.665149 Z: 1.00393
 
 -----------------------------------------------------------------------------------
 
-Step 171: In "VehiclesSpeed" create empty child: "SwatVan02Speedometer"
+Step 168: In "VehiclesSpeed" create empty child: "SwatVan02Speedometer"
 
 -----------------------------------------------------------------------------------
 
@@ -11155,7 +11186,7 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 172: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan02_SpeedoGuage"
+Step 169: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan02_SpeedoGuage"
 
 -----------------------------------------------------------------------------------
 
@@ -11190,7 +11221,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 173: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan02_SpeedoNeedle"
+Step 170: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan02_SpeedoNeedle"
 
 -----------------------------------------------------------------------------------
 
@@ -11225,7 +11256,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 174: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan02_SpeedText"
+Step 171: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan02_SpeedText"
 
 -----------------------------------------------------------------------------------
 
@@ -11277,7 +11308,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 175: In Vehicle > SwatVan02 attach script: (SwatVan02Speedometer.cs)
+Step 172: In Vehicle > SwatVan02 attach script: (SwatVan02Speedometer.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -11300,6 +11331,14 @@ Interface Parent Object: SwatVan02Speedometer
 Interface IMG01 Object: SwatVan02_SpeedoGuage
 Interface IMG02 Object: SwatVan02_SpeedoNeedle
 Interface Text Object: SwatVan02_SpeedText
+
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -11622,7 +11661,7 @@ EventSystem
 
 -----------------------------------------------------------------------------------
 
-Step 176: Identify: the next "Vehicle Prefab"
+Step 173: Identify: the next "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -11636,7 +11675,7 @@ SM_Veh_SwatVan_01
 
 -----------------------------------------------------------------------------------
 
-Step 177: Add: the next "Vehicle Prefab" to Scene
+Step 174: Add: the next "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -11660,7 +11699,7 @@ Then move "SwatVan03" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 178: Add: empty "View" as child
+Step 175: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -11676,7 +11715,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 179: Add: "Camera" in empty "View" as child
+Step 176: Add: "Camera" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -11696,7 +11735,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 180: Add: empty "WheelMeshes" as child
+Step 177: Add: empty "WheelMeshes" as child
 
 -----------------------------------------------------------------------------------
 
@@ -11760,7 +11799,7 @@ Important: Disable Sphere Collider component!
 
 -----------------------------------------------------------------------------------
 
-Step 181: Duplicate: empty "WheelMeshes" as "WheelColliders"
+Step 178: Duplicate: empty "WheelMeshes" as "WheelColliders"
 
 -----------------------------------------------------------------------------------
 
@@ -12129,7 +12168,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 182: Add to: Van (SwatVan03Controller.cs)
+Step 179: Add to: Van (SwatVan03Controller.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -12165,9 +12204,16 @@ Rigidbody Mass:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 183: Add to: SwatVan03Camera (SwatVan03Camera.cs)
+Step 180: Add to: SwatVan03Camera (SwatVan03Camera.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -12194,7 +12240,7 @@ Height: 3.16
 
 -----------------------------------------------------------------------------------
 
-Step 184:  Create child of "VehiclesEntry" add Text tmp: "SwatVan03_EntryKey"
+Step 181:  Create child of "VehiclesEntry" add Text tmp: "SwatVan03_EntryKey"
 
 -----------------------------------------------------------------------------------
 
@@ -12880,7 +12926,7 @@ EventSystem
 
 -----------------------------------------------------------------------------------
 
-Step 185: Add to: SwatVan03 (SwatVan03Entry.cs)
+Step 182: Add to: SwatVan03 (SwatVan03Entry.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -12896,6 +12942,14 @@ Game Objects:
 SwatVan03: SwatVan03
 Player: Player
 InterfaceText Object: SwatVan03_EntryKey
+
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 In Box Collider:
@@ -12916,7 +12970,7 @@ Size: X: 4.096394 Y: 1.665149 Z: 1.00393
 
 -----------------------------------------------------------------------------------
 
-Step 186: In "VehiclesSpeed" create empty child: "SwatVan03Speedometer"
+Step 183: In "VehiclesSpeed" create empty child: "SwatVan03Speedometer"
 
 -----------------------------------------------------------------------------------
 
@@ -12948,7 +13002,7 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 187: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan03_SpeedoGuage"
+Step 184: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan03_SpeedoGuage"
 
 -----------------------------------------------------------------------------------
 
@@ -12983,7 +13037,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 188: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan03_SpeedoNeedle"
+Step 185: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan03_SpeedoNeedle"
 
 -----------------------------------------------------------------------------------
 
@@ -13018,7 +13072,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 189: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan03_SpeedText"
+Step 186: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan03_SpeedText"
 
 -----------------------------------------------------------------------------------
 
@@ -13070,7 +13124,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 190: In Vehicle > SwatVan03 attach script: (SwatVan03Speedometer.cs)
+Step 187: In Vehicle > SwatVan03 attach script: (SwatVan03Speedometer.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -13093,6 +13147,13 @@ Interface Parent Object: SwatVan03Speedometer
 Interface IMG01 Object: SwatVan03_SpeedoGuage
 Interface IMG02 Object: SwatVan03_SpeedoNeedle
 Interface Text Object: SwatVan03_SpeedText
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -13445,7 +13506,7 @@ EventSystem
 
 -----------------------------------------------------------------------------------
 
-Step 191: Identify: the next "Vehicle Prefab"
+Step 188: Identify: the next "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -13459,7 +13520,7 @@ SM_Veh_SwatVan_01
 
 -----------------------------------------------------------------------------------
 
-Step 192: Add: the next "Vehicle Prefab" to Scene
+Step 189: Add: the next "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -13483,7 +13544,7 @@ Then move "SwatVan04" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 193: Add: empty "View" as child
+Step 190: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -13499,7 +13560,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 194: Add: "Camera" in empty "View" as child
+Step 191: Add: "Camera" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -13519,7 +13580,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 195: Add: empty "WheelMeshes" as child
+Step 192: Add: empty "WheelMeshes" as child
 
 -----------------------------------------------------------------------------------
 
@@ -13583,7 +13644,7 @@ Important: Disable Sphere Collider component!
 
 -----------------------------------------------------------------------------------
 
-Step 196: Duplicate: empty "WheelMeshes" as "WheelColliders"
+Step 193: Duplicate: empty "WheelMeshes" as "WheelColliders"
 
 -----------------------------------------------------------------------------------
 
@@ -13977,7 +14038,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 197: Add to: Van (SwatVan04Controller.cs)
+Step 194: Add to: Van (SwatVan04Controller.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -14013,9 +14074,16 @@ Rigidbody Mass:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 198: Add to: SwatVan04Camera (SwatVan04Camera.cs)
+Step 195: Add to: SwatVan04Camera (SwatVan04Camera.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -14042,7 +14110,7 @@ Height: 3.16
 
 -----------------------------------------------------------------------------------
 
-Step 199:  Create child of "VehiclesEntry" add Text tmp: "SwatVan04_EntryKey"
+Step 196:  Create child of "VehiclesEntry" add Text tmp: "SwatVan04_EntryKey"
 
 -----------------------------------------------------------------------------------
 
@@ -14765,7 +14833,7 @@ EventSystem
 
 -----------------------------------------------------------------------------------
 
-Step 200: Add to: SwatVan04 (SwatVan04Entry.cs)
+Step 197: Add to: SwatVan04 (SwatVan04Entry.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -14781,6 +14849,13 @@ Game Objects:
 SwatVan04: SwatVan04
 Player: Player
 InterfaceText Object: SwatVan04_EntryKey
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 In Box Collider:
@@ -14801,7 +14876,7 @@ Size: X: 4.096394 Y: 1.665149 Z: 1.00393
 
 -----------------------------------------------------------------------------------
 
-Step 201: In "VehiclesSpeed" create empty child: "SwatVan04Speedometer"
+Step 198: In "VehiclesSpeed" create empty child: "SwatVan04Speedometer"
 
 -----------------------------------------------------------------------------------
 
@@ -14833,7 +14908,7 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 202: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan04_SpeedoGuage"
+Step 199: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan04_SpeedoGuage"
 
 -----------------------------------------------------------------------------------
 
@@ -14868,7 +14943,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 203: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan04_SpeedoNeedle"
+Step 200: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan04_SpeedoNeedle"
 
 -----------------------------------------------------------------------------------
 
@@ -14903,7 +14978,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 204: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan04_SpeedText"
+Step 201: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan04_SpeedText"
 
 -----------------------------------------------------------------------------------
 
@@ -14955,7 +15030,7 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 205: In Vehicle > SwatVan04 attach script: (SwatVan04Speedometer.cs)
+Step 202: In Vehicle > SwatVan04 attach script: (SwatVan04Speedometer.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -14978,6 +15053,14 @@ Interface Parent Object: SwatVan04Speedometer
 Interface IMG01 Object: SwatVan04_SpeedoGuage
 Interface IMG02 Object: SwatVan04_SpeedoNeedle
 Interface Text Object: SwatVan04_SpeedText
+
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
