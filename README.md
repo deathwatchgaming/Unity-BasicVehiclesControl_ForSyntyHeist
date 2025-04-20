@@ -41,9 +41,6 @@ New_Input_System Directory NOTE:
 
 NOTE: This currently uses the New Input System (ie: Unity 21 - 22 variant provided & Unity 6 version coming soon when I have further free time to do such), so as such depending on what version of Unity you may be using it may be necessary to make sure such or both is enabled in project settings.
 
-Also note: Currently the new input system directory still has old documentations and still needs to be edited to reflect any setup changes with the new input system when I have further free time to do so so there may be currently some confusion if reading them at this point without a familiarity in the minor changes like primarily references like input and such from old would be ignored and you would instead make note of the input action assets noted below for now until I can get further free time 
-to edit the many included documentations.
-
 New_Input_System Directory Documentations NOTE: If there is any confusion with any documentation during setup in regards to "Input Actions", just note the following "Input Action Assets" found below:
 
 For player:
