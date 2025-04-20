@@ -34,6 +34,22 @@ NOTE: This uses the New Input System, so as such depending on what version of
 Unity you may be using it may be necessary to make sure such or both is
 enabled in project settings.
 
+Documentations NOTE: If there is any confusion with any documentation during setup in regards to "Input Actions", just note the following "Input Action Assets" found below:
+
+For player:
+
+Input Actions:
+
+Player Controls: PlayerControls (Input Action Asset)
+
+For vehicles:
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 Vehicles Currently "Completed" & Included:
 ------------------------------------------
