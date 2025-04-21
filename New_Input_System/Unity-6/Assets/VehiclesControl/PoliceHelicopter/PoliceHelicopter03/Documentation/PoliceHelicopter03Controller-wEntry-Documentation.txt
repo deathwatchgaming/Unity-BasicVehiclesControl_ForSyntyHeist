@@ -1,0 +1,1033 @@
+"PoliceHelicopter03DevScene-wEntry" Scene Setup Steps
+-----------------------------------------------------------------------------------
+
+Description:
+
+Create a basic Police Helicopter Controller for your Unity projects using
+vehicle models from Synty Polygon Heist Asset.
+
+
+Vehicle Controls: 
+-----------------
+
+Heli Roll: A & D
+Heli Pitch: S & W
+Heli Yaw:  Q & E
+
+Decrease throttle: Left Shift
+Increase throttle: Left Control
+
+Camera Controls:
+----------------
+
+Change Cameras: V (ie: Rear Camera, Belly Camera & Cockpit Camera)
+
+Entry Controls:
+-----------------
+
+Entry: E
+Exit: F
+
+Player Controls:
+----------------
+
+Player Forward:   W
+Player Reverse:   S
+Player Left:      A
+Player Right:     D
+Player Jump:      Space
+Player Sprint:    Left Shift
+
+
+Manual Setup Instruction:
+-------------------------
+
+* Simply follow the instruction for manual setup found below.
+
+
+-----------------------------------------------------------------------------------
+
+Prep Step: Create New Scene Called: "PoliceHelicopter03DevScene-wEntry"
+
+Note: if you already have some sort of a test terrain in place, well then, you
+can simple skip the steps: #1, 2 & 3 and go directly to #4.
+
+-----------------------------------------------------------------------------------
+
+Step 1: Create: "Environment" * (for Nicer Organization)
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Environment"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+First since this is just a "holder" added for better organization, let us go
+ahead & drag the "Directional Light" into "Environment".
+
+* also if you wanted you could add a "dir" called Environment and opt to place
+  your TerrainData inside that in its own Dir "TerrainData" and as such any
+  other Environment stuff respectively in as desired the "Environment" dir.
+  Just a suggestion.
+
+Also: We don't need the "Main Camera" in Sample Scene, so..., we can go ahead
+and delete it.
+
+
+-----------------------------------------------------------------------------------
+
+Step 2: Create: "Terrain Plane"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Plane"
+
+Position: X: 0   Y: -0.03 Z: 0 
+Rotation: X: 0   Y: 0     Z: 0 
+Scale:    X: 800 Y: 1     Z: 800
+
+Rename to: "Terrain Plane"
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain Plane" into the holder "Environment" we added for just this exact
+ purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 3: Create: "Terrain"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Terrain"
+
+Modify via:
+
+"Terrain" Inspector: Terrain Settings
+
+Mesh Resolution:
+
+Terrain Width: 8000
+Terrain Length: 8000
+
+Modify via:
+
+"Terrain" Inspector: "Transform"
+
+Position: X: -4000 Y: 0 Z: -4000 
+Rotation: X: 0     Y: 0 Z: 0 
+Scale:    X: 1     Y: 1 Z: 1
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain" into the holder "Environment" we added for just this exact purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 4: Add Input: "Heli Roll"
+
+-----------------------------------------------------------------------------------
+
+
+In Edit -> Project Settings -> Input Manager:
+
+Add Input Axes: "Heli Roll"
+
+Name: Roll
+Negative Button: left
+Positive Button: right
+Alt Negative Button: a
+Alt Positive Button: d
+Gravity: 3
+Dead: 0.001
+Sensitivity: 3
+Snap: True (checked)
+Invert: False (unchecked)
+Type: Key or Mouse Button
+Axis: X axis
+Joy Num: Get Motion from all Joysticks
+
+Note: this is using the old input system and while yes, you could modify the script
+for new input system usage, currently that is not covered in the scope of this 
+setup at this time.
+
+
+-----------------------------------------------------------------------------------
+
+Step 5: Add Input: "Heli Pitch"
+
+-----------------------------------------------------------------------------------
+
+
+In Edit -> Project Settings -> Input Manager:
+
+Add Input Axes: "Heli Pitch"
+
+Name: Pitch
+Negative Button: down
+Positive Button: up
+Alt Negative Button: s
+Alt Positive Button: w
+Gravity: 3
+Dead: 0.001
+Sensitivity: 3
+Snap: True (checked)
+Invert: False (unchecked)
+Type: Key or Mouse Button
+Axis: X axis
+Joy Num: Get Motion from all Joysticks
+
+Note: this is using the old input system and while yes, you could modify the script
+for new input system usage, currently that is not covered in the scope of this 
+setup at this time.
+
+
+-----------------------------------------------------------------------------------
+
+Step 6: Add Input: "Heli Yaw"
+
+-----------------------------------------------------------------------------------
+
+
+In Edit -> Project Settings -> Input Manager:
+
+Add Input Axes: "Heli Yaw"
+
+Name: Yaw
+Negative Button: q
+Positive Button: e
+Gravity: 3
+Dead: 0.001
+Sensitivity: 3
+Snap: True (checked)
+Invert: False (unchecked)
+Type: Key or Mouse Button
+Axis: X axis
+Joy Num: Get Motion from all Joysticks
+
+Note: this is using the old input system and while yes, you could modify the script
+for new input system usage, currently that is not covered in the scope of this 
+setup at this time.
+
+
+-----------------------------------------------------------------------------------
+
+Step 7: Create: empty "Vehicle"
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Vehicle"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your scene heirarchy at top should look like this:
+
+Environment
+Vehicle
+
+
+Nice and organized right?! :) Good Stuff! ;)
+
+Note: as this uses a vehicle from such and due to licensing such vehicles
+cannot be included in this repository obviously, as such the provided scripts
+and instructions thus require having / purchasing the:
+
+Synty Polygon Heist Asset:
+
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-poly-3d-art-by-synty-97949
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Install: "Synty Polygon Heist Asset"
+
+-----------------------------------------------------------------------------------
+
+
+Depending on how you purchased you can either use the package manager to
+install the asset or if you are like me and say already have local repository
+storage of purchased assets and have the package already you can install the
+asset manually.
+
+Asset package to install:
+
+ POLYGON Heist - Low Poly 3D Art by Synty.unitypackage
+
+Purchase Synty Polygon Heist Asset:
+
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-poly-3d-art-by-synty-97949
+
+
+
+-----------------------------------------------------------------------------------
+
+Step 9: Identify: the "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonHeist > Prefabs > Vehicles
+
+SM_Veh_Helicopter_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 10: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Helicopter_01 => "PoliceHelicopter03"
+
+Next, set the Transform:
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonHeist_Material_03_A
+
+Then move "PoliceHelicopter03" into the empty: "Vehicle" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 11: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceHelicopter03" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 12: Add: "Camera(s)" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "Heli03 Cockpit Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "Heli03 Cockpit Camera":
+
+Position: X: 0 Y: 2.058 Z: 2.33 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+* Disable the bool in Inspector as this camera is currently just added as an 
+optional example and is not currently used, but you could opt for either or a 
+future switch method or what not, hence why such is added as an example of three 
+diff views.
+
+In the empty: "View" add "Camera" component named: "Heli03 Belly Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "Heli03 Belly Camera":
+
+Position: X: 0 Y: 0.3 Z: 2 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+* Disable the bool in Inspector as this camera is currently just added as an 
+optional example and is not currently used, but you could opt for either or a 
+future switch method or what not, hence why such is added as an example of three 
+diff views.
+
+In the empty: "View" add "Camera" component named: "Heli03 Rear Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "Heli03 Rear Camera":
+
+Position: X: 0 Y: 3.2 Z: -10.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+* Keep this camera Active as this is the camera we will use (for now).
+
+So, now overall your heirarchy expanded should look like so:
+
+ie:
+
+Environment
+-- Directional Light
+-- Terrain
+-- Terrain Plane
+Vehicle
+- PoliceHelicopter03
+-- SM_Veh_Helicopter_Glass_01
+-- SM_Veh_Helicopter_Stick_01
+-- SM_Veh_Helicopter_Stick_02
+-- SM_Veh_Helicopter_Blades_Main_01
+-- SM_Veh_Helicopter_Blades_Back_01
+-- View
+--- Heli03 Cockpit Camera
+--- Heli03 Belly Camera
+--- Heli03 Rear Camera
+
+
+
+-----------------------------------------------------------------------------------
+
+Step 12: In "PoliceHelicopter03" Add: empty "Rotors" as child 
+
+-----------------------------------------------------------------------------------
+
+
+
+In "PoliceHelicopter03" add empty as child named "Rotors"
+
+Set the Transform of "Rotors":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+In "Rotors" add empty as child named "TopRotor"
+
+Set the Transform of "TopRotor":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+In "Rotors" add empty as child named "TailRotor"
+
+Set the Transform of "TailRotor":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Move: "SM_Veh_Helicopter_Blades_Main_01" into "TopRotor"
+
+Move: "SM_Veh_Helicopter_Blades_Back_01" into "TailRotor"
+
+
+So, now overall your heirarchy expanded should look like so:
+
+ie:
+
+Environment
+-- Directional Light
+-- Terrain
+-- Terrain Plane
+Vehicle
+- PoliceHelicopter03
+-- SM_Veh_Helicopter_Glass_01
+-- SM_Veh_Helicopter_Stick_01
+-- SM_Veh_Helicopter_Stick_02
+-- Rotors
+--- TopRotor
+---- SM_Veh_Helicopter_Blades_Main_01
+--- TailRotor
+---- SM_Veh_Helicopter_Blades_Back_01
+-- View
+--- Heli03 Cockpit Camera
+--- Heli03 Belly Camera
+--- Heli03 Rear Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 13: Add Script: "PoliceHelicopter03Controller.cs" to "PoliceHelicopter03" 
+
+-----------------------------------------------------------------------------------
+
+
+On the "PoliceHelicopter03 object"...
+
+Add Component: PoliceHelicopter03Controller (PoliceHelicopter03Controller)
+
+
+-----------------------------------------------------------------------------------
+
+Step 14: Modify Settings for: "PoliceHelicopter03Controller (Script)" 
+
+-----------------------------------------------------------------------------------
+
+
+Note: While the script will work fine and fill most of these settings by itself on 
+Awake() as intended say as long as you say set the bare minimum for example rotor 
+sound & transforms, hmm, let us just for good measure set all up in inspector 
+instead. So, in saying such, your settings should simply look like such:
+
+Script: PoliceHelicopter03Controller
+
+Inputs:
+-------
+
+Heli Roll Input: Heli Roll
+Heli Pitch Input: Heli Pitch
+Heli Yaw Input: Heli Yaw
+Min Throttle Key: Left Shift
+Max Throttle Key: Left Control
+
+Components:
+-----------
+
+Rigidbody: PoliceHelicopter03 (Rigidbody)
+Mesh Collider: PoliceHelicopter03 (Mesh Collider)
+
+Rb Adjustments:
+---------------
+
+Rigibody Mass: 360
+Center Of Mass Offset: X: 0 Y: 0.7 Z: 1
+
+Transforms:
+-----------
+
+Rotors Transform Top: SM_Veh_Helicopter_Blades_Main_01 (Transform)
+Rotors Transform Tail: SM_Veh_Helicopter_Blades_Back_01 (Transform)
+
+Amounts:
+--------
+
+Sensitivity: 500
+Throttle Amount: 25
+Max Thrust: 5
+Rotor speed Modifier: 10
+
+Airspeed:
+---------
+
+Airspeed Type: Mph *
+
+* or Kmh depending on your desired choice
+
+Max Airspeed: 80 *
+
+* 160 is max suggested for Mph else say 260 for Kmh for example if such was
+  selected
+
+HUD:
+----
+
+Heli HUD: PoliceHelicopter03_HUD * 
+
+* This will need to be returned to and to then be selected
+once you set the interface text mesh pro hud item up in the later step as
+described.
+
+Audio:
+------
+
+Audio Source: PoliceHelicopter03 (Audio Source)
+Rotor Sound: Helicopter03_Rotor
+
+
+-----------------------------------------------------------------------------------
+
+Step 15: Modify Settings for: "Rigidbody (Component)" 
+
+-----------------------------------------------------------------------------------
+
+
+Note: While the script will work fine and fill these particular settings by itself 
+on Awake() as intended hmm, let us just for good measure set such up in inspector 
+instead. So, in saying such, your specific settings should simply look like such:
+
+Mass: 360
+
+
+-----------------------------------------------------------------------------------
+
+Step 16: Modify Settings for: "Mesh Collider (Component)" 
+
+-----------------------------------------------------------------------------------
+
+
+Note: While the script will work fine and fill this particular setting by itself 
+on Awake() as intended hmm, let us just for good measure set such up in inspector 
+instead. So, in saying such, your specific setting should simply look like such:
+
+Convex: True (Bool checked)
+
+
+-----------------------------------------------------------------------------------
+
+Step 17: Outside of PoliceHelicopter03: Create Empty Game Object: "Interface"
+
+-----------------------------------------------------------------------------------
+
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Layer: UI
+
+Next: In "Interface": add as child: "Canvas"
+
+Layer: UI
+
+
+-----------------------------------------------------------------------------------
+
+Step 18: In "Canvas": add as child: An Empty called: "VehiclesHUD"
+
+-----------------------------------------------------------------------------------
+
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Layer: UI
+
+Rect Transform:
+
+Bottom Left
+
+Pos X: 0 Y : 0 Z: 0
+
+Width: 300 
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 19: In "VehiclesHUD": add child: (TexMeshPro) called: "PoliceHelicopter03_HUD"
+
+-----------------------------------------------------------------------------------
+
+
+Layer: UI
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos X: 160
+Pos Y: 60
+
+Width: 300
+Height: 300
+
+Text Input:
+-----------
+
+* Say if you selected speed type Kmh then such:
+
+Throttle: 0 %
+Airspeed: 0 kmh
+Altitude: 0 m
+
+* Say if you selected speed type Mph then such:
+
+Throttle: 0 %
+Airspeed: 0 mph
+Altitude: 0 ft
+
+* Note: that either or of the above can be added as placeholder as such will
+  be overwritten on awake
+
+
+Text Size: 25
+
+Alignment: Left & Middle
+
+
+So, now overall your heirarchy expanded should look like so:
+
+ie:
+
+Environment
+-- Directional Light
+-- Terrain
+-- Terrain Plane
+Vehicle
+- PoliceHelicopter03
+-- SM_Veh_Helicopter_Glass_01
+-- SM_Veh_Helicopter_Stick_01
+-- SM_Veh_Helicopter_Stick_02
+-- Rotors
+--- TopRotor
+---- SM_Veh_Helicopter_Blades_Main_01
+--- TailRotor
+---- SM_Veh_Helicopter_Blades_Back_01
+-- View
+--- Heli03 Cockpit Camera
+--- Heli03 Belly Camera
+--- Heli03 Rear Camera
+Interface
+- Canvas
+-- VehiclesHUD
+--- PoliceHelicopter03_HUD
+EventSystem
+
+
+Lastly, make note: we do  not want this item to be enabled prior to awake or
+start and because of such we must disable this object. The script has a
+wrapper that will find the disabled object, so this is not a worry now that
+you disable the object.
+
+
+Disable Object:
+---------------
+
+PoliceHelicopter03_HUD
+
+
+-----------------------------------------------------------------------------------
+
+Step 20: Exit "Interface" & Add Script: "PoliceHelicopter03CamSwitch.cs" 
+
+-----------------------------------------------------------------------------------
+
+
+On the "PoliceHelicopter03 object"...
+
+Add Component: PoliceHelicopter03CameSwitch (Script)
+
+Then re-enable the previously disabled camera named: "Heli03 Cockpit Camera"
+Then re-enable the previously disabled camera named: "Heli03 Belly Camera"
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Modify Settings for: "PoliceHelicopter03 Cam Switch (Script)" 
+
+-----------------------------------------------------------------------------------
+
+
+Cameras: 3 *
+
+Element 0: Heli03 Rear Camera
+
+Element 1: Heli03 Belly Camera
+
+Element 2: Heli03 Cockpit Camera
+
+Input:
+------
+
+Camera Switch Key: V
+
+
+
+* make sure that you include all three cams as the later added entry script is
+  reliant on the same.
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: In "Canvas" add as child: An Empty called: "VehiclesEntry"
+
+-----------------------------------------------------------------------------------
+
+
+Rect Transform:
+---------------
+
+Bottom Center
+
+Pos: X: 0 Y: 50 Z: 0
+Width: 100
+Height: 100
+
+
+-----------------------------------------------------------------------------------
+
+Step 23: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter03_EntryKey" 
+
+-----------------------------------------------------------------------------------
+
+Layer: UI
+
+Rect Transform:
+---------------
+
+Top Center
+
+Pos X: 0
+Pos Y: -50
+
+Width: 100
+Height: 100
+
+Text Input:
+-----------
+
+Pilot [E]
+
+
+Font Size:: 36
+
+Alignment: Center & Middle
+
+
+So, now overall your heirarchy expanded should look like so:
+
+ie:
+
+Environment
+-- Directional Light
+-- Terrain
+-- Terrain Plane
+Vehicle
+- PoliceHelicopter03
+-- SM_Veh_Helicopter_Glass_01
+-- SM_Veh_Helicopter_Stick_01
+-- SM_Veh_Helicopter_Stick_02
+-- Rotors
+--- TopRotor
+---- SM_Veh_Helicopter_Blades_Main_01
+--- TailRotor
+---- SM_Veh_Helicopter_Blades_Back_01
+-- View
+--- Heli03 Cockpit Camera
+--- Heli03 Belly Camera
+--- Heli03 Rear Camera
+Interface
+- Canvas
+-- VehiclesHUD
+--- PoliceHelicopter03_HUD
+-- VehiclesEntry
+--- PoliceHelicopter03_EntryKey
+EventSystem
+
+
+Lastly, make note: we do  not want this item to be enabled prior to awake or
+start and because of such we must disable this object. The script has a
+wrapper that will find the disabled object, so this is not a worry now that
+you disable the object.
+
+
+Disable Object:
+---------------
+
+PoliceHelicopter03_EntryKey
+
+-----------------------------------------------------------------------------------
+
+Step 24: Exit "Interface" & Add Script: "PoliceHelicopter03Entry.cs" 
+
+-----------------------------------------------------------------------------------
+
+
+On the "PoliceHelicopter03 object"...
+
+Add Component: PoliceHelicopter03Entry (Script)
+
+
+Script: PoliceHelicopter03Entry
+
+
+Input Customisations:
+---------------------
+
+Enter Key: E
+
+Exit Key: F
+
+
+Game Objects:
+-------------
+
+PoliceHelicopter03: PoliceHelicopter03
+
+Player: Player
+
+Interface Text Object: PoliceHelicopter03_EntryKey
+
+Interface HUD Object: PoliceHelicopter03_HUD
+
+
+Cameras: (3) *
+------------
+
+Element 0: Heli03 Rear Camera
+
+Element 1: Heli03 Belly Camera
+
+Element 2: Heli03 Cockpit Camera
+
+
+* make sure the element order matches the order that you have
+  on "PoliceHelicopter03CamSwitch" component and that you include all three.
+
+
+-----------------------------------------------------------------------------------
+
+Step 25: Edit component: "Box Collider"
+
+-----------------------------------------------------------------------------------
+
+
+Is Trigger: True
+
+
+Center: X:-0.004791498  Y: 1.172665  Z: 1.978747
+
+Size: X: 3.937339 Y: 2.408782  Z: 2.001414
+
+
+Note: these values are simply provided as an example and may need to be
+tweaked further to your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 26: Create: object "Player":
+
+-----------------------------------------------------------------------------------
+
+
+Create empty object and name such: "Player"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.9799998 Z: -15 
+Rotation: X: 0 Y: 0  Z: 0 
+Scale:    X: 1 Y: 1  Z: 1
+
+Add Tag: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 27: Add: empty object "View":
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, create a child of the "Player" object and name
+such: "View"
+
+Transform Position: X: 0 Y: 0 Z: 0
+
+
+-----------------------------------------------------------------------------------
+
+Step 28: Add: "Camera":
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, add a Camera component as child of "View" and name
+such: "Camera"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.6 Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1
+
+Depth: "1" 
+
+Add Tag: "MainCamera"
+
+
+-----------------------------------------------------------------------------------
+
+Step 29: Edit: the "CharacterController" component:
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, edit the "CharacterController" component:
+
+Height: "1.8"
+
+
+-----------------------------------------------------------------------------------
+
+Step 30: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 31: Setup: Audio Source and Footstep Sounds Audio Clips:
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object edit: the "First Person Controller (Script)"
+
+Footstep Source: Player (AudioSource)
+
+Footstep Sounds: "4"
+
+Element 0: "Footstep01"
+Element 1: "Footstep02"
+Element 2: "Footstep03"
+Element 3: "Footstep04"
+
+
+-----------------------------------------------------------------------------------
+
+Note: Lastly, you need to next follow the Player and Vehicles Compass setup steps to
+finalize the setup steps!
+
+Ok, hopefully I covered everything. After completion of those steps you should
+then be able to run around your scene with your player and then enter / exit
+and fly your helicopter(s) around and see your direction by player and vehicle
+compass.
+
+-----------------------------------------------------------------------------------
+
+Entry Script Note: the provided entry script is provided "as is" simply as a
+starting point as there are some further things that will need to be touched
+upon as you will find when you start tinkering with such. So note the
+starting point provided was the intention to then allow you the user to
+continue to expand upon this script further.
+
+-----------------------------------------------------------------------------------
+
+
+Ok, that is it and concludes the basic PoliceHelicopter03 Controller manual
+setup steps. You can now begin to modify such further for your specific
+needs.
+
+Best of Luck!

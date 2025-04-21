@@ -1,0 +1,4268 @@
+"AllPoliceChargersDevScene-wEntry" Scene Setup Steps
+-----------------------------------------------------------------------------------
+
+Description:
+
+Create a basic All Police Charger Vehicle Controller(s) with entry in scene
+for your Unity projects using vehicle models from Synty Polygon Heist Asset.
+
+
+Player Controls:
+----------------
+
+Player Forward:   W
+Player Reverse:   S
+Player Left:      A
+Player Right:     D
+Player Jump:      Space
+Player Sprint:    Left Shift
+
+
+Vehicle Controls: 
+-----------------
+
+Vehicle Forward:  W
+Vehicle Reverse:  S
+Turn Left:        A
+Turn Right:       D
+Apply Brake:      Space
+Enter Vehicle:    E
+Exit Vehicle:     F
+
+
+Manual Setup Instruction:
+-------------------------
+
+* Simply follow the instruction for manual setup found below.
+
+
+-----------------------------------------------------------------------------------
+
+Prep Step: Create New Scene Called: "AllPoliceChargersDevScene-wEntry"
+
+Note: if you already have some sort of a test terrain in place, well then, you
+can simple skip the steps: #1, 2 & 3 and go directly to #4.
+
+-----------------------------------------------------------------------------------
+
+Step 1: Create: "Environment" * (for Nicer Organization)
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Environment"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+First since this is just a "holder" added for better organization, let us go
+ahead & drag the "Directional Light" into "Environment".
+
+* also if you wanted you could add a "dir" called Environment and opt to place
+  your TerrainData inside that in its own Dir "TerrainData" and as such any
+  other Environment stuff respectively in as desired the "Environment" dir.
+  Just a suggestion.
+
+Also: We don't need the "Main Camera" in Sample Scene, so..., we can go ahead
+and delete it.
+
+
+-----------------------------------------------------------------------------------
+
+Step 2: Create: "Terrain Plane"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Plane"
+
+Position: X: 0   Y: -0.03 Z: 0 
+Rotation: X: 0   Y: 0     Z: 0 
+Scale:    X: 800 Y: 1     Z: 800
+
+Rename to: "Terrain Plane"
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain Plane" into the holder "Environment" we added for just this exact
+ purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 3: Create: "Terrain"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Terrain"
+
+Modify via:
+
+"Terrain" Inspector: Terrain Settings
+
+Mesh Resolution:
+
+Terrain Width: 8000
+Terrain Length: 8000
+
+Modify via:
+
+"Terrain" Inspector: "Transform"
+
+Position: X: -4000 Y: 0 Z: -4000 
+Rotation: X: 0     Y: 0 Z: 0 
+Scale:    X: 1     Y: 1 Z: 1
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain" into the holder "Environment" we added for just this exact purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 4: Create: empty "Vehicles"
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Vehicles"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your scene heirarchy at top should look like this:
+
+Environment
+Vehicle
+
+
+Nice and organized right?! :) Good Stuff! ;)
+
+Note: as this uses a vehicle from such and due to licensing such vehicles
+cannot be included in this repository obviously, as such the provided scripts
+and instructions thus require having / purchasing the:
+
+Synty Polygon Heist Asset:
+
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-poly-3d-art-by-synty-97949
+
+
+-----------------------------------------------------------------------------------
+
+Step 5: Install: "Synty Polygon Heist Asset"
+
+-----------------------------------------------------------------------------------
+
+
+Depending on how you purchased you can either use the package manager to
+install the asset or if you are like me and say already have local repository
+storage of purchased assets and have the package already you can install the
+asset manually.
+
+Asset package to install:
+
+ POLYGON Heist - Low Poly 3D Art by Synty.unitypackage
+
+Purchase Synty Polygon Heist Asset:
+
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-poly-3d-art-by-synty-97949
+
+
+-----------------------------------------------------------------------------------
+
+Step 6: Identify: the "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonHeist > Prefabs > Vehicles
+
+SM_Veh_Car_Police_Heist_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 7: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Police_Heist_01 => "PoliceCharger01"
+
+Next, set the Transform:
+
+Position: X: -9 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonHeist_Material_01_A
+
+Then move "PoliceCharger01" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 9: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "PoliceCharger01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "PoliceCharger01Camera":
+
+Position: X: 0 Y: 1.64 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 10: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.4267825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_fr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.4267825 Z: 1.564265 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_rl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.4267825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_rr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.4267825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+
+-----------------------------------------------------------------------------------
+
+Step 11: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Left Wheel Collider Radius: 0.4267825
+Front Left Wheel Center X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Front Left Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Front Right Wheel Collider Radius: 0.4267825
+Front Right Wheel Center X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08 
+Front Right Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Rear Left Wheel Collider Radius: 0.4267825
+Rear Left Wheel Center X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Rear Left Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Rear Right Wheel Collider Radius: 0.4267825
+Rear Right Wheel Center X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08 
+Rear Right Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.4267825
+Set both rear  "Wheel Colliders" radius: 0.4267825
+
+Set Front Left "Wheel Collider" Center: X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Front Right "Wheel Collider" Center: X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Rear Left "Wheel Collider" Center: X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Reart Right "Wheel Collider" Center: X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.5767825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_fr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.5767825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_rl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.5767825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_rr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.5767825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 12: Add to: PoliceCharger01 (PoliceCharger01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger01Controller.cs) to "PoliceCharger01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: PoliceCharger01 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Police_Heist_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Police_Heist_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Police_Heist_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Police_Heist_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Police_Heist_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Police_Heist_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Police_Heist_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Police_Heist_Wheel_rr (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 2500
+
+
+-----------------------------------------------------------------------------------
+
+Step 13: Add to: PoliceCharger01Camera (PoliceCharger01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger01Camera.cs) to "PoliceCharger01Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Police Cruiser: PoliceCharger01 (Transform)
+
+Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
+-----------------------------------------------------------------------------------
+
+Step 14: Create: empty "Interface"
+
+-----------------------------------------------------------------------------------
+
+
+Create an empty called: "Interface"
+
+Layer: "UI"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0   Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1 
+
+
+-----------------------------------------------------------------------------------
+
+Step 15: In "Interface" Add UI: "Canvas"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" Add a UI: "Canvas"
+
+
+-----------------------------------------------------------------------------------
+
+Step 16: Create as child of "Canvas" add empty: "VehiclesEntry"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" add empty: "VehiclesEntry"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Bottom Center"
+
+Position: X: 0 Y: 50   Z: 0 
+Width: 100
+Height: 100
+
+
+-----------------------------------------------------------------------------------
+
+Step 17:  Create child of "VehiclesEntry" add Text tmp: "PoliceCharger01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "PoliceCharger01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+Interface
+  Canvas
+    VehiclesEntry
+      PoliceCharger01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 18: Create: object "Player":
+
+-----------------------------------------------------------------------------------
+
+
+Create empty object and name such: "Player"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.9799998 Z: -15
+Rotation: X: 0 Y: 0  Z: 0 
+Scale:    X: 1 Y: 1  Z: 1
+
+Add Tag: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 19: Add: empty object "View":
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, create a child of the "Player" object and name
+such: "View"
+
+Transform Position: X: 0 Y: 0 Z: 0
+
+
+-----------------------------------------------------------------------------------
+
+Step 20: Add: "Camera":
+
+-----------------------------------------------------------------------------------
+
+In "Player" object, add a Camera component as child of "View" and name
+such: "Camera"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.6 Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1
+
+Depth: "1" 
+
+Add Tag: "MainCamera"
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Edit: the "CharacterController" component:
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, edit the "CharacterController" component:
+
+Height: "1.8"
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 23: Setup: Audio Source and Footstep Sounds Audio Clips:
+
+-----------------------------------------------------------------------------------
+
+In "Player" object edit: the "First Person Controller (Script)"
+
+Footstep Source: Player (AudioSource)
+
+Footstep Sounds: "4"
+
+Element 0: "Footstep01"
+Element 1: "Footstep02"
+Element 2: "Footstep03"
+Element 3: "Footstep04"
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+Interface
+  Canvas
+    VehiclesEntry
+      PoliceCharger01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 24: Add to: PoliceCharger01 (PoliceCharger01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger01Entry.cs) to "PoliceCharger01"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+PoliceCharger01: PoliceCharger01
+Player: Player
+InterfaceText Object: PoliceCharger01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.07936704 Y: 0.8205938 Z: 0.4637029
+Size: X: 4.241376 Y: 1.228981 Z: 1.03095
+
+
+-----------------------------------------------------------------------------------
+
+Step 25: In Interface > Canvas create empty child: "VehiclesSpeed"
+
+-----------------------------------------------------------------------------------
+
+
+In: "VehiclesSpeed"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Bottom Left
+
+Pos X: 146.3
+Pos Y: 143
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 26: In "VehiclesSpeed" create empty child: "PoliceCharger01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 27: In Interface > Canvas > VehiclesSpeed add UI IMG: "PoliceCharger01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 28: In Interface > Canvas > VehiclesSpeed add IMG: "PoliceCharger01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 29: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "PoliceCharger01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 30: In Vehicles > PoliceCharger01 attach script: (PoliceCharger01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach PoliceCharger01Speedometer script: (PoliceCharger01Speedometer.cs) to
+Vehicle: "PoliceCharger01"
+
+In: "PoliceCharger01" > PoliceCharger01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: PoliceCharger01_Needle
+
+Speed Text: PoliceCharger01_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: PoliceCharger01Speedometer
+Interface IMG01 Object: PoliceCharger01_SpeedoGuage
+Interface IMG02 Object: PoliceCharger01_SpeedoNeedle
+Interface Text Object: PoliceCharger01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+PoliceCharger01Speedometer
+PoliceCharger01_SpeedoGuage
+PoliceCharger01_SpeedoNeedle
+PoliceCharger01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed  
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      PoliceCharger01Speedometer
+        PoliceCharger01_SpeedoGuage
+        PoliceCharger01_SpeedoNeedle
+        PoliceCharger01_SpeedText 
+    VehiclesEntry
+      PoliceCharger01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 31: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonHeist > Prefabs > Vehicles
+
+SM_Veh_Car_Police_Heist_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 32: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Police_Heist_01 => "PoliceCharger02"
+
+Next, set the Transform:
+
+Position: X: -3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonHeist_Material_02_A
+
+Then move "PoliceCharger02" into the empty: "Vehicle" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 33: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger02" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 34: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "PoliceCharger02Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "PoliceCharger02Camera":
+
+Position: X: 0 Y: 1.64 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 35: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger02" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.4267825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_fr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.4267825 Z: 1.564265 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_rl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.4267825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_rr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.4267825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+
+-----------------------------------------------------------------------------------
+
+Step 36: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger02" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Left Wheel Collider Radius: 0.4267825
+Front Left Wheel Center X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Front Left Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Front Right Wheel Collider Radius: 0.4267825
+Front Right Wheel Center X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08 
+Front Right Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Rear Left Wheel Collider Radius: 0.4267825
+Rear Left Wheel Center X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Rear Left Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Rear Right Wheel Collider Radius: 0.4267825
+Rear Right Wheel Center X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08 
+Rear Right Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.4267825
+Set both rear  "Wheel Colliders" radius: 0.4267825
+
+Set Front Left "Wheel Collider" Center: X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Front Right "Wheel Collider" Center: X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Rear Left "Wheel Collider" Center: X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Reart Right "Wheel Collider" Center: X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.5767825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_fr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.5767825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_rl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.5767825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_rr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.5767825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 37: Add to: PoliceCharger02 (PoliceCharger02Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger02Controller.cs) to "PoliceCharger02"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: PoliceCharger02 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Police_Heist_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Police_Heist_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Police_Heist_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Police_Heist_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Police_Heist_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Police_Heist_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Police_Heist_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Police_Heist_Wheel_rr (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 2500
+
+
+-----------------------------------------------------------------------------------
+
+Step 38: Add to: PoliceCharger02Camera (PoliceCharger02Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger02Camera.cs) to "PoliceCharger02Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Police Cruiser: PoliceCharger02 (Transform)
+
+Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
+-----------------------------------------------------------------------------------
+
+Step 39:  Create child of "VehiclesEntry" add Text tmp: "PoliceCharger02_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "PoliceCharger02_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicle
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      PoliceCharger01Speedometer
+        PoliceCharger01_SpeedoGuage
+        PoliceCharger01_SpeedoNeedle
+        PoliceCharger01_SpeedText   
+    VehiclesEntry
+      PoliceCharger01_EntryKey
+      PoliceCharger02_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      PoliceCharger01Speedometer
+        PoliceCharger01_SpeedoGuage
+        PoliceCharger01_SpeedoNeedle
+        PoliceCharger01_SpeedText   
+    VehiclesEntry
+      PoliceCharger01_EntryKey    
+      PoliceCharger02_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 40: Add to: PoliceCharger02 (PoliceCharger02Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger02Entry.cs) to "PoliceCharger02"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+PoliceCharger02: PoliceCharger02
+Player: Player
+InterfaceText Object: PoliceCharger02_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.07936704 Y: 0.8205938 Z: 0.4637029
+Size: X: 4.241376 Y: 1.228981 Z: 1.03095
+
+
+-----------------------------------------------------------------------------------
+
+Step 41: In "VehiclesSpeed" create empty child: "PoliceCharger02Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger02Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 42: In Interface > Canvas > VehiclesSpeed add UI IMG: "PoliceCharger02_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger02_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 43: In Interface > Canvas > VehiclesSpeed add IMG: "PoliceCharger02_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger02_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 44: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "PoliceCharger02_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger02_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 45: In Vehicle > PoliceCharger02 attach script: (PoliceCharger02Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach PoliceCharger02Speedometer script: (PoliceCharger02Speedometer.cs) to
+Vehicle: "PoliceCharger02"
+
+In: "PoliceCharger02" > PoliceCharger02 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: PoliceCharger02_Needle
+
+Speed Text: PoliceCharger02_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: PoliceCharger02Speedometer
+Interface IMG01 Object: PoliceCharger02_SpeedoGuage
+Interface IMG02 Object: PoliceCharger02_SpeedoNeedle
+Interface Text Object: PoliceCharger02_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+PoliceCharger02Speedometer
+PoliceCharger02_SpeedoGuage
+PoliceCharger02_SpeedoNeedle
+PoliceCharger02_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    VehiclesSpeed  
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera      
+Interface
+  Canvas
+    VehiclesSpeed
+      PoliceCharger01Speedometer
+        PoliceCharger01_SpeedoGuage
+        PoliceCharger01_SpeedoNeedle
+        PoliceCharger01_SpeedText 
+      PoliceCharger02Speedometer
+        PoliceCharger02_SpeedoGuage
+        PoliceCharger02_SpeedoNeedle
+        PoliceCharger02_SpeedText         
+    VehiclesEntry
+      PoliceCharger01_EntryKey
+      PoliceCharger02_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 46: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonHeist > Prefabs > Vehicles
+
+SM_Veh_Car_Police_Heist_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 47: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Police_Heist_01 => "PoliceCharger03"
+
+Next, set the Transform:
+
+Position: X: 3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonHeist_Material_03_A
+
+Then move "PoliceCharger03" into the empty: "Vehicle" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 48: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger03" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 49: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "PoliceCharger03Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "PoliceCharger03Camera":
+
+Position: X: 0 Y: 1.64 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 50: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger03" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.4267825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_fr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.4267825 Z: 1.564265 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_rl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.4267825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_rr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.4267825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+
+-----------------------------------------------------------------------------------
+
+Step 51: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger03" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Left Wheel Collider Radius: 0.4267825
+Front Left Wheel Center X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Front Left Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Front Right Wheel Collider Radius: 0.4267825
+Front Right Wheel Center X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08 
+Front Right Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Rear Left Wheel Collider Radius: 0.4267825
+Rear Left Wheel Center X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Rear Left Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Rear Right Wheel Collider Radius: 0.4267825
+Rear Right Wheel Center X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08 
+Rear Right Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.4267825
+Set both rear  "Wheel Colliders" radius: 0.4267825
+
+Set Front Left "Wheel Collider" Center: X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Front Right "Wheel Collider" Center: X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Rear Left "Wheel Collider" Center: X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Reart Right "Wheel Collider" Center: X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.5767825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_fr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.5767825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_rl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.5767825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_rr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.5767825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger03Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 52: Add to: PoliceCharger03 (PoliceCharger03Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger03Controller.cs) to "PoliceCharger03"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: PoliceCharger03 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Police_Heist_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Police_Heist_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Police_Heist_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Police_Heist_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Police_Heist_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Police_Heist_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Police_Heist_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Police_Heist_Wheel_rr (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 2500
+
+
+-----------------------------------------------------------------------------------
+
+Step 53: Add to: PoliceCharger03Camera (PoliceCharger03Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger03Camera.cs) to "PoliceCharger03Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Police Cruiser: PoliceCharger03 (Transform)
+
+Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
+-----------------------------------------------------------------------------------
+
+Step 54:  Create child of "VehiclesEntry" add Text tmp: "PoliceCharger03_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "PoliceCharger03_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicle
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicle
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger03Camera
+Interface
+  Canvas
+    VehiclesEntry
+      PoliceCharger01_EntryKey    
+      PoliceCharger02_EntryKey    
+      PoliceCharger03_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger03Camera
+Interface
+  Canvas
+    VehiclesEntry
+      PoliceCharger01_EntryKey    
+      PoliceCharger02_EntryKey    
+      PoliceCharger03_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 55: Add to: PoliceCharger03 (PoliceCharger03Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger03Entry.cs) to "PoliceCharger03"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+PoliceCharger03: PoliceCharger03
+Player: Player
+InterfaceText Object: PoliceCharger03_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.07936704 Y: 0.8205938 Z: 0.4637029
+Size: X: 4.241376 Y: 1.228981 Z: 1.03095
+
+
+-----------------------------------------------------------------------------------
+
+Step 56: In "VehiclesSpeed" create empty child: "PoliceCharger03Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger03Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 57: In Interface > Canvas > VehiclesSpeed add UI IMG: "PoliceCharger03_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger03_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 58: In Interface > Canvas > VehiclesSpeed add IMG: "PoliceCharger03_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger03_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 59: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "PoliceCharger03_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger03_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 60: In Vehicle > PoliceCharger03 attach script: (PoliceCharger03Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach PoliceCharger03Speedometer script: (PoliceCharger03Speedometer.cs) to
+Vehicle: "PoliceCharger03"
+
+In: "PoliceCharger03" > PoliceCharger03 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: PoliceCharger03_Needle
+
+Speed Text: PoliceCharger03_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: PoliceCharger03Speedometer
+Interface IMG01 Object: PoliceCharger03_SpeedoGuage
+Interface IMG02 Object: PoliceCharger03_SpeedoNeedle
+Interface Text Object: PoliceCharger03_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+PoliceCharger03Speedometer
+PoliceCharger03_SpeedoGuage
+PoliceCharger03_SpeedoNeedle
+PoliceCharger03_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View 
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View 
+Interface
+  Canvas
+    VehiclesSpeed  
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger03Camera             
+Interface
+  Canvas
+    VehiclesSpeed
+      PoliceCharger01Speedometer
+        PoliceCharger01_SpeedoGuage
+        PoliceCharger01_SpeedoNeedle
+        PoliceCharger01_SpeedText 
+      PoliceCharger02Speedometer
+        PoliceCharger02_SpeedoGuage
+        PoliceCharger02_SpeedoNeedle
+        PoliceCharger02_SpeedText 
+      PoliceCharger03Speedometer
+        PoliceCharger03_SpeedoGuage
+        PoliceCharger03_SpeedoNeedle
+        PoliceCharger03_SpeedText 
+    VehiclesEntry
+      PoliceCharger01_EntryKey
+      PoliceCharger02_EntryKey
+      PoliceCharger03_EntryKey             
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 61: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonHeist > Prefabs > Vehicles
+
+SM_Veh_Car_Police_Heist_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 62: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Police_Heist_01 => "PoliceCharger04"
+
+Next, set the Transform:
+
+Position: X: 9 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonHeist_Material_04_A
+
+Then move "PoliceCharger04" into the empty: "Vehicle" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 63: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger04" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 64: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "PoliceCharger04Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "PoliceCharger04Camera":
+
+Position: X: 0 Y: 1.64 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 65: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger04" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.4267825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_fr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.4267825 Z: 1.564265 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_rl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.4267825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+SM_Veh_Car_Police_Heist_Wheel_rr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.4267825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Important: Disable the Sphere Collider Component!
+
+
+-----------------------------------------------------------------------------------
+
+Step 70: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger04" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Left Wheel Collider Radius: 0.4267825
+Front Left Wheel Center X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Front Left Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Front Right Wheel Collider Radius: 0.4267825
+Front Right Wheel Center X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08 
+Front Right Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Rear Left Wheel Collider Radius: 0.4267825
+Rear Left Wheel Center X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Rear Left Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+Rear Right Wheel Collider Radius: 0.4267825
+Rear Right Wheel Center X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08 
+Rear Right Wheel Collider Position Y: 0.5767825 (0.4267825+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+SM_Veh_Car_Police_Heist_Wheel_fr
+SM_Veh_Car_Police_Heist_Wheel_rl
+SM_Veh_Car_Police_Heist_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.4267825
+Set both rear  "Wheel Colliders" radius: 0.4267825
+
+Set Front Left "Wheel Collider" Center: X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Front Right "Wheel Collider" Center: X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Rear Left "Wheel Collider" Center: X: 5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+Set Reart Right "Wheel Collider" Center: X: -5.960464e-08 Y: 1.490116e-08  Z: 2.980232e-08
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Police_Heist_Wheel_fl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.5767825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_fr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.5767825 Z: 1.564265
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_rl
+---------------------------
+
+Position: X: -0.7880916 Y: 0.5767825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Police_Heist_Wheel_rr
+---------------------------
+
+Position: X: 0.7992286 Y: 0.5767825 Z: -1.460021
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger04
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger03Camera
+  PoliceCharger04
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger04Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 71: Add to: PoliceCharger04 (PoliceCharger04Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger04Controller.cs) to "PoliceCharger04"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: PoliceCharger04 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Police_Heist_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Police_Heist_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Police_Heist_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Police_Heist_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Police_Heist_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Police_Heist_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Police_Heist_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Police_Heist_Wheel_rr (Wheel Collider)
+
+Rigidbody Mass:
+---------------
+
+Set Rigibody Mass: 2500
+
+
+-----------------------------------------------------------------------------------
+
+Step 72: Add to: PoliceCharger04Camera (PoliceCharger04Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger04Camera.cs) to "PoliceCharger04Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Police Cruiser: PoliceCharger04 (Transform)
+
+Height: 3.28
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
+-----------------------------------------------------------------------------------
+
+Step 73:  Create child of "VehiclesEntry" add Text tmp: "PoliceCharger04_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "PoliceCharger04_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger04
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger03Camera
+  PoliceCharger04
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger04Camera
+Interface
+  Canvas
+    VehiclesEntry
+      PoliceCharger01_EntryKey    
+      PoliceCharger02_EntryKey    
+      PoliceCharger03_EntryKey    
+      PoliceCharger04_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger04
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger03Camera
+  PoliceCharger04
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger04Camera
+Interface
+  Canvas
+    VehiclesEntry
+      PoliceCharger01_EntryKey
+      PoliceCharger02_EntryKey
+      PoliceCharger03_EntryKey
+      PoliceCharger04_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 74: Add to: PoliceCharger04 (PoliceCharger04Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (PoliceCharger04Entry.cs) to "PoliceCharger04"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+PoliceCharger04: PoliceCharger04
+Player: Player
+InterfaceText Object: PoliceCharger04_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.07936704 Y: 0.8205938 Z: 0.4637029
+Size: X: 4.241376 Y: 1.228981 Z: 1.03095
+
+
+-----------------------------------------------------------------------------------
+
+Step 75: In "VehiclesSpeed" create empty child: "PoliceCharger04Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "PoliceCharger04Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text output display thus such would make sense to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 76: In Interface > Canvas > VehiclesSpeed add UI IMG: "PoliceCharger04_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger04_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 77: In Interface > Canvas > VehiclesSpeed add IMG: "PoliceCharger04_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger04_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 78: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "PoliceCharger04_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "PoliceCharger04_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 79: In Vehicle > PoliceCharger04 attach script: (PoliceCharger04Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach PoliceCharger04Speedometer script: (PoliceCharger04Speedometer.cs) to
+Vehicle: "PoliceCharger04"
+
+In: "PoliceCharger04" > PoliceCharger04 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: PoliceCharger04_Needle
+
+Speed Text: PoliceCharger04_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: PoliceCharger04Speedometer
+Interface IMG01 Object: PoliceCharger04_SpeedoGuage
+Interface IMG02 Object: PoliceCharger04_SpeedoNeedle
+Interface Text Object: PoliceCharger04_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, in case you missed this notice previously, we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+this object in the editor.
+
+Game Objects:
+
+PoliceCharger04Speedometer
+PoliceCharger04_SpeedoGuage
+PoliceCharger04_SpeedoNeedle
+PoliceCharger04_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View 
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View  
+  PoliceCharger04
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View           
+Interface
+  Canvas
+    VehiclesSpeed  
+    VehiclesEntry
+EventSystem
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  PoliceCharger01
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger01Camera
+  PoliceCharger02
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger02Camera
+  PoliceCharger03
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger03Camera 
+  PoliceCharger04
+    SM_Veh_Car_Police_Heist_Glass
+    SM_Veh_Car_Police_Heist_Plates
+    SM_Veh_Car_Police_Heist_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Heist_Wheel_fl
+      SM_Veh_Car_Police_Heist_Wheel_fr
+      SM_Veh_Car_Police_Heist_Wheel_rl
+      SM_Veh_Car_Police_Heist_Wheel_rr   
+    View
+      PoliceCharger04Camera 
+Interface
+  Canvas
+    VehiclesSpeed
+      PoliceCharger01Speedometer
+        PoliceCharger01_SpeedoGuage
+        PoliceCharger01_SpeedoNeedle
+        PoliceCharger01_SpeedText 
+      PoliceCharger02Speedometer
+        PoliceCharger02_SpeedoGuage
+        PoliceCharger02_SpeedoNeedle
+        PoliceCharger02_SpeedText 
+      PoliceCharger03Speedometer
+        PoliceCharger03_SpeedoGuage
+        PoliceCharger03_SpeedoNeedle
+        PoliceCharger03_SpeedText 
+      PoliceCharger04Speedometer
+        PoliceCharger04_SpeedoGuage
+        PoliceCharger04_SpeedoNeedle
+        PoliceCharger04_SpeedText         
+    VehiclesEntry
+      PoliceCharger01_EntryKey
+      PoliceCharger02_EntryKey
+      PoliceCharger03_EntryKey
+      PoliceCharger04_EntryKey                    
+EventSystem
+
+
+
+-----------------------------------------------------------------------------------
+
+Note: Lastly, you need to next follow the Player and Vehicles Compass setup steps to
+finalize the setup steps!
+
+Ok, hopefully I covered everything. After completion of those steps you should
+then be able to run around your scene with your player and then enter / exit
+and drive your vehicle around and see your direction by player and vehicle
+compass.
+
+------------------------------------------------------------------------------------
+
+
+That should about sum it up and should be about it and concludes the basic All
+Police Charger Vehicle Controller(s) with entry in scene manual setup steps.
+You can now begin to modify such further for your specific needs.
+
+Best of Luck!
