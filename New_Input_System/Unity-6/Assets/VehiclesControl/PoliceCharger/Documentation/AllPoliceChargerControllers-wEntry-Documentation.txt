@@ -10,24 +10,30 @@ for your Unity projects using vehicle models from Synty Polygon Heist Asset.
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
-Enter Vehicle:    E
-Exit Vehicle:     F
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+
+
+Entry Controls:
+-----------------
+
+Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:       F [Keyboard] / Button South [Gamepad]
 
 
 Manual Setup Instruction:
@@ -501,6 +507,13 @@ Rigidbody Mass:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 13: Add to: PoliceCharger01Camera (PoliceCharger01Camera.cs)
@@ -733,7 +746,23 @@ Add Tag: "MainCamera"
 
 -----------------------------------------------------------------------------------
 
-Step 21: Edit: the "CharacterController" component:
+Step 21: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+Input Actions:
+--------------
+
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -741,16 +770,6 @@ Step 21: Edit: the "CharacterController" component:
 In "Player" object, edit the "CharacterController" component:
 
 Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 22: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
 
 
 -----------------------------------------------------------------------------------
@@ -854,6 +873,13 @@ Game Objects:
 PoliceCharger01: PoliceCharger01
 Player: Player
 InterfaceText Object: PoliceCharger01_EntryKey
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 In Box Collider:
@@ -1078,6 +1104,13 @@ Interface Parent Object: PoliceCharger01Speedometer
 Interface IMG01 Object: PoliceCharger01_SpeedoGuage
 Interface IMG02 Object: PoliceCharger01_SpeedoNeedle
 Interface Text Object: PoliceCharger01_SpeedText
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1516,6 +1549,13 @@ Rigidbody Mass:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 38: Add to: PoliceCharger02Camera (PoliceCharger02Camera.cs)
@@ -1786,6 +1826,13 @@ Player: Player
 InterfaceText Object: PoliceCharger02_EntryKey
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 In Box Collider:
 ----------------
 
@@ -1985,6 +2032,13 @@ Interface Parent Object: PoliceCharger02Speedometer
 Interface IMG01 Object: PoliceCharger02_SpeedoGuage
 Interface IMG02 Object: PoliceCharger02_SpeedoNeedle
 Interface Text Object: PoliceCharger02_SpeedText
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2474,6 +2528,13 @@ Rigidbody Mass:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 53: Add to: PoliceCharger03Camera (PoliceCharger03Camera.cs)
@@ -2780,6 +2841,13 @@ Player: Player
 InterfaceText Object: PoliceCharger03_EntryKey
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 In Box Collider:
 ----------------
 
@@ -2979,6 +3047,13 @@ Interface Parent Object: PoliceCharger03Speedometer
 Interface IMG01 Object: PoliceCharger03_SpeedoGuage
 Interface IMG02 Object: PoliceCharger03_SpeedoNeedle
 Interface Text Object: PoliceCharger03_SpeedText
+
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3519,6 +3594,14 @@ Rigidbody Mass:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
+
 -----------------------------------------------------------------------------------
 
 Step 72: Add to: PoliceCharger04Camera (PoliceCharger04Camera.cs)
@@ -3873,6 +3956,13 @@ Player: Player
 InterfaceText Object: PoliceCharger04_EntryKey
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 In Box Collider:
 ----------------
 
@@ -4074,6 +4164,14 @@ Interface IMG02 Object: PoliceCharger04_SpeedoNeedle
 Interface Text Object: PoliceCharger04_SpeedText
 
 
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
+
 -----------------------------------------------------------------------------------
 
 
@@ -4247,7 +4345,6 @@ Interface
 EventSystem
 
 
-
 -----------------------------------------------------------------------------------
 
 Note: Lastly, you need to next follow the Player and Vehicles Compass setup steps to
@@ -4258,7 +4355,7 @@ then be able to run around your scene with your player and then enter / exit
 and drive your vehicle around and see your direction by player and vehicle
 compass.
 
-------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 
 That should about sum it up and should be about it and concludes the basic All

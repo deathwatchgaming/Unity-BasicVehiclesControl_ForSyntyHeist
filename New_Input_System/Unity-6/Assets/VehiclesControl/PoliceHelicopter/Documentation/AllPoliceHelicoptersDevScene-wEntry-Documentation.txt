@@ -10,33 +10,37 @@ your Unity projects using vehicle models from Synty Polygon Heist Asset.
 Vehicle Controls: 
 -----------------
 
-Heli Roll: A & D
-Heli Pitch: S & W
-Heli Yaw:  Q & E
-
-Decrease throttle: Left Shift
-Increase throttle: Left Control
+Helicopter Roll: A & D [Keyboard] / Left Stick [Gamepad]
+Helicopter Pitch: S & W [Keyboard] / Left Stick [Gamepad] 
+Helicopter Yaw:  Q & E [Keyboard] / Right Stick [Gamepad]
+Helicopter Decrease throttle: Shift [Keyboard] / D-Pad Down [Gamepad]
+Helicopter Increase throttle: Control [Keyboard] / D-Pad Up [Gamepad]
 
 Camera Controls:
 ----------------
 
-Change Cameras: V (ie: Rear Camera, Belly Camera & Cockpit Camera)
+Helicopter Change Cameras: V [Keyboard] / D-Pad Left [Gamepad] * 
+
+* (ie: Rear Camera, Belly Camera & Cockpit Camera)
+
 
 Entry Controls:
 -----------------
 
-Entry: E
-Exit: F
+Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:       F [Keyboard] / Button South [Gamepad]
+
 
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Manual Setup Instruction:
@@ -129,95 +133,7 @@ We can now opt to clean up for better organization, simply drag the:
 
 -----------------------------------------------------------------------------------
 
-Step 4: Add Input: "Heli Roll"
-
------------------------------------------------------------------------------------
-
-
-In Edit -> Project Settings -> Input Manager:
-
-Add Input Axes: "Heli Roll"
-
-Name: Roll
-Negative Button: left
-Positive Button: right
-Alt Negative Button: a
-Alt Positive Button: d
-Gravity: 3
-Dead: 0.001
-Sensitivity: 3
-Snap: True (checked)
-Invert: False (unchecked)
-Type: Key or Mouse Button
-Axis: X axis
-Joy Num: Get Motion from all Joysticks
-
-Note: this is using the old input system and while yes, you could modify the script
-for new input system usage, currently that is not covered in the scope of this 
-setup at this time.
-
-
------------------------------------------------------------------------------------
-
-Step 5: Add Input: "Heli Pitch"
-
------------------------------------------------------------------------------------
-
-
-In Edit -> Project Settings -> Input Manager:
-
-Add Input Axes: "Heli Pitch"
-
-Name: Pitch
-Negative Button: down
-Positive Button: up
-Alt Negative Button: s
-Alt Positive Button: w
-Gravity: 3
-Dead: 0.001
-Sensitivity: 3
-Snap: True (checked)
-Invert: False (unchecked)
-Type: Key or Mouse Button
-Axis: X axis
-Joy Num: Get Motion from all Joysticks
-
-Note: this is using the old input system and while yes, you could modify the script
-for new input system usage, currently that is not covered in the scope of this 
-setup at this time.
-
-
------------------------------------------------------------------------------------
-
-Step 6: Add Input: "Heli Yaw"
-
------------------------------------------------------------------------------------
-
-
-In Edit -> Project Settings -> Input Manager:
-
-Add Input Axes: "Heli Yaw"
-
-Name: Yaw
-Negative Button: q
-Positive Button: e
-Gravity: 3
-Dead: 0.001
-Sensitivity: 3
-Snap: True (checked)
-Invert: False (unchecked)
-Type: Key or Mouse Button
-Axis: X axis
-Joy Num: Get Motion from all Joysticks
-
-Note: this is using the old input system and while yes, you could modify the script
-for new input system usage, currently that is not covered in the scope of this 
-setup at this time.
-
-
------------------------------------------------------------------------------------
-
-Step 7: Create: empty "Vehicles"
+Step 4: Create: empty "Vehicles"
 
 -----------------------------------------------------------------------------------
 
@@ -255,7 +171,7 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-po
 
 -----------------------------------------------------------------------------------
 
-Step 8: Install: "Synty Polygon Heist Asset"
+Step 5: Install: "Synty Polygon Heist Asset"
 
 -----------------------------------------------------------------------------------
 
@@ -277,7 +193,7 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-po
 
 -----------------------------------------------------------------------------------
 
-Step 9: Identify: the "Vehicle Prefab"
+Step 6: Identify: the "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -291,7 +207,7 @@ SM_Veh_Helicopter_01
 
 -----------------------------------------------------------------------------------
 
-Step 10: Add: the "Vehicle Prefab" to Scene
+Step 7: Add: the "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -315,7 +231,7 @@ Then move "PoliceHelicopter01" into the empty: "Vehicles" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 11: Add: empty "View" as child
+Step 8: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -331,7 +247,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 12: Add: "Camera(s)" in empty "View" as child
+Step 9: Add: "Camera(s)" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -408,7 +324,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 12: In "PoliceHelicopter01" Add: empty "Rotors" as child 
+Step 10: In "PoliceHelicopter01" Add: empty "Rotors" as child 
 
 -----------------------------------------------------------------------------------
 
@@ -471,7 +387,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 13: Add Script: "PoliceHelicopter01Controller.cs" to "PoliceHelicopter01" 
+Step 11: Add Script: "PoliceHelicopter01Controller.cs" to "PoliceHelicopter01" 
 
 -----------------------------------------------------------------------------------
 
@@ -483,7 +399,7 @@ Add Component: PoliceHelicopter01Controller (PoliceHelicopter01Controller)
 
 -----------------------------------------------------------------------------------
 
-Step 14: Modify Settings for: "PoliceHelicopter01Controller (Script)" 
+Step 12: Modify Settings for: "PoliceHelicopter01Controller (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -495,14 +411,6 @@ instead. So, in saying such, your settings should simply look like such:
 
 Script: PoliceHelicopter01Controller
 
-Inputs:
--------
-
-Heli Roll Input: Heli Roll
-Heli Pitch Input: Heli Pitch
-Heli Yaw Input: Heli Yaw
-Min Throttle Key: Left Shift
-Max Throttle Key: Left Control
 
 Components:
 -----------
@@ -537,7 +445,7 @@ Airspeed Type: Mph *
 
 * or Kmh depending on your desired choice
 
-Max Airspeed: 160 *
+Max Airspeed: 80 *
 
 * 160 is max suggested for Mph else say 260 for Kmh for example if such was
   selected
@@ -558,9 +466,17 @@ Audio Source: PoliceHelicopter01 (Audio Source)
 Rotor Sound: Helicopter01_Rotor
 
 
+
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 15: Modify Settings for: "Rigidbody (Component)" 
+Step 13: Modify Settings for: "Rigidbody (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -574,7 +490,7 @@ Mass: 360
 
 -----------------------------------------------------------------------------------
 
-Step 16: Modify Settings for: "Mesh Collider (Component)" 
+Step 14: Modify Settings for: "Mesh Collider (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -588,7 +504,7 @@ Convex: True (Bool checked)
 
 -----------------------------------------------------------------------------------
 
-Step 17: Outside of PoliceHelicopter01: Create Empty Game Object: "Interface"
+Step 15: Outside of PoliceHelicopter01: Create Empty Game Object: "Interface"
 
 -----------------------------------------------------------------------------------
 
@@ -606,7 +522,7 @@ Layer: UI
 
 -----------------------------------------------------------------------------------
 
-Step 18: In "Canvas": add as child: An Empty called: "VehiclesHUD"
+Step 16: In "Canvas": add as child: An Empty called: "VehiclesHUD"
 
 -----------------------------------------------------------------------------------
 
@@ -629,7 +545,7 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 19: In "VehiclesHUD": add child: (TexMeshPro) called: "PoliceHelicopter01_HUD"
+Step 17: In "VehiclesHUD": add child: (TexMeshPro) called: "PoliceHelicopter01_HUD"
 
 -----------------------------------------------------------------------------------
 
@@ -714,7 +630,7 @@ PoliceHelicopter01_HUD
 
 -----------------------------------------------------------------------------------
 
-Step 20: Exit "Interface" & Add Script: "PoliceHelicopter01CamSwitch.cs" 
+Step 18: Exit "Interface" & Add Script: "PoliceHelicopter01CamSwitch.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -729,7 +645,7 @@ Then re-enable the previously disabled camera named: "Heli01 Belly Camera"
 
 -----------------------------------------------------------------------------------
 
-Step 21: Modify Settings for: "PoliceHelicopter01 Cam Switch (Script)" 
+Step 19: Modify Settings for: "PoliceHelicopter01 Cam Switch (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -742,20 +658,21 @@ Element 1: Heli01 Belly Camera
 
 Element 2: Heli01 Cockpit Camera
 
-Input:
-------
-
-Camera Switch Key: V
-
-
 
 * make sure that you include all three cams as the later added entry script is
   reliant on the same.
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 22: In "Canvas" add as child: An Empty called: "VehiclesEntry"
+Step 20: In "Canvas" add as child: An Empty called: "VehiclesEntry"
 
 -----------------------------------------------------------------------------------
 
@@ -772,7 +689,7 @@ Height: 100
 
 -----------------------------------------------------------------------------------
 
-Step 23: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter01_EntryKey" 
+Step 21: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter01_EntryKey" 
 
 -----------------------------------------------------------------------------------
 
@@ -845,7 +762,7 @@ PoliceHelicopter01_EntryKey
 
 -----------------------------------------------------------------------------------
 
-Step 24: Exit "Interface" & Add Script: "PoliceHelicopter01Entry.cs" 
+Step 22: Exit "Interface" & Add Script: "PoliceHelicopter01Entry.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -856,14 +773,6 @@ Add Component: PoliceHelicopter01Entry (Script)
 
 
 Script: PoliceHelicopter01Entry
-
-
-Input Customisations:
----------------------
-
-Enter Key: E
-
-Exit Key: F
 
 
 Game Objects:
@@ -892,9 +801,16 @@ Element 2: Heli01 Cockpit Camera
   on "PoliceHelicopter01CamSwitch" component and that you include all three.
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 25: Edit component: "Box Collider"
+Step 23: Edit component: "Box Collider"
 
 -----------------------------------------------------------------------------------
 
@@ -913,7 +829,7 @@ tweaked further to your likings.
 
 -----------------------------------------------------------------------------------
 
-Step 26: Identify: the next "Vehicle Prefab"
+Step 24: Identify: the next "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -927,7 +843,7 @@ SM_Veh_Helicopter_01
 
 -----------------------------------------------------------------------------------
 
-Step 27: Add: the next "Vehicle Prefab" to Scene
+Step 25: Add: the next "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -951,7 +867,7 @@ Then move "PoliceHelicopter02" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 28: Add: empty "View" as child
+Step 26: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -967,7 +883,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 29: Add: "Camera(s)" in empty "View" as child
+Step 27: Add: "Camera(s)" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -1056,7 +972,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 30: In "PoliceHelicopter02" Add: empty "Rotors" as child 
+Step 28: In "PoliceHelicopter02" Add: empty "Rotors" as child 
 
 -----------------------------------------------------------------------------------
 
@@ -1132,7 +1048,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 31: Add Script: "PoliceHelicopter02Controller.cs" to "PoliceHelicopter02" 
+Step 29: Add Script: "PoliceHelicopter02Controller.cs" to "PoliceHelicopter02" 
 
 -----------------------------------------------------------------------------------
 
@@ -1144,7 +1060,7 @@ Add Component: PoliceHelicopter02Controller (PoliceHelicopter02Controller)
 
 -----------------------------------------------------------------------------------
 
-Step 32: Modify Settings for: "PoliceHelicopter02Controller (Script)" 
+Step 30: Modify Settings for: "PoliceHelicopter02Controller (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -1156,14 +1072,6 @@ instead. So, in saying such, your settings should simply look like such:
 
 Script: PoliceHelicopter02Controller
 
-Inputs:
--------
-
-Heli Roll Input: Heli Roll
-Heli Pitch Input: Heli Pitch
-Heli Yaw Input: Heli Yaw
-Min Throttle Key: Left Shift
-Max Throttle Key: Left Control
 
 Components:
 -----------
@@ -1198,7 +1106,7 @@ Airspeed Type: Mph *
 
 * or Kmh depending on your desired choice
 
-Max Airspeed: 160 *
+Max Airspeed: 80 *
 
 * 160 is max suggested for Mph else say 260 for Kmh for example if such was
   selected
@@ -1219,9 +1127,16 @@ Audio Source: PoliceHelicopter02 (Audio Source)
 Rotor Sound: Helicopter02_Rotor
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 32: Modify Settings for: "Rigidbody (Component)" 
+Step 31: Modify Settings for: "Rigidbody (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -1235,7 +1150,7 @@ Mass: 360
 
 -----------------------------------------------------------------------------------
 
-Step 33: Modify Settings for: "Mesh Collider (Component)" 
+Step 32: Modify Settings for: "Mesh Collider (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -1249,7 +1164,7 @@ Convex: True (Bool checked)
 
 -----------------------------------------------------------------------------------
 
-Step 34: In "VehiclesHUD": add child: (TextMeshPro) called: "PoliceHelicopter02_HUD"
+Step 33: In "VehiclesHUD": add child: (TextMeshPro) called: "PoliceHelicopter02_HUD"
 
 -----------------------------------------------------------------------------------
 
@@ -1348,7 +1263,7 @@ PoliceHelicopter02_HUD
 
 -----------------------------------------------------------------------------------
 
-Step 35: Exit "Interface" & Add Script: "PoliceHelicopter02CamSwitch.cs" 
+Step 34: Exit "Interface" & Add Script: "PoliceHelicopter02CamSwitch.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -1363,7 +1278,7 @@ Then re-enable the previously disabled camera named: "Heli02 Belly Camera"
 
 -----------------------------------------------------------------------------------
 
-Step 36: Modify Settings for: "PoliceHelicopter02 Cam Switch (Script)" 
+Step 35: Modify Settings for: "PoliceHelicopter02 Cam Switch (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -1376,20 +1291,20 @@ Element 1: Heli02 Belly Camera
 
 Element 2: Heli02 Cockpit Camera
 
-Input:
-------
-
-Camera Switch Key: V
-
-
 
 * make sure that you include all three cams as the later added entry script is
   reliant on the same.
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 37: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter02_EntryKey" 
+Step 36: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter02_EntryKey" 
 
 -----------------------------------------------------------------------------------
 
@@ -1478,7 +1393,7 @@ PoliceHelicopter02_EntryKey
 
 -----------------------------------------------------------------------------------
 
-Step 38: Exit "Interface" & Add Script: "PoliceHelicopter02Entry.cs" 
+Step 37: Exit "Interface" & Add Script: "PoliceHelicopter02Entry.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -1489,14 +1404,6 @@ Add Component: PoliceHelicopter02Entry (Script)
 
 
 Script: PoliceHelicopter02Entry
-
-
-Input Customisations:
----------------------
-
-Enter Key: E
-
-Exit Key: F
 
 
 Game Objects:
@@ -1524,10 +1431,16 @@ Element 2: Heli02 Cockpit Camera
 * make sure the element order matches the order that you have
   on "PoliceHelicopter02CamSwitch" component and that you include all three.
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
-Step 39: Edit component: "Box Collider"
+Step 38: Edit component: "Box Collider"
 
 -----------------------------------------------------------------------------------
 
@@ -1546,7 +1459,7 @@ tweaked further to your likings.
 
 -----------------------------------------------------------------------------------
 
-Step 40: Identify: the next "Vehicle Prefab"
+Step 39: Identify: the next "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -1560,7 +1473,7 @@ SM_Veh_Helicopter_01
 
 -----------------------------------------------------------------------------------
 
-Step 41: Add: the next "Vehicle Prefab" to Scene
+Step 40: Add: the next "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -1584,7 +1497,7 @@ Then move "PoliceHelicopter03" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 42: Add: empty "View" as child
+Step 41: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -1600,7 +1513,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 43: Add: "Camera(s)" in empty "View" as child
+Step 42: Add: "Camera(s)" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -1703,7 +1616,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 44: In "PoliceHelicopter03" Add: empty "Rotors" as child 
+Step 43: In "PoliceHelicopter03" Add: empty "Rotors" as child 
 
 -----------------------------------------------------------------------------------
 
@@ -1792,7 +1705,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 45: Add Script: "PoliceHelicopter03Controller.cs" to "PoliceHelicopter03" 
+Step 44: Add Script: "PoliceHelicopter03Controller.cs" to "PoliceHelicopter03" 
 
 -----------------------------------------------------------------------------------
 
@@ -1804,7 +1717,7 @@ Add Component: PoliceHelicopter03Controller (PoliceHelicopter03Controller)
 
 -----------------------------------------------------------------------------------
 
-Step 46: Modify Settings for: "PoliceHelicopter03Controller (Script)" 
+Step 45: Modify Settings for: "PoliceHelicopter03Controller (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -1816,14 +1729,6 @@ instead. So, in saying such, your settings should simply look like such:
 
 Script: PoliceHelicopter03Controller
 
-Inputs:
--------
-
-Heli Roll Input: Heli Roll
-Heli Pitch Input: Heli Pitch
-Heli Yaw Input: Heli Yaw
-Min Throttle Key: Left Shift
-Max Throttle Key: Left Control
 
 Components:
 -----------
@@ -1858,7 +1763,7 @@ Airspeed Type: Mph *
 
 * or Kmh depending on your desired choice
 
-Max Airspeed: 160 *
+Max Airspeed: 80 *
 
 * 160 is max suggested for Mph else say 260 for Kmh for example if such was
   selected
@@ -1879,9 +1784,16 @@ Audio Source: PoliceHelicopter03 (Audio Source)
 Rotor Sound: Helicopter03_Rotor
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 47: Modify Settings for: "Rigidbody (Component)" 
+Step 46: Modify Settings for: "Rigidbody (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -1895,7 +1807,7 @@ Mass: 360
 
 -----------------------------------------------------------------------------------
 
-Step 48: Modify Settings for: "Mesh Collider (Component)" 
+Step 47: Modify Settings for: "Mesh Collider (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -1909,7 +1821,7 @@ Convex: True (Bool checked)
 
 -----------------------------------------------------------------------------------
 
-Step 49: In "VehiclesHUD": add child: (TexMeshPro) called: "PoliceHelicopter03_HUD"
+Step 48: In "VehiclesHUD": add child: (TexMeshPro) called: "PoliceHelicopter03_HUD"
 
 -----------------------------------------------------------------------------------
 
@@ -2022,7 +1934,7 @@ PoliceHelicopter03_HUD
 
 -----------------------------------------------------------------------------------
 
-Step 50: Exit "Interface" & Add Script: "PoliceHelicopter03CamSwitch.cs" 
+Step 49: Exit "Interface" & Add Script: "PoliceHelicopter03CamSwitch.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -2037,7 +1949,7 @@ Then re-enable the previously disabled camera named: "Heli03 Belly Camera"
 
 -----------------------------------------------------------------------------------
 
-Step 51: Modify Settings for: "PoliceHelicopter03 Cam Switch (Script)" 
+Step 50: Modify Settings for: "PoliceHelicopter03 Cam Switch (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -2050,20 +1962,20 @@ Element 1: Heli03 Belly Camera
 
 Element 2: Heli03 Cockpit Camera
 
-Input:
-------
-
-Camera Switch Key: V
-
-
-
 * make sure that you include all three cams as the later added entry script is
   reliant on the same.
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 52: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter03_EntryKey" 
+Step 51: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter03_EntryKey" 
 
 -----------------------------------------------------------------------------------
 
@@ -2166,7 +2078,7 @@ PoliceHelicopter03_EntryKey
 
 -----------------------------------------------------------------------------------
 
-Step 53: Exit "Interface" & Add Script: "PoliceHelicopter03Entry.cs" 
+Step 52: Exit "Interface" & Add Script: "PoliceHelicopter03Entry.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -2177,14 +2089,6 @@ Add Component: PoliceHelicopter03Entry (Script)
 
 
 Script: PoliceHelicopter03Entry
-
-
-Input Customisations:
----------------------
-
-Enter Key: E
-
-Exit Key: F
 
 
 Game Objects:
@@ -2213,9 +2117,16 @@ Element 2: Heli03 Cockpit Camera
   on "PoliceHelicopter03CamSwitch" component and that you include all three.
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 54: Edit component: "Box Collider"
+Step 53: Edit component: "Box Collider"
 
 -----------------------------------------------------------------------------------
 
@@ -2234,7 +2145,7 @@ tweaked further to your likings.
 
 -----------------------------------------------------------------------------------
 
-Step 55: Identify: the next "Vehicle Prefab"
+Step 54: Identify: the next "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -2248,7 +2159,7 @@ SM_Veh_Helicopter_01
 
 -----------------------------------------------------------------------------------
 
-Step 56: Add: the next "Vehicle Prefab" to Scene
+Step 55: Add: the next "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -2272,7 +2183,7 @@ Then move "PoliceHelicopter04" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 57: Add: empty "View" as child
+Step 56: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -2288,7 +2199,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 58: Add: "Camera(s)" in empty "View" as child
+Step 57: Add: "Camera(s)" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -2404,7 +2315,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 59: In "PoliceHelicopter04" Add: empty "Rotors" as child 
+Step 58: In "PoliceHelicopter04" Add: empty "Rotors" as child 
 
 -----------------------------------------------------------------------------------
 
@@ -2506,7 +2417,7 @@ Vehicles
 
 -----------------------------------------------------------------------------------
 
-Step 60: Add Script: "PoliceHelicopter04Controller.cs" to "PoliceHelicopter04" 
+Step 59: Add Script: "PoliceHelicopter04Controller.cs" to "PoliceHelicopter04" 
 
 -----------------------------------------------------------------------------------
 
@@ -2518,7 +2429,7 @@ Add Component: PoliceHelicopter04Controller (PoliceHelicopter04Controller)
 
 -----------------------------------------------------------------------------------
 
-Step 61: Modify Settings for: "PoliceHelicopter04Controller (Script)" 
+Step 60: Modify Settings for: "PoliceHelicopter04Controller (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -2530,14 +2441,6 @@ instead. So, in saying such, your settings should simply look like such:
 
 Script: PoliceHelicopter04Controller
 
-Inputs:
--------
-
-Heli Roll Input: Heli Roll
-Heli Pitch Input: Heli Pitch
-Heli Yaw Input: Heli Yaw
-Min Throttle Key: Left Shift
-Max Throttle Key: Left Control
 
 Components:
 -----------
@@ -2572,7 +2475,7 @@ Airspeed Type: Mph *
 
 * or Kmh depending on your desired choice
 
-Max Airspeed: 160 *
+Max Airspeed: 80 *
 
 * 160 is max suggested for Mph else say 260 for Kmh for example if such was
   selected
@@ -2593,9 +2496,16 @@ Audio Source: PoliceHelicopter04 (Audio Source)
 Rotor Sound: Helicopter04_Rotor
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 62: Modify Settings for: "Rigidbody (Component)" 
+Step 61: Modify Settings for: "Rigidbody (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -2609,7 +2519,7 @@ Mass: 360
 
 -----------------------------------------------------------------------------------
 
-Step 63: Modify Settings for: "Mesh Collider (Component)" 
+Step 62: Modify Settings for: "Mesh Collider (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -2623,7 +2533,7 @@ Convex: True (Bool checked)
 
 -----------------------------------------------------------------------------------
 
-Step 64: In "VehiclesHUD": add child: (TextMeshPro) called: "PoliceHelicopter04_HUD"
+Step 63: In "VehiclesHUD": add child: (TextMeshPro) called: "PoliceHelicopter04_HUD"
 
 -----------------------------------------------------------------------------------
 
@@ -2750,7 +2660,7 @@ PoliceHelicopter04_HUD
 
 -----------------------------------------------------------------------------------
 
-Step 65: Exit "Interface" & Add Script: "PoliceHelicopter04CamSwitch.cs" 
+Step 64: Exit "Interface" & Add Script: "PoliceHelicopter04CamSwitch.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -2765,7 +2675,7 @@ Then re-enable the previously disabled camera named: "Heli04 Belly Camera"
 
 -----------------------------------------------------------------------------------
 
-Step 66: Modify Settings for: "PoliceHelicopter04 Cam Switch (Script)" 
+Step 65: Modify Settings for: "PoliceHelicopter04 Cam Switch (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -2778,20 +2688,21 @@ Element 1: Heli04 Belly Camera
 
 Element 2: Heli04 Cockpit Camera
 
-Input:
-------
-
-Camera Switch Key: V
-
-
 
 * make sure that you include all three cams as the later added entry script is
   reliant on the same.
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
-Step 67: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter04_EntryKey" 
+Step 66: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter04_EntryKey" 
 
 -----------------------------------------------------------------------------------
 
@@ -2908,7 +2819,7 @@ PoliceHelicopter04_EntryKey
 
 -----------------------------------------------------------------------------------
 
-Step 68: Exit "Interface" & Add Script: "PoliceHelicopter04Entry.cs" 
+Step 67: Exit "Interface" & Add Script: "PoliceHelicopter04Entry.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -2919,14 +2830,6 @@ Add Component: PoliceHelicopter04Entry (Script)
 
 
 Script: PoliceHelicopter04Entry
-
-
-Input Customisations:
----------------------
-
-Enter Key: E
-
-Exit Key: F
 
 
 Game Objects:
@@ -2955,9 +2858,16 @@ Element 2: Heli04 Cockpit Camera
   on "PoliceHelicopter04CamSwitch" component and that you include all three.
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)  
+
+
 -----------------------------------------------------------------------------------
 
-Step 69: Edit component: "Box Collider"
+Step 68: Edit component: "Box Collider"
 
 -----------------------------------------------------------------------------------
 
@@ -2976,7 +2886,7 @@ tweaked further to your likings.
 
 -----------------------------------------------------------------------------------
 
-Step 70: Create: object "Player":
+Step 69: Create: object "Player":
 
 -----------------------------------------------------------------------------------
 
@@ -2995,7 +2905,7 @@ Add Tag: "Player"
 
 -----------------------------------------------------------------------------------
 
-Step 71: Add: empty object "View":
+Step 70: Add: empty object "View":
 
 -----------------------------------------------------------------------------------
 
@@ -3008,7 +2918,7 @@ Transform Position: X: 0 Y: 0 Z: 0
 
 -----------------------------------------------------------------------------------
 
-Step 72: Add: "Camera":
+Step 71: Add: "Camera":
 
 -----------------------------------------------------------------------------------
 
@@ -3030,6 +2940,22 @@ Add Tag: "MainCamera"
 
 -----------------------------------------------------------------------------------
 
+Step 72: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+Input Actions:
+--------------
+
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
 Step 73: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
@@ -3042,17 +2968,7 @@ Height: "1.8"
 
 -----------------------------------------------------------------------------------
 
-Step 74: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
-
-
------------------------------------------------------------------------------------
-
-Step 75: Setup: Audio Source and Footstep Sounds Audio Clips:
+Step 74: Setup: Audio Source and Footstep Sounds Audio Clips:
 
 -----------------------------------------------------------------------------------
 
@@ -3166,6 +3082,7 @@ and fly your helicopter(s) around and see your direction by player and vehicle
 compass.
 
 -----------------------------------------------------------------------------------
+
 
 
 Entry Script Note: the provided entry script(s) are provided "as is" simply as a

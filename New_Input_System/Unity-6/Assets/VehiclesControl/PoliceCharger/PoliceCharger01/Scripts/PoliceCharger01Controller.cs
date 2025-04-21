@@ -1,5 +1,5 @@
 /*
- * File: Police Charger 01 Controller
+ * File: Police Charger 01 Controller (New Input System)
  * Name: PoliceCharger01Controller.cs
  * Author: DeathwatchGaming
  * License: MIT
@@ -25,6 +25,7 @@
 // using
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -45,22 +46,7 @@ namespace VehiclesControl
 
 	// public class PoliceCharger01Controller
 	public class PoliceCharger01Controller : MonoBehaviour
-	{
-		// Input Customizations
-		[Header("Input Customizations")]
-
-			[Tooltip("The vertical movement input string")]
-			// string _verticalMoveInput
-			[SerializeField] private string _verticalMoveInput = "Vertical";	
-
-			[Tooltip("The horizontal movement input string")]
-			// string _horizontalMoveInput
-			[SerializeField] private string _horizontalMoveInput = "Horizontal";	
-
-			[Tooltip("The brake input keycode key")]
-			// KeyCode _brakeKey
-			[SerializeField] private KeyCode _brakeKey = KeyCode.Space;
-					
+	{					
 		// Require Components
 		[Header("Require Components")]
 
@@ -144,6 +130,25 @@ namespace VehiclesControl
 			// float _maxSpeed
 			[SerializeField] private float _maxSpeed = 180;	
 
+		// Input Actions
+		[Header("Input Actions")]
+
+			[Tooltip("The input action asset")]
+			// InputActionAsset _carControls
+			[SerializeField] private InputActionAsset _carControls;
+
+		// InputAction _moveAction
+		private InputAction _moveAction;
+
+		// Vector2 _moveInput
+		private Vector2 _moveInput;
+
+		// InputAction _brakeAction
+		private InputAction _brakeAction;
+
+		// bool _brakeValue
+		private bool _brakeValue;
+
 		// _currentAcceleration is 0
 		private float _currentAcceleration = 0f;
 
@@ -179,7 +184,47 @@ namespace VehiclesControl
 			// Cursor visible is false
 			Cursor.visible = false;
 
+			// Input Actions
+
+			// _moveAction
+			_moveAction = _carControls.FindActionMap("Car").FindAction("Move");
+
+			// _brakeAction
+			_brakeAction = _carControls.FindActionMap("Car").FindAction("Brake");
+
+			// _moveAction performed
+			_moveAction.performed += context => _moveInput = context.ReadValue<Vector2>();
+
+			// _moveAction canceled
+			_moveAction.canceled += context => _moveInput = Vector2.zero;
+
 		} // close private void Awake
+
+		// private void OnEnable
+		private void OnEnable()
+		{
+			// Input Actions Enable
+
+			// _moveAction Enable
+			_moveAction.Enable();
+
+			// _brakeAction Enable
+			_brakeAction.Enable();
+
+		} // close private void OnEnable
+
+		// private void OnDisable
+		private void OnDisable()
+		{
+			// Input Actions Disable
+			
+			// _moveAction Disable
+			_moveAction.Disable();
+
+			// _brakeAction Disable
+			_brakeAction.Disable();
+
+		} // close private void OnDisable
 
 		// private void Update
 		private void Update()
@@ -187,6 +232,11 @@ namespace VehiclesControl
 			// Handle Speed
 			HandleSpeed();
 
+			// Handle Braking Input
+			
+			// _brakeValue is _brakeAction IsPressed
+			_brakeValue = _brakeAction.IsPressed();
+			
 		} // close private void Update
 
 		// private void FixedUpdate
@@ -258,7 +308,7 @@ namespace VehiclesControl
 			// Get the forward and reverse _acceleration from vertical axis (W and S keys)
 	        
 			// _currentAcceleration is _acceleration times Input GetAxis Vertical
-			_currentAcceleration = _acceleration * Input.GetAxis(_verticalMoveInput);
+			_currentAcceleration = _acceleration * _moveInput.y;
 
 			// Apply _acceleration to the rear wheels
 	        
@@ -276,7 +326,7 @@ namespace VehiclesControl
 			// If we are pressing the _brakeKey give currentBrakingForce a value
 
 			// if Input GetKey KeyCode _brakeKey
-			if (Input.GetKey(_brakeKey))
+			if (_brakeValue)
 			{
 				// _currentBrakeForce is _brakingForce
 				_currentBrakeForce = _brakingForce;
@@ -313,7 +363,7 @@ namespace VehiclesControl
 			// Take care of the front wheels steering
 
 			// _currentTurnAngle is _maxTurnAngle times Input GetAxis Horizontal
-			_currentTurnAngle = _maxTurnAngle * Input.GetAxis(_horizontalMoveInput);
+			_currentTurnAngle = _maxTurnAngle * _moveInput.x;
 
 			// _frontLeft steerAngle is _currentTurnAngle
 			_frontLeft.steerAngle = _currentTurnAngle;

@@ -6,14 +6,16 @@ Description:
 Create a basic Vehicle Controller for your Unity projects using vehicle models
 from Synty Polygon Heist Asset.
 
+
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+
 
 Manual Setup Instruction:
 -------------------------
@@ -488,6 +490,14 @@ Rigidbody Mass:
 Set Rigibody Mass: 2500
 
 
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 13: Add to: PoliceCharger03Camera (PoliceCharger03Camera.cs)
@@ -508,6 +518,13 @@ Police Cruiser: PoliceCharger03 (Transform)
 Height: 3.28
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 
@@ -520,7 +537,7 @@ the documentation folder ie:
 
 PoliceCharger03Controller-Only-Speedometer-Documentation 
 
-to finalize all setups steps.. 
+to finalize all setups steps. 
 
 
 -----------------------------------------------------------------------------------

@@ -1,5 +1,5 @@
 /*
- * Name: Police Helicopter 01 Controller
+ * Name: Police Helicopter 01 Controller (New Input System)
  * File: PoliceHelicopter01Controller.cs
  * Author: DeathwatchGaming
  * License: MIT
@@ -7,9 +7,10 @@
 */
 
 // Using
-using UnityEngine;
-using System;
 using TMPro;
+using System; 
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -34,29 +35,6 @@ namespace VehiclesControl
     // public class PoliceHelicopter01Controller
     public class PoliceHelicopter01Controller : MonoBehaviour 
     {
-        // Header Inputs
-        [Header("Inputs")]
-        
-            [Tooltip("Helicopter Roll Movement Input String")]
-            // private string _heliRollInput
-            [SerializeField] private string _heliRollInput = "Heli Roll";
-
-            [Tooltip("Helicopter Pitch Movement Input String")]
-            // private string _heliPitchInput
-            [SerializeField] private string _heliPitchInput = "Heli Pitch";
-
-            [Tooltip("Helicopter Yaw Movement Input String")]
-            // private string _heliYawInput
-            [SerializeField] private string _heliYawInput = "Heli Yaw";
-
-            [Tooltip("Minimum Throttle Input Key")]
-            // private KeyCode _minThrottleKey
-            [SerializeField] private KeyCode _minThrottleKey = KeyCode.LeftShift;
-
-            [Tooltip("Maximum Throttle Input Key")]
-            // private KeyCode _maxThrottleKey
-            [SerializeField] private KeyCode _maxThrottleKey = KeyCode.LeftControl;        
-
         // Components
         [Header("Components")]
 
@@ -137,7 +115,44 @@ namespace VehiclesControl
             [Tooltip("The Rotor Sound Audio Clip")]
             // private AudioClip _rotorSound
             [SerializeField] private AudioClip _rotorSound;
-        
+
+        // Input Actions
+        [Header("Input Actions")]
+
+            [Tooltip("The input action asset")]
+            // InputActionAsset _helicopterControls
+            [SerializeField] private InputActionAsset _helicopterControls;
+
+        // InputAction _moveTwoAction (Pitch & Roll)
+        private InputAction _moveTwoAction;
+
+        // Vector2 _moveTwoInput (Pitch & Roll)
+        private Vector2 _moveTwoInput;
+
+        // InputAction _moveOneAction (Yaw)
+        private InputAction _moveOneAction;
+
+        // Vector2 _moveOneInput (Yaw)
+        private Vector2 _moveOneInput;
+
+        // InputAction _maxThrottleAction (Max)
+        private InputAction _maxThrottleAction;
+
+        // InputAction _minThrottleAction (Min)
+        private InputAction _minThrottleAction;
+
+        // bool _maxThrottleIsPressed
+        private bool _maxThrottleIsPressed;
+
+        // bool _minThrottleIsPressed
+        private bool _minThrottleIsPressed;
+
+        // bool _maxThrottleWasPressed
+        private bool _maxThrottleWasPressed;
+
+        // bool _minThrottleWasPressed
+        private bool _minThrottleWasPressed;
+
         // private Bool _rotorCheck
         private bool _rotorCheck = false;
 
@@ -184,13 +199,80 @@ namespace VehiclesControl
             // Cursor visible is false
             Cursor.visible = false;
 
+            // Input Actions
+
+            // _moveTwoAction
+            _moveTwoAction = _helicopterControls.FindActionMap("Helicopter").FindAction("MoveTwo");
+
+            // _moveTwoAction performed
+            _moveTwoAction.performed += context => _moveTwoInput = context.ReadValue<Vector2>();
+
+            // _moveTwoAction canceled
+            _moveTwoAction.canceled += context => _moveTwoInput = Vector2.zero;
+
+            // _moveOneAction
+            _moveOneAction = _helicopterControls.FindActionMap("Helicopter").FindAction("MoveOne");
+
+            // _moveOneAction performed
+            _moveOneAction.performed += context => _moveOneInput = context.ReadValue<Vector2>();
+
+            // _moveOneAction canceled
+            _moveOneAction.canceled += context => _moveOneInput = Vector2.zero;
+
+            // _maxThrottleAction
+            _maxThrottleAction = _helicopterControls.FindActionMap("Helicopter").FindAction("MaxThrottle");
+
+            // _minThrottleAction
+            _minThrottleAction = _helicopterControls.FindActionMap("Helicopter").FindAction("MinThrottle");
+
         } // close private void Awake
-        
+
+        // private void OnEnable
+        private void OnEnable()
+        {
+            // Input Actions Enable
+
+            // _moveTwoAction Enable
+            _moveTwoAction.Enable();
+
+            // _moveOneAction Enable
+            _moveOneAction.Enable();
+
+            // _maxThrottleAction Enable
+            _maxThrottleAction.Enable();
+
+            // _minThrottleAction Enable
+            _minThrottleAction.Enable();
+
+        } // close private void OnEnable
+
+        // private void OnDisable
+        private void OnDisable()
+        {
+            // Input Actions Disable
+
+            // _moveTwoAction Disable
+            _moveTwoAction.Disable();
+
+            // _moveOneAction Disable
+            _moveOneAction.Disable();
+
+            // _maxThrottleAction Disable
+            _maxThrottleAction.Disable();
+
+            // _minThrottleAction Disable
+            _minThrottleAction.Disable();
+
+        } // close private void OnDisable
+
         // Update is called every frame
 
         // private void Update
         private void Update()
         {
+            // Handle Press State
+            HandlePressState();
+
             // Handle Inputs
             HandleInputs();
 
@@ -223,30 +305,47 @@ namespace VehiclesControl
             _rigidbody.AddTorque(transform.up * _heliYaw * _sensitivity); 
 
         } // close private void FixedUpdate    
-        
+
+        // private void HandlePressState
+        private void HandlePressState()
+        {
+            // _maxThrottleIsPressed
+            _maxThrottleIsPressed = _maxThrottleAction.IsPressed();
+
+            // _minThrottleIsPressed
+            _minThrottleIsPressed = _minThrottleAction.IsPressed();
+
+            // _maxThrottleWasPressed
+            _maxThrottleWasPressed = _maxThrottleAction.WasPressedThisFrame();
+
+            // _minThrottleWasPressed
+            _minThrottleWasPressed = _minThrottleAction.WasPressedThisFrame();            
+
+        } // close private void HandlePressState
+                
         // private void HandleInputs
         private void HandleInputs()
         {
-            // _heliRoll
-            _heliRoll = Input.GetAxis(_heliRollInput);
+            // _heliRoll (Roll)
+            _heliRoll = _moveTwoInput.x;
 
-            // _heliPitch
-            _heliPitch = Input.GetAxis(_heliPitchInput); 
+            // _heliPitch (Pitch)
+            _heliPitch = _moveTwoInput.y; 
 
-            // _heliYaw
-            _heliYaw = Input.GetAxis(_heliYawInput);
+            // _heliYaw (Yaw)
+            _heliYaw = _moveOneInput.x;
 
             // _rotorCheck false
             _rotorCheck = false;
             
             // if Input GetKey LeftControl
-            if (Input.GetKey(_maxThrottleKey))
+            if (_maxThrottleIsPressed)
             {
                 // _throttle
                 _throttle += Time.deltaTime * _throttleAmount;
                 
                 // if Input GetKeyDown LeftControl
-                if (Input.GetKeyDown(_maxThrottleKey))
+                if (_maxThrottleWasPressed)
                 {
                     // _rotorCheck true
                     _rotorCheck = true;
@@ -256,13 +355,13 @@ namespace VehiclesControl
             } // close if Input GetKey LeftControl
             
             // else if Input GetKey LeftShift
-            else if (Input.GetKey(_minThrottleKey))
+            else if (_minThrottleIsPressed)
             {
                 // _throttle
                 _throttle -= Time.deltaTime * _throttleAmount;
                 
                 // if Input GetKeyDown LeftShift
-                if (Input.GetKeyDown(_minThrottleKey))
+                if (_minThrottleWasPressed)
                 {
                     // _rotorCheck true
                     _rotorCheck = true;
@@ -371,7 +470,7 @@ namespace VehiclesControl
             // Tail Rotor Rotate Roll or Yaw is 0
 
             // if Input GetAxis _heliRollInput is 0 or Input GetAxis _heliYawInput is 0
-            if (Input.GetAxis(_heliRollInput) == 0 || Input.GetAxis(_heliYawInput) == 0)
+            if (_heliRoll == 0 || _heliYaw == 0)
             {
                 // _rotorsTransformTail Rotate
                 _rotorsTransformTail.Rotate(Vector3.right * _throttle * _rotorSpeedModifier);
@@ -381,7 +480,7 @@ namespace VehiclesControl
             // Tail Rotor Yaw Rotate
 
             // if Input GetAxis _heliYawInput is less than 0
-            if (Input.GetAxis(_heliYawInput) < 0)
+            if (_heliYaw < 0)
             {
                 // _rotorsTransformTail
                 _rotorsTransformTail.Rotate(Vector3.left * (_maxThrust * _throttle) * _rotorSpeedModifier);
@@ -389,7 +488,7 @@ namespace VehiclesControl
             } // close if Input GetAxis _heliYawInput is less than 0
 
             // if Input GetAxis _heliYawInput is greater than 0
-            if (Input.GetAxis(_heliYawInput) > 0)
+            if (_heliYaw > 0)
             {
                 // _rotorsTransformTail
                 _rotorsTransformTail.Rotate(Vector3.right * (_maxThrust * _throttle) * _rotorSpeedModifier);
@@ -399,7 +498,7 @@ namespace VehiclesControl
             // Tail Rotor Roll Rotate
 
             // if Input GetAxis _heliRollInput is less than 0
-            if (Input.GetAxis(_heliRollInput) < 0)
+            if (_heliRoll < 0)
             {
                 // _rotorsTransformTail
                 _rotorsTransformTail.Rotate(Vector3.left * (_maxThrust * _throttle) * _rotorSpeedModifier);
@@ -407,7 +506,7 @@ namespace VehiclesControl
             } // close if Input GetAxis _heliRollInput is less than 0
 
             // if Input GetAxis _heliRollInput is greater than 0
-            if (Input.GetAxis(_heliRollInput) > 0)
+            if (_heliRoll > 0)
             {
                 // _rotorsTransformTail
                 _rotorsTransformTail.Rotate(Vector3.right * (_maxThrust * _throttle) * _rotorSpeedModifier);

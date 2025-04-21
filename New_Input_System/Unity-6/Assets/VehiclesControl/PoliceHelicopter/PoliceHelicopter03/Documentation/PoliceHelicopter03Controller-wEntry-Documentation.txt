@@ -10,33 +10,37 @@ vehicle models from Synty Polygon Heist Asset.
 Vehicle Controls: 
 -----------------
 
-Heli Roll: A & D
-Heli Pitch: S & W
-Heli Yaw:  Q & E
+Roll: A & D [Keyboard] / Left Stick [Gamepad]
+Pitch: S & W [Keyboard] / Left Stick [Gamepad] 
+Yaw:  Q & E [Keyboard] / Right Stick [Gamepad]
+Decrease throttle: Shift [Keyboard] / D-Pad Down [Gamepad]
+Increase throttle: Control [Keyboard] / D-Pad Up [Gamepad] 
 
-Decrease throttle: Left Shift
-Increase throttle: Left Control
 
 Camera Controls:
 ----------------
 
-Change Cameras: V (ie: Rear Camera, Belly Camera & Cockpit Camera)
+Change Cameras: V [Keyboard] / D-Pad Left [Gamepad] * 
+
+* (ie: Rear Camera, Belly Camera & Cockpit Camera) 
+
 
 Entry Controls:
 -----------------
 
-Entry: E
-Exit: F
+Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:       F [Keyboard] / Button South [Gamepad] 
 
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Manual Setup Instruction:
@@ -129,95 +133,7 @@ We can now opt to clean up for better organization, simply drag the:
 
 -----------------------------------------------------------------------------------
 
-Step 4: Add Input: "Heli Roll"
-
------------------------------------------------------------------------------------
-
-
-In Edit -> Project Settings -> Input Manager:
-
-Add Input Axes: "Heli Roll"
-
-Name: Roll
-Negative Button: left
-Positive Button: right
-Alt Negative Button: a
-Alt Positive Button: d
-Gravity: 3
-Dead: 0.001
-Sensitivity: 3
-Snap: True (checked)
-Invert: False (unchecked)
-Type: Key or Mouse Button
-Axis: X axis
-Joy Num: Get Motion from all Joysticks
-
-Note: this is using the old input system and while yes, you could modify the script
-for new input system usage, currently that is not covered in the scope of this 
-setup at this time.
-
-
------------------------------------------------------------------------------------
-
-Step 5: Add Input: "Heli Pitch"
-
------------------------------------------------------------------------------------
-
-
-In Edit -> Project Settings -> Input Manager:
-
-Add Input Axes: "Heli Pitch"
-
-Name: Pitch
-Negative Button: down
-Positive Button: up
-Alt Negative Button: s
-Alt Positive Button: w
-Gravity: 3
-Dead: 0.001
-Sensitivity: 3
-Snap: True (checked)
-Invert: False (unchecked)
-Type: Key or Mouse Button
-Axis: X axis
-Joy Num: Get Motion from all Joysticks
-
-Note: this is using the old input system and while yes, you could modify the script
-for new input system usage, currently that is not covered in the scope of this 
-setup at this time.
-
-
------------------------------------------------------------------------------------
-
-Step 6: Add Input: "Heli Yaw"
-
------------------------------------------------------------------------------------
-
-
-In Edit -> Project Settings -> Input Manager:
-
-Add Input Axes: "Heli Yaw"
-
-Name: Yaw
-Negative Button: q
-Positive Button: e
-Gravity: 3
-Dead: 0.001
-Sensitivity: 3
-Snap: True (checked)
-Invert: False (unchecked)
-Type: Key or Mouse Button
-Axis: X axis
-Joy Num: Get Motion from all Joysticks
-
-Note: this is using the old input system and while yes, you could modify the script
-for new input system usage, currently that is not covered in the scope of this 
-setup at this time.
-
-
------------------------------------------------------------------------------------
-
-Step 7: Create: empty "Vehicle"
+Step 4: Create: empty "Vehicle"
 
 -----------------------------------------------------------------------------------
 
@@ -255,7 +171,7 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-po
 
 -----------------------------------------------------------------------------------
 
-Step 8: Install: "Synty Polygon Heist Asset"
+Step 5: Install: "Synty Polygon Heist Asset"
 
 -----------------------------------------------------------------------------------
 
@@ -277,7 +193,7 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-heist-low-po
 
 -----------------------------------------------------------------------------------
 
-Step 9: Identify: the "Vehicle Prefab"
+Step 6: Identify: the "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -291,7 +207,7 @@ SM_Veh_Helicopter_01
 
 -----------------------------------------------------------------------------------
 
-Step 10: Add: the "Vehicle Prefab" to Scene
+Step 7: Add: the "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -315,7 +231,7 @@ Then move "PoliceHelicopter03" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 11: Add: empty "View" as child
+Step 8: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -331,7 +247,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 12: Add: "Camera(s)" in empty "View" as child
+Step 9: Add: "Camera(s)" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -408,7 +324,7 @@ Vehicle
 
 -----------------------------------------------------------------------------------
 
-Step 12: In "PoliceHelicopter03" Add: empty "Rotors" as child 
+Step 10: In "PoliceHelicopter03" Add: empty "Rotors" as child 
 
 -----------------------------------------------------------------------------------
 
@@ -471,7 +387,7 @@ Vehicle
 
 -----------------------------------------------------------------------------------
 
-Step 13: Add Script: "PoliceHelicopter03Controller.cs" to "PoliceHelicopter03" 
+Step 11: Add Script: "PoliceHelicopter03Controller.cs" to "PoliceHelicopter03" 
 
 -----------------------------------------------------------------------------------
 
@@ -483,7 +399,7 @@ Add Component: PoliceHelicopter03Controller (PoliceHelicopter03Controller)
 
 -----------------------------------------------------------------------------------
 
-Step 14: Modify Settings for: "PoliceHelicopter03Controller (Script)" 
+Step 12: Modify Settings for: "PoliceHelicopter03Controller (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -495,14 +411,6 @@ instead. So, in saying such, your settings should simply look like such:
 
 Script: PoliceHelicopter03Controller
 
-Inputs:
--------
-
-Heli Roll Input: Heli Roll
-Heli Pitch Input: Heli Pitch
-Heli Yaw Input: Heli Yaw
-Min Throttle Key: Left Shift
-Max Throttle Key: Left Control
 
 Components:
 -----------
@@ -558,9 +466,16 @@ Audio Source: PoliceHelicopter03 (Audio Source)
 Rotor Sound: Helicopter03_Rotor
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset) 
+
+
 -----------------------------------------------------------------------------------
 
-Step 15: Modify Settings for: "Rigidbody (Component)" 
+Step 13: Modify Settings for: "Rigidbody (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -574,7 +489,7 @@ Mass: 360
 
 -----------------------------------------------------------------------------------
 
-Step 16: Modify Settings for: "Mesh Collider (Component)" 
+Step 14: Modify Settings for: "Mesh Collider (Component)" 
 
 -----------------------------------------------------------------------------------
 
@@ -588,7 +503,7 @@ Convex: True (Bool checked)
 
 -----------------------------------------------------------------------------------
 
-Step 17: Outside of PoliceHelicopter03: Create Empty Game Object: "Interface"
+Step 15: Outside of PoliceHelicopter03: Create Empty Game Object: "Interface"
 
 -----------------------------------------------------------------------------------
 
@@ -606,7 +521,7 @@ Layer: UI
 
 -----------------------------------------------------------------------------------
 
-Step 18: In "Canvas": add as child: An Empty called: "VehiclesHUD"
+Step 16: In "Canvas": add as child: An Empty called: "VehiclesHUD"
 
 -----------------------------------------------------------------------------------
 
@@ -629,7 +544,7 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 19: In "VehiclesHUD": add child: (TexMeshPro) called: "PoliceHelicopter03_HUD"
+Step 17: In "VehiclesHUD": add child: (TexMeshPro) called: "PoliceHelicopter03_HUD"
 
 -----------------------------------------------------------------------------------
 
@@ -714,7 +629,7 @@ PoliceHelicopter03_HUD
 
 -----------------------------------------------------------------------------------
 
-Step 20: Exit "Interface" & Add Script: "PoliceHelicopter03CamSwitch.cs" 
+Step 18: Exit "Interface" & Add Script: "PoliceHelicopter03CamSwitch.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -729,7 +644,7 @@ Then re-enable the previously disabled camera named: "Heli03 Belly Camera"
 
 -----------------------------------------------------------------------------------
 
-Step 21: Modify Settings for: "PoliceHelicopter03 Cam Switch (Script)" 
+Step 19: Modify Settings for: "PoliceHelicopter03 Cam Switch (Script)" 
 
 -----------------------------------------------------------------------------------
 
@@ -742,20 +657,20 @@ Element 1: Heli03 Belly Camera
 
 Element 2: Heli03 Cockpit Camera
 
-Input:
-------
-
-Camera Switch Key: V
-
-
-
 * make sure that you include all three cams as the later added entry script is
   reliant on the same.
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)   
+
+
 -----------------------------------------------------------------------------------
 
-Step 22: In "Canvas" add as child: An Empty called: "VehiclesEntry"
+Step 20: In "Canvas" add as child: An Empty called: "VehiclesEntry"
 
 -----------------------------------------------------------------------------------
 
@@ -772,7 +687,7 @@ Height: 100
 
 -----------------------------------------------------------------------------------
 
-Step 23: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter03_EntryKey" 
+Step 21: In "VehiclesEntry": add child: (TMPro) called: "PoliceHelicopter03_EntryKey" 
 
 -----------------------------------------------------------------------------------
 
@@ -844,7 +759,7 @@ PoliceHelicopter03_EntryKey
 
 -----------------------------------------------------------------------------------
 
-Step 24: Exit "Interface" & Add Script: "PoliceHelicopter03Entry.cs" 
+Step 22: Exit "Interface" & Add Script: "PoliceHelicopter03Entry.cs" 
 
 -----------------------------------------------------------------------------------
 
@@ -856,13 +771,6 @@ Add Component: PoliceHelicopter03Entry (Script)
 
 Script: PoliceHelicopter03Entry
 
-
-Input Customisations:
----------------------
-
-Enter Key: E
-
-Exit Key: F
 
 
 Game Objects:
@@ -891,9 +799,16 @@ Element 2: Heli03 Cockpit Camera
   on "PoliceHelicopter03CamSwitch" component and that you include all three.
 
 
+Input Actions:
+--------------
+
+
+Helicopter Controls: HelicopterControls (Input Action Asset)   
+
+
 -----------------------------------------------------------------------------------
 
-Step 25: Edit component: "Box Collider"
+Step 23: Edit component: "Box Collider"
 
 -----------------------------------------------------------------------------------
 
@@ -912,7 +827,7 @@ tweaked further to your likings.
 
 -----------------------------------------------------------------------------------
 
-Step 26: Create: object "Player":
+Step 24: Create: object "Player":
 
 -----------------------------------------------------------------------------------
 
@@ -931,7 +846,7 @@ Add Tag: "Player"
 
 -----------------------------------------------------------------------------------
 
-Step 27: Add: empty object "View":
+Step 25: Add: empty object "View":
 
 -----------------------------------------------------------------------------------
 
@@ -944,7 +859,7 @@ Transform Position: X: 0 Y: 0 Z: 0
 
 -----------------------------------------------------------------------------------
 
-Step 28: Add: "Camera":
+Step 26: Add: "Camera":
 
 -----------------------------------------------------------------------------------
 
@@ -963,10 +878,26 @@ Depth: "1"
 
 Add Tag: "MainCamera"
 
+-----------------------------------------------------------------------------------
+
+Step 27: Add Component: "First Person Controller (Script)"
 
 -----------------------------------------------------------------------------------
 
-Step 29: Edit: the "CharacterController" component:
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+Input Actions:
+--------------
+
+
+Player Controls: PlayerControls (Input Action Asset) 
+
+
+-----------------------------------------------------------------------------------
+
+Step 28: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -978,17 +909,7 @@ Height: "1.8"
 
 -----------------------------------------------------------------------------------
 
-Step 30: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
-
-
------------------------------------------------------------------------------------
-
-Step 31: Setup: Audio Source and Footstep Sounds Audio Clips:
+Step 29: Setup: Audio Source and Footstep Sounds Audio Clips:
 
 -----------------------------------------------------------------------------------
 

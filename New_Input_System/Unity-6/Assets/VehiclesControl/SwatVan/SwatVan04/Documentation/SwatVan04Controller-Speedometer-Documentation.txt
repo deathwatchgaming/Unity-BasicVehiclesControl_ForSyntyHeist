@@ -1,4 +1,4 @@
-PoliceCharger04 Speedometer Setup Steps:
+SwatVan04 Speedometer Setup Steps:
 ----------------------------------------
 
 
@@ -48,12 +48,12 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 2: In "VehiclesSpeed" create empty child: "PoliceCharger04Speedometer"
+Step 2: In "VehiclesSpeed" create empty child: "SwatVan04Speedometer"
 
 -----------------------------------------------------------------------------------
 
 
-In "PoliceCharger04Speedometer"
+In "SwatVan04Speedometer"
 
 Adjust:
 
@@ -80,12 +80,12 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 3: In Interface > Canvas > VehiclesSpeed add UI IMG: "PoliceCharger04_SpeedoGuage"
+Step 3: In Interface > Canvas > VehiclesSpeed add UI IMG: "SwatVan04_SpeedoGuage"
 
 -----------------------------------------------------------------------------------
 
 
-In: "PoliceCharger04_SpeedoGuage"
+In: "SwatVan04_SpeedoGuage"
 
 Adjust:
 
@@ -115,12 +115,12 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 4: In Interface > Canvas > VehiclesSpeed add IMG: "PoliceCharger04_SpeedoNeedle"
+Step 4: In Interface > Canvas > VehiclesSpeed add IMG: "SwatVan04_SpeedoNeedle"
 
 -----------------------------------------------------------------------------------
 
 
-In: "PoliceCharger04_SpeedoNeedle"
+In: "SwatVan04_SpeedoNeedle"
 
 Adjust:
 
@@ -152,12 +152,12 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 5: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "PoliceCharger04_SpeedText"
+Step 5: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SwatVan04_SpeedText"
 
 -----------------------------------------------------------------------------------
 
 
-In: "PoliceCharger04_SpeedText"
+In: "SwatVan04_SpeedText"
 
 Adjust:
 
@@ -206,30 +206,29 @@ object in the editor.
 
 -----------------------------------------------------------------------------------
 
-Step 6: In Vehicle > PoliceCharger04 attach script: (PoliceCharger04Speedometer.cs)
+Step 6: In Vehicle > SwatVan04 attach script: (SwatVan04Speedometer.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach PoliceCharger04Speedometer script: (PoliceCharger04Speedometer.cs) to
-Vehicle: "PoliceCharger04"
+Attach SwatVan04Speedometer script: (SwatVan04Speedometer.cs) to
+Vehicle: "SwatVan04"
 
-In: "PoliceCharger04" > PoliceCharger04 Speedometer (Script)
+In: "SwatVan04" > SwatVan04 Speedometer (Script)
 
 Adjust the minimal settings as far as what is min needed: (Needle IMG and
 Speed Text)
 
-Needle: PoliceCharger04_Needle
+Needle: SwatVan04_Needle
 
-Speed Text: PoliceCharger04_SpeedText (Text Mesh Pro UGUI)
+Speed Text: SwatVan04_SpeedText (Text Mesh Pro UGUI)
 
 GameObjects:
 
-Interface Parent Object: PoliceCharger04Speedometer
-Interface IMG01 Object: PoliceCharger04_SpeedoGuage
-Interface IMG02 Object: PoliceCharger04_SpeedoNeedle
-Interface Text Object: PoliceCharger04_SpeedText
-
+Interface Parent Object: SwatVan04Speedometer
+Interface IMG01 Object: SwatVan04_SpeedoGuage
+Interface IMG02 Object: SwatVan04_SpeedoNeedle
+Interface Text Object: SwatVan04_SpeedText
 
 
 Input Actions:
@@ -251,10 +250,10 @@ this object in the editor.
 
 Game Objects:
 
-PoliceCharger04Speedometer
-PoliceCharger04_SpeedoGuage
-PoliceCharger04_SpeedoNeedle
-PoliceCharger04_SpeedText
+SwatVan04Speedometer
+SwatVan04_SpeedoGuage
+SwatVan04_SpeedoNeedle
+SwatVan04_SpeedText
 
 -----------------------------------------------------------------------------------
 

@@ -9,11 +9,12 @@ from Synty Polygon Heist Asset.
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+
 
 Manual Setup Instruction:
 -------------------------
@@ -487,6 +488,14 @@ Rigidbody Mass:
 Set Rigibody Mass: 3000
 
 
+
+Input Actions:
+--------------
+
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 13: Add to: SwatVan02Camera (SwatVan02Camera.cs)
@@ -526,7 +535,7 @@ the documentation folder ie:
 
 SwatVan02Controller-Only-Speedometer-Documentation 
 
-to finalize all setups steps 
+to finalize all setups steps.
 
 
 -----------------------------------------------------------------------------------
