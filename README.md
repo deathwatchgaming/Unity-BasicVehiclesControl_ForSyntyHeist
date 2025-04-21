@@ -39,7 +39,7 @@ NOTE: This currently still uses the Old Input System, so as such depending on wh
 
 New_Input_System Directory NOTE:
 
-NOTE: This currently uses the New Input System (ie: Unity 21 - 22 variant provided & Unity 6 version coming soon when I have further free time to do such), so as such depending on what version of Unity you may be using it may be necessary to make sure such or both is enabled in project settings.
+NOTE: This currently uses the New Input System (ie: Unity 21 - 22 & Unity 6 variants provided), so as such depending on what version of Unity you may be using it may be necessary to make sure such or both is enabled in project settings.
 
 New_Input_System Directory Documentations NOTE: If there is any confusion with any documentation during setup in regards to "Input Actions", just note the following "Input Action Assets" found below:
 
@@ -204,7 +204,9 @@ New_Input_System Variant:
 * Unity 20221+ & 2022+ => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/tree/main/New_Input_System/Unity-2021-2022
 
 
-* Unity 6 => Files, ReadMe, docs: coming soon...
+* Unity 6 => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/New_Input_System/Unity-6
+
+
 
 Old_Input_System Variant:
 
