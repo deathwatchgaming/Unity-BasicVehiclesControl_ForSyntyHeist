@@ -21,13 +21,13 @@ namespace NavigationControl
 		[Header("Raw Images")]
 
 			// Tooltip
-			[Tooltip("The compass background raw image")]
+			[Tooltip("The compass foreground raw image")]
 			// RawImage _compassForeground
 			[SerializeField] private RawImage _compassForeground;
 
 			// Tooltip
-			[Tooltip("The compass foreground raw image")]
-			// RawImage _compassForeground
+			[Tooltip("The compass background raw image")]
+			// RawImage _compassBackground
 			[SerializeField] private RawImage _compassBackground;	
 
 		// Header
